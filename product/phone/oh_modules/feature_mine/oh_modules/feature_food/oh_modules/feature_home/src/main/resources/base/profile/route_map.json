@@ -1,0 +1,20 @@
+{
+  "routerMap": [
+    {
+      "name": "PageTakeOut",
+      "pageSourceFile": "src/main/ets/pages/PageTakeOut.ets",
+      "buildFunction": "PageTakeOutBuilder",
+      "data": {
+        "description": "this is PageTakeOut"
+      }
+    },
+    {
+      "name": "PageAddAddress",
+      "pageSourceFile": "src/main/ets/pages/PageAddAddress.ets",
+      "buildFunction": "PageAddAddressBuilder",
+      "data": {
+        "description": "this is PageAddAddress"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "feature_order",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "router_manage": "file:../../common/router_manage",
+    "feature_food": "file:../../feature/feature_food",
+    "common_utils": "file:../../common/common_utils"
+  }
+}

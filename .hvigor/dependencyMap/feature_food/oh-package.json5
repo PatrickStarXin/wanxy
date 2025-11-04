@@ -1,0 +1,1 @@
+{"name":"feature_food","version":"1.0.0","description":"Please describe the basic information.","main":"Index.ets","author":"","license":"Apache-2.0","dependencies":{"router_manage":"file:../../common/router_manage","feature_map":"file:../feature_map","common_utils":"file:../../common/common_utils","feature_home":"file:../../feature/feature_home"}}

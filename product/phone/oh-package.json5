@@ -1,0 +1,19 @@
+{
+  "name": "phone",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "router_manage": "file:../../common/router_manage",
+    "common_utils": "file:../../common/common_utils",
+    "feature_home": "file:../../feature/feature_home",
+    "feature_food": "file:../../feature/feature_food",
+    "feature_order": "file:../../feature/feature_order",
+    "feature_mine": "file:../../feature/feature_mine",
+    "feature_map": "file:../../feature/feature_map",
+    "@hw-agconnect/auth": "^1.0.5"
+  }
+}
+

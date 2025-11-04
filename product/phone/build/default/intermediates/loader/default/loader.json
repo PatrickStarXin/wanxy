@@ -1,0 +1,96 @@
+{
+  "modulePathMap": {
+    "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage",
+    "phone": "E:\\Chrome\\download\\Food\\product\\phone",
+    "feature_home": "E:\\Chrome\\download\\Food\\feature\\feature_home",
+    "feature_food": "E:\\Chrome\\download\\Food\\feature\\feature_food",
+    "feature_order": "E:\\Chrome\\download\\Food\\feature\\feature_order",
+    "feature_mine": "E:\\Chrome\\download\\Food\\feature\\feature_mine",
+    "feature_map": "E:\\Chrome\\download\\Food\\feature\\feature_map",
+    "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils"
+  },
+  "compileMode": "esmodule",
+  "projectRootPath": "E:\\Chrome\\download\\Food",
+  "nodeModulesPath": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\loader_out\\default\\node_modules",
+  "byteCodeHarInfo": {
+    "@hw-agconnect/auth": {
+      "abcPath": "E:\\Chrome\\download\\Food\\oh_modules\\.ohpm\\@hw-agconnect+auth@1.0.5\\oh_modules\\@hw-agconnect\\auth\\ets\\modules.abc"
+    }
+  },
+  "declarationEntry": [],
+  "moduleName": "phone",
+  "hspNameOhmMap": {},
+  "harNameOhmMap": {},
+  "packageManagerType": "ohpm",
+  "compileEntry": [
+    "E:\\Chrome\\download\\Food\\product\\phone\\src\\main\\ets\\pages\\Main.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\ets\\pages\\PageTakeOut.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\ets\\pages\\PageAddAddress.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\pages\\PageFoodDetail.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_order\\src\\main\\ets\\pages\\PageOrderPreview.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_mine\\src\\main\\ets\\pages\\FoodManagePage.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_mine\\src\\main\\ets\\pages\\AddFoodPage.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_map\\src\\main\\ets\\pages\\PageShopList.ets"
+  ],
+  "otherCompileFiles": [],
+  "dynamicImportLibInfo": {},
+  "routerMap": [
+    {
+      "ohmurl": "@normalized:N&&&phone/src/main/ets/pages/Main&",
+      "name": "PageMain",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\product\\phone\\src\\main\\ets\\pages\\Main.ets",
+      "buildFunction": "MainPageBuilder"
+    },
+    {
+      "ohmurl": "@normalized:N&&&feature_home/src/main/ets/pages/PageTakeOut&1.0.0",
+      "name": "PageTakeOut",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\ets\\pages\\PageTakeOut.ets",
+      "buildFunction": "PageTakeOutBuilder"
+    },
+    {
+      "ohmurl": "@normalized:N&&&feature_home/src/main/ets/pages/PageAddAddress&1.0.0",
+      "name": "PageAddAddress",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\ets\\pages\\PageAddAddress.ets",
+      "buildFunction": "PageAddAddressBuilder"
+    },
+    {
+      "ohmurl": "@normalized:N&&&feature_food/src/main/ets/pages/PageFoodDetail&1.0.0",
+      "name": "PageFoodDetail",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\pages\\PageFoodDetail.ets",
+      "buildFunction": "PageFoodDetailBuilder"
+    },
+    {
+      "ohmurl": "@normalized:N&&&feature_order/src/main/ets/pages/PageOrderPreview&1.0.0",
+      "name": "PageOrderPreview",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_order\\src\\main\\ets\\pages\\PageOrderPreview.ets",
+      "buildFunction": "PageOrderPreviewBuilder"
+    },
+    {
+      "ohmurl": "@normalized:N&&&feature_mine/src/main/ets/pages/FoodManagePage&1.0.0",
+      "name": "FoodManagePage",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\src\\main\\ets\\pages\\FoodManagePage.ets",
+      "buildFunction": "FoodManagePageBuilder"
+    },
+    {
+      "ohmurl": "@normalized:N&&&feature_mine/src/main/ets/pages/AddFoodPage&1.0.0",
+      "name": "AddFoodPage",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\src\\main\\ets\\pages\\AddFoodPage.ets",
+      "buildFunction": "AddFoodPageBuilder"
+    },
+    {
+      "ohmurl": "@normalized:N&&&feature_map/src/main/ets/pages/PageShopList&1.0.0",
+      "name": "PageShopList",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_map\\src\\main\\ets\\pages\\PageShopList.ets",
+      "buildFunction": "PageShopListBuilder"
+    }
+  ],
+  "hspResourcesMap": {},
+  "updateVersionInfo": {
+    "@hw-agconnect/auth": {}
+  },
+  "anBuildOutPut": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\loader_out\\default\\an\\arm64-v8a",
+  "anBuildMode": "type",
+  "patchConfig": {
+    "changedFileList": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\patch\\default\\changedFileList.json"
+  }
+}

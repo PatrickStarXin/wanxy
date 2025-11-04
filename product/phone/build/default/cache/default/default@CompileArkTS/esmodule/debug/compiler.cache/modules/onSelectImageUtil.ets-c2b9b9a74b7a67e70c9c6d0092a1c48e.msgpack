@@ -1,0 +1,386 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚ ‹import photoAccessHelper from "@ohos.file.photoAccessHelper";
+import util from "@ohos.util";
+import fileIo from "@ohos.file.fs";
+import fileUri from "@ohos.file.fileuri";
+import hilog from "@ohos.hilog";
+export default class onSelectImageUtil {
+    // é™æ€æ–¹æ³•ï¼Œæ¥æ”¶contextå‚æ•°
+    /*  static async onSelectImage(context: common.Context): Promise<string> {
+        try {
+          // åˆ›å»ºç…§ç‰‡é€‰æ‹©å™¨å®ä¾‹
+          const photoViewPicker = new photoAccessHelper.PhotoViewPicker();
+    
+          // è°ƒç”¨selectæ–¹æ³•æ‹‰èµ·å›¾åº“ç•Œé¢
+          const result = await photoViewPicker.select({
+            maxSelectNumber: 1    // é™åˆ¶é€‰æ‹©ä¸€å¼ ç…§ç‰‡
+          });
+          if (result.photoUris && result.photoUris.length > 0) {
+            const selectedImageUri = result.photoUris[0];
+            return await onSelectImageUtil.saveImageToSandbox(context,selectedImageUri);
+          }
+          return ""
+        } catch (err) {
+          console.error('é€‰æ‹©å›¾ç‰‡å¤±è´¥: ' + JSON.stringify(err));
+          return "";
+        }
+      }*/
+    static async onSelectImage(context) {
+        if (!context) {
+            hilog.error(0x0000, 'AddFoodPage', 'ä¸Šä¸‹æ–‡æœªåˆå§‹åŒ–ï¼Œæ— æ³•é€‰æ‹©å›¾ç‰‡');
+            return { originalUri: '', savedPath: '' };
+        }
+        // ç›´æ¥ä½¿ç”¨é€‰æ‹©å™¨è¿”å›çš„uriè¿›è¡Œå®æ—¶é¢„è§ˆ
+        try {
+            // åˆ›å»ºç…§ç‰‡é€‰æ‹©å™¨å®ä¾‹
+            const photoViewPicker = new photoAccessHelper.PhotoViewPicker(); // ç”¨äºå›¾ç‰‡é€‰æ‹©
+            const result = await photoViewPicker.select({
+                maxSelectNumber: 1 // é™åˆ¶é€‰æ‹©ä¸€å¼ ç…§ç‰‡
+            });
+            hilog.info(0x0000, 'onSelectImage', `é€‰æ‹©å™¨è¿”å›ç»“æœ: ${JSON.stringify(result)}`);
+            if (result && result.photoUris && result.photoUris.length > 0) {
+                const selectedUri = result.photoUris[0]; // é€‰æ‹©ç¬¬ä¸€ä¸ªé€‰ä¸­çš„å›¾ç‰‡
+                hilog.info(0x0000, 'AddFoodPage', `é€‰æ‹©çš„å›¾ç‰‡URI: ${selectedUri}`);
+                // åŒæ—¶è¿”å›åŸå§‹uriå’Œä¿å­˜åçš„è·¯å¾„
+                const savedPath = await onSelectImageUtil.saveImageToSandbox(context, selectedUri);
+                return { originalUri: selectedUri, savedPath: savedPath };
+            }
+            else {
+                hilog.info(0x0000, 'onSelectImage', 'ç”¨æˆ·å–æ¶ˆé€‰æ‹©å›¾ç‰‡');
+                return { originalUri: '', savedPath: '' };
+            }
+        }
+        catch (err) {
+            hilog.error(0x0000, 'onSelectImage', 'é€‰æ‹©å›¾ç‰‡å¤±è´¥: ' + JSON.stringify(err));
+            return { originalUri: '', savedPath: '' };
+        }
+    }
+    // åªé€‰æ‹©å›¾ç‰‡,ä¸ç«‹å³ä¿å­˜,ç”¨äºå®æ—¶é¢„è§ˆ
+    static async selectImageOnly() {
+        try {
+            const photoViewPicker = new photoAccessHelper.PhotoViewPicker();
+            const result = await photoViewPicker.select({
+                maxSelectNumber: 1
+            });
+            hilog.info(0x0000, 'selectImageOnly', `é€‰æ‹©å™¨è¿”å›ç»“æœ: ${JSON.stringify(result)}`);
+            if (result && result.photoUris && result.photoUris.length > 0) {
+                const selectedUri = result.photoUris[0];
+                hilog.info(0x0000, 'selectImageOnly', `é€‰æ‹©çš„å›¾ç‰‡URI: ${selectedUri}`);
+                return selectedUri;
+            }
+            return "";
+        }
+        catch (err) {
+            hilog.error(0x0000, 'selectImageOnly', 'é€‰æ‹©å›¾ç‰‡å¤±è´¥: ' + JSON.stringify(err));
+            return "";
+        }
+    }
+    static async saveImageToSandbox(context, uri) {
+        try {
+            // ç”Ÿæˆå”¯ä¸€æ–‡ä»¶å
+            const fileName = util.generateRandomUUID() + ".jpg";
+            // è·å–åº”ç”¨æ²™ç®±filesç›®å½•è·¯å¾„
+            const targetPath = context.filesDir + '/' + fileName;
+            hilog.info(0x0000, 'onSelectImageUtil_saveImageToSandbox', `å¼€å§‹æ‹·è´å›¾ç‰‡: ${uri} -> ${targetPath}`);
+            //æ‰§è¡Œæ–‡ä»¶æ‹·è´
+            const sourceFile = fileIo.openSync(uri, fileIo.OpenMode.READ_ONLY);
+            const targetFile = fileIo.openSync(targetPath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+            fileIo.copyFileSync(sourceFile.fd, targetFile.fd);
+            // å…³é—­æ–‡ä»¶
+            fileIo.closeSync(sourceFile.fd);
+            fileIo.closeSync(targetFile.fd);
+            const isFileExist = fileIo.accessSync(targetPath);
+            if (isFileExist) {
+                hilog.info(0x0000, 'onSelectImageUtil', `å›¾ç‰‡å·²æˆåŠŸä¿å­˜åˆ°: ${targetPath}`);
+                /// return fileUri.getUriFromPath(targetPath);
+                // è¿”å›åŸå§‹è·¯å¾„è€Œä¸æ˜¯fileUriï¼Œè¿™æ ·æ•°æ®åº“ä¿å­˜çš„å°±æ˜¯ /data/storage/... æ ¼å¼
+                return targetPath;
+            }
+            else {
+                hilog.error(0x0000, 'onSelectImageUtil', `æ–‡ä»¶ä¿å­˜åéªŒè¯å¤±è´¥: ${targetPath}`);
+                return "";
+            }
+        }
+        catch (err) {
+            console.error('ä¿å­˜å›¾ç‰‡å¤±è´¥: ' + JSON.stringify(err));
+            return "";
+        }
+    }
+    /**
+     * è·å–å›¾ç‰‡æ•°æ®æº
+     * æ”¯æŒbase64å’Œresourseä¸¤ç§æ ¼å¼
+     * é‡å¤ï¼ŒåæœŸæ”¹ä¸ºé€šç”¨æ¥å£
+     */
+    getImageSource(pic) {
+        if (!pic || pic.trim() === '') {
+            hilog.info(0x0000, 'FoodCategory_getImageSource', 'å›¾ç‰‡è·¯å¾„ä¸ºç©ºï¼Œä½¿ç”¨é»˜è®¤å›¾ç‰‡');
+            return { "id": 134217790, "type": 20000, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" };
+        }
+        // å¦‚æœæ˜¯å®Œæ•´çš„æ–‡ä»¶è·¯å¾„
+        if (pic.startsWith('/') || pic.startsWith('file://')) {
+            hilog.info(0x0000, 'FoodCategory_getImageSource', `è¯†åˆ«ä¸ºæ–‡ä»¶è·¯å¾„: ${pic}`);
+            try {
+                // æ£€æŸ¥æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+                const isFileExist = fileIo.accessSync(pic);
+                if (isFileExist) {
+                    hilog.info(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶å­˜åœ¨: ${pic}`);
+                    // ä½¿ç”¨ fileUri æ¥è®¿é—®æ–‡ä»¶
+                    return fileUri.getUriFromPath(pic);
+                }
+                else {
+                    hilog.error(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶ä¸å­˜åœ¨: ${pic}`);
+                }
+            }
+            catch (err) {
+                hilog.error(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶è®¿é—®å¤±è´¥: ${pic}, error: ${JSON.stringify(err)}`);
+            }
+            return { "id": 134217790, "type": 20000, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" };
+        }
+        // å¦‚æœæ˜¯base64æ•°æ®uri
+        if (pic && pic.startsWith('data:image')) {
+            hilog.info(0x0000, 'FoodCategory', 'è¯†åˆ«ä¸ºbase64å›¾ç‰‡');
+            return pic;
+        }
+        // å¦‚æœæ˜¯èµ„æºè·¯å¾„
+        if (pic && pic.startsWith('app.media.')) {
+            hilog.info(0x0000, 'FoodCategory', `è¯†åˆ«ä¸ºèµ„æºè·¯å¾„: ${pic}`);
+            try {
+                const resource = { "id": -1, "type": -1, params: [pic], "bundleName": "wanxy.food.com", "moduleName": "phone" };
+                if (resource) {
+                    return resource;
+                }
+            }
+            catch (error) {
+                hilog.error(0x0000, 'FoodCategory', `èµ„æºè·¯å¾„è½¬æ¢å¤±è´¥: ${pic}, error: ${JSON.stringify(error)}`);
+            }
+        }
+        // å¦‚æœæ˜¯æ–‡ä»¶åï¼Œæ²¡æœ‰è·¯å¾„åˆ†éš”ç¬¦
+        if (pic && !pic.includes('/') && !pic.includes('\\')) {
+            // å°è¯•æ„å»ºå®Œæ•´è·¯å¾„
+            try {
+                const context = getContext(this);
+                const fullPath = context.filesDir + '/' + pic;
+                hilog.info(0x0000, 'FoodCategory', `æ„å»ºå®Œæ•´æ–‡ä»¶è·¯å¾„: ${fullPath}`);
+                return fullPath;
+            }
+            catch (err) {
+                hilog.error(0x0000, 'FoodCategory', 'æ„å»ºå›¾ç‰‡è·¯å¾„å¤±è´¥: ' + JSON.stringify(err));
+            }
+        }
+        // è¿”å›ä¸€ä¸ªå±•ä½å›¾
+        hilog.warn(0x0000, 'FoodCategory', `æ— æ³•è¯†åˆ«çš„å›¾ç‰‡è·¯å¾„æ ¼å¼: ${pic}`);
+        return { "id": 134217790, "type": 20000, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" };
+    }
+}
+//# sourceMappingURL=onSelectImageUtil.js.mapÂ•Ùu hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.photoAccessHelper.d.tsÙc hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.util.d.tsÙf hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.fs.d.tsÙk hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.fileuri.d.tsÙd hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.hilog.d.tsÙTE:\Chrome\download\Food\feature\feature_mine\src\main\ets\util\onSelectImageUtil.etsÔrB›ªmoduleName±isLocalDependency¯isNodeEntryFile§pkgPath±belongProjectPath§pkgNameªpkgVersion±dependencyPkgInfo°belongModulePath¯hostModulesInfo¬shouldEmitJs¬feature_mineÃÂÙ,E:\Chrome\download\Food\feature\feature_mine·E:\Chrome\download\Food¬feature_mine¥1.0.0ÔrC’§pkgNameªpkgVersion¬feature_mine¥1.0.0Ù,E:\Chrome\download\Food\feature\feature_mine’ÔrD’²hostDependencyName®hostModuleName¹../util/onSelectImageUtil¬feature_mineDÙ%./src/main/ets/util/onSelectImageUtil¬feature_mineÃÃÚùimport { photoAccessHelper } from "@kit.MediaLibraryKit";
+import { util } from "@kit.ArkTS";
+import { common } from "@kit.AbilityKit";
+import { fileIo, fileUri, picker } from "@kit.CoreFileKit";
+import { hilog } from "@kit.PerformanceAnalysisKit";
+
+interface ImageSelectResult {
+  originalUri: string,
+  savedPath: string
+}
+
+
+export default class onSelectImageUtil{
+
+  // é™æ€æ–¹æ³•ï¼Œæ¥æ”¶contextå‚æ•°
+/*  static async onSelectImage(context: common.Context): Promise<string> {
+    try {
+      // åˆ›å»ºç…§ç‰‡é€‰æ‹©å™¨å®ä¾‹
+      const photoViewPicker = new photoAccessHelper.PhotoViewPicker();
+
+      // è°ƒç”¨selectæ–¹æ³•æ‹‰èµ·å›¾åº“ç•Œé¢
+      const result = await photoViewPicker.select({
+        maxSelectNumber: 1    // é™åˆ¶é€‰æ‹©ä¸€å¼ ç…§ç‰‡
+      });
+      if (result.photoUris && result.photoUris.length > 0) {
+        const selectedImageUri = result.photoUris[0];
+        return await onSelectImageUtil.saveImageToSandbox(context,selectedImageUri);
+      }
+      return ""
+    } catch (err) {
+      console.error('é€‰æ‹©å›¾ç‰‡å¤±è´¥: ' + JSON.stringify(err));
+      return "";
+    }
+  }*/
+
+  static async onSelectImage(context: common.Context): Promise<ImageSelectResult> {
+    if (!context) {
+      hilog.error(0x0000, 'AddFoodPage', 'ä¸Šä¸‹æ–‡æœªåˆå§‹åŒ–ï¼Œæ— æ³•é€‰æ‹©å›¾ç‰‡');
+      return {originalUri:'', savedPath:''};
+    }
+
+    // ç›´æ¥ä½¿ç”¨é€‰æ‹©å™¨è¿”å›çš„uriè¿›è¡Œå®æ—¶é¢„è§ˆ
+    try {
+      // åˆ›å»ºç…§ç‰‡é€‰æ‹©å™¨å®ä¾‹
+
+      const photoViewPicker = new photoAccessHelper.PhotoViewPicker();      // ç”¨äºå›¾ç‰‡é€‰æ‹©
+      const result = await photoViewPicker.select({         // è°ƒç”¨ç³»ç»Ÿç›¸å†Œé€‰æ‹©ç•Œé¢ï¼Œç”¨æˆ·æ“ä½œå®Œæˆåè¿”å›ç»“æœ
+        maxSelectNumber: 1    // é™åˆ¶é€‰æ‹©ä¸€å¼ ç…§ç‰‡
+      });
+      hilog.info(0x0000, 'onSelectImage', `é€‰æ‹©å™¨è¿”å›ç»“æœ: ${JSON.stringify(result)}`);
+
+      if (result && result.photoUris && result.photoUris.length > 0) {
+        const selectedUri = result.photoUris[0]       // é€‰æ‹©ç¬¬ä¸€ä¸ªé€‰ä¸­çš„å›¾ç‰‡
+        hilog.info(0x0000, 'AddFoodPage', `é€‰æ‹©çš„å›¾ç‰‡URI: ${selectedUri}`);
+
+        // åŒæ—¶è¿”å›åŸå§‹uriå’Œä¿å­˜åçš„è·¯å¾„
+        const savedPath = await onSelectImageUtil.saveImageToSandbox(context, selectedUri);
+        return {originalUri: selectedUri, savedPath: savedPath};
+      }
+      else {
+        hilog.info(0x0000, 'onSelectImage', 'ç”¨æˆ·å–æ¶ˆé€‰æ‹©å›¾ç‰‡');
+        return { originalUri: '', savedPath: '' };
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'onSelectImage', 'é€‰æ‹©å›¾ç‰‡å¤±è´¥: ' + JSON.stringify(err));
+      return { originalUri: '', savedPath: '' };
+    }
+  }
+
+  // åªé€‰æ‹©å›¾ç‰‡,ä¸ç«‹å³ä¿å­˜,ç”¨äºå®æ—¶é¢„è§ˆ
+  static async selectImageOnly(): Promise<string> {
+    try {
+      const photoViewPicker = new photoAccessHelper.PhotoViewPicker();
+      const result = await photoViewPicker.select({
+        maxSelectNumber: 1
+      });
+
+      hilog.info(0x0000, 'selectImageOnly', `é€‰æ‹©å™¨è¿”å›ç»“æœ: ${JSON.stringify(result)}`);
+
+      if (result && result.photoUris && result.photoUris.length > 0) {
+        const selectedUri = result.photoUris[0];
+        hilog.info(0x0000, 'selectImageOnly', `é€‰æ‹©çš„å›¾ç‰‡URI: ${selectedUri}`);
+        return selectedUri;
+      }
+      return "";
+    } catch (err) {
+      hilog.error(0x0000, 'selectImageOnly', 'é€‰æ‹©å›¾ç‰‡å¤±è´¥: ' + JSON.stringify(err));
+      return "";
+    }
+  }
+
+  static async saveImageToSandbox(context: common.Context,uri: string): Promise<string> {
+    try {
+      // ç”Ÿæˆå”¯ä¸€æ–‡ä»¶å
+      const fileName = util.generateRandomUUID() + ".jpg";
+
+      // è·å–åº”ç”¨æ²™ç®±filesç›®å½•è·¯å¾„
+      const targetPath = context.filesDir + '/' + fileName;
+
+      hilog.info(0x0000, 'onSelectImageUtil_saveImageToSandbox', `å¼€å§‹æ‹·è´å›¾ç‰‡: ${uri} -> ${targetPath}`);
+
+      //æ‰§è¡Œæ–‡ä»¶æ‹·è´
+      const sourceFile = fileIo.openSync(uri,fileIo.OpenMode.READ_ONLY);
+      const targetFile = fileIo.openSync(targetPath,fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+      fileIo.copyFileSync(sourceFile.fd,targetFile.fd);
+
+      // å…³é—­æ–‡ä»¶
+      fileIo.closeSync(sourceFile.fd);
+      fileIo.closeSync(targetFile.fd);
+
+      const isFileExist = fileIo.accessSync(targetPath);
+      if (isFileExist) {
+        hilog.info(0x0000, 'onSelectImageUtil', `å›¾ç‰‡å·²æˆåŠŸä¿å­˜åˆ°: ${targetPath}`);
+        /// return fileUri.getUriFromPath(targetPath);
+        // è¿”å›åŸå§‹è·¯å¾„è€Œä¸æ˜¯fileUriï¼Œè¿™æ ·æ•°æ®åº“ä¿å­˜çš„å°±æ˜¯ /data/storage/... æ ¼å¼
+        return targetPath;
+      } else {
+        hilog.error(0x0000, 'onSelectImageUtil', `æ–‡ä»¶ä¿å­˜åéªŒè¯å¤±è´¥: ${targetPath}`);
+        return "";
+      }
+
+    } catch (err) {
+      console.error('ä¿å­˜å›¾ç‰‡å¤±è´¥: ' + JSON.stringify(err));
+      return "";
+    }
+  }
+
+  /**
+   * è·å–å›¾ç‰‡æ•°æ®æº
+   * æ”¯æŒbase64å’Œresourseä¸¤ç§æ ¼å¼
+   * é‡å¤ï¼ŒåæœŸæ”¹ä¸ºé€šç”¨æ¥å£
+   */
+  getImageSource(pic: string): Resource | string | PixelMap{
+    if (!pic || pic.trim() === '') {
+      hilog.info(0x0000, 'FoodCategory_getImageSource', 'å›¾ç‰‡è·¯å¾„ä¸ºç©ºï¼Œä½¿ç”¨é»˜è®¤å›¾ç‰‡');
+      return $r("app.media.food_main");
+    }
+    // å¦‚æœæ˜¯å®Œæ•´çš„æ–‡ä»¶è·¯å¾„
+    if (pic.startsWith('/') || pic.startsWith('file://')){
+      hilog.info(0x0000, 'FoodCategory_getImageSource', `è¯†åˆ«ä¸ºæ–‡ä»¶è·¯å¾„: ${pic}`);
+
+      try {
+        // æ£€æŸ¥æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+        const isFileExist = fileIo.accessSync(pic);
+        if (isFileExist) {
+          hilog.info(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶å­˜åœ¨: ${pic}`);
+          // ä½¿ç”¨ fileUri æ¥è®¿é—®æ–‡ä»¶
+          return fileUri.getUriFromPath(pic);
+        }
+        else {
+          hilog.error(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶ä¸å­˜åœ¨: ${pic}`);
+        }
+      } catch (err) {
+        hilog.error(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶è®¿é—®å¤±è´¥: ${pic}, error: ${JSON.stringify(err)}`);
+      }
+      return $r("app.media.food_main");
+    }
+
+    // å¦‚æœæ˜¯base64æ•°æ®uri
+    if (pic && pic.startsWith('data:image')) {
+      hilog.info(0x0000, 'FoodCategory', 'è¯†åˆ«ä¸ºbase64å›¾ç‰‡');
+      return pic;
+    }
+    // å¦‚æœæ˜¯èµ„æºè·¯å¾„
+    if (pic && pic.startsWith('app.media.')) {
+      hilog.info(0x0000, 'FoodCategory', `è¯†åˆ«ä¸ºèµ„æºè·¯å¾„: ${pic}`);
+      try {
+        const resource = $r(pic);
+        if (resource) {
+          return resource;
+        }
+      } catch (error) {
+        hilog.error(0x0000, 'FoodCategory', `èµ„æºè·¯å¾„è½¬æ¢å¤±è´¥: ${pic}, error: ${JSON.stringify(error)}`);
+      }
+    }
+    // å¦‚æœæ˜¯æ–‡ä»¶åï¼Œæ²¡æœ‰è·¯å¾„åˆ†éš”ç¬¦
+    if (pic && !pic.includes('/') && !pic.includes('\\')) {
+      // å°è¯•æ„å»ºå®Œæ•´è·¯å¾„
+      try {
+        const context = getContext(this) as common.Context;
+        const fullPath = context.filesDir + '/' + pic;
+        hilog.info(0x0000, 'FoodCategory', `æ„å»ºå®Œæ•´æ–‡ä»¶è·¯å¾„: ${fullPath}`);
+        return fullPath;
+      } catch (err) {
+        hilog.error(0x0000, 'FoodCategory', 'æ„å»ºå›¾ç‰‡è·¯å¾„å¤±è´¥: ' + JSON.stringify(err));
+      }
+    }
+
+    // è¿”å›ä¸€ä¸ªå±•ä½å›¾
+    hilog.warn(0x0000, 'FoodCategory', `æ— æ³•è¯†åˆ«çš„å›¾ç‰‡è·¯å¾„æ ¼å¼: ${pic}`);
+    return $r("app.media.food_main");
+  }
+
+
+
+}
+ÀÔrE•¼@ohos.file.photoAccessHelperª@ohos.util­@ohos.file.fs²@ohos.file.fileuri«@ohos.hilogÔrF—ªassertions¨external¢id¤meta±moduleSideEffectsªresolvedByµsyntheticNamedExportsAÃÙu hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.photoAccessHelper.d.tsÔrG‘¯hostModulesInfo‘D¼@ohos.file.photoAccessHelper¬feature_mineÃªoh-resolveÂFAÃÙc hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.util.d.tsG’Dª@ohos.util¬feature_mineDª@ohos.util¬common_utilsÃªoh-resolveÂFAÃÙf hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.fs.d.tsAÃªoh-resolveÂFAÃÙk hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.fileuri.d.tsAÃªoh-resolveÂFAÃÙd hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.hilog.d.tsAÃªoh-resolveÂ“ÔrH–§version¤fileªsourceRoot§sources¥names¨mappings´onSelectImageUtil.js ‘µonSelectImageUtil.etsÜ ­–”    ”  	”  ”  "”<  8”=  9–”   ” 	” ” ” !” "–”   ” 	” ” (”" :”# ;–”   ” ” ” (”( :”) ;–”   ” 	” ” ” 3”  4–”   ” ” ” ” ”& &’” ” ‘”  ‘”	 !˜” #”
+ #” #	” #” #” #” #”& #4•” $” $” $	” $” $œ” %” %” %” %” %” %”  %”- %'”/ %)”? %9”Ì@ %:”ÌA %;œ” &” &” &”  &”" &”$ &”& &”/ &'”1 &(”3 &*”5 &+”6 &,‘”	 '’” )” )’” *” *’” +” +œ” -” -”! -”$ -”( -"”9 -3”: -4”ÌI -ÌC”ÌK -ÌE”ÌL -ÌF”ÌM -ÌL”ÌV -ÌU™” .” .” .” .”! .”0 .*”1 .+”7 .1”8 .2–” /” /”! /”" /”# /”. /)“” 0” 0” 0	Ü ” 1” 1” 1” 1” 1” 1” 1”. 1(”0 1*”< 16”Ì@ 1:”ÌA 1;”ÌJ 1ÌD”ÌK 1ÌE”ÌQ 1ÌK”ÌR 1ÌL”ÌT 1ÌN”ÌU 1ÌO”ÌV 1ÌPÜ ” 3” 3
+” 3” 3”  3”! 3”* 3$”. 3(”4 3.”5 3/”> 38”? 39”ÌE 3?”ÌH 3ÌB”ÌI 3ÌC”ÌK 3ÌE” 4” 4”! 4”$ 4”* 4"”+ 4#”4 4,”5 4-”6 4.”7 4/”8 4/”9 46”ÌF 4ÌC” 5” 5” 5” 5” 5”! 5”# 5”0 5(”2 5*”? 57”ÌJ 5ÌB”ÌL 5ÌD”ÌM 5ÌE”ÌN 5ÌF’” 7”# 7” 8” 8” 8”" 8”( 8 ”9 81”: 82”ÌL 8ÌD”ÌM 8ÌE”ÌT 8ÌL”ÌV 8ÌN”Ìa 8ÌY”Ìb 8ÌZ”Ìc 8Ì[œ” 9” 9” 9”$ 9”& 9”1 9(”3 9*”< 93”> 95”ÌG 9>”ÌI 9?”ÌJ 9Ì@‘” :‘” ;œ” <” <” <” <” <”! <”# <”2 <*”4 <,”> <6”? <7”Ì@ <8œ” =” =” =”$ =”& =”( = ”* ="”3 =+”5 =-”7 =/”9 =1”: =2‘” >‘”	 ?”” ?” ?” ?” ?Ü ” Ì@” Ì@” Ì@” Ì@” Ì@” Ì@”  Ì@”/ Ì@)”1 Ì@+”; Ì@5”> Ì@8”ÌB Ì@<”ÌC Ì@=”ÌL Ì@ÌF”ÌM Ì@ÌG”ÌP Ì@ÌJ”ÌQ Ì@ÌK”ÌR Ì@ÌL”ÌS Ì@ÌMœ” ÌA” ÌA” ÌA”  ÌA”" ÌA”$ ÌA”& ÌA ”/ ÌA)”1 ÌA+”3 ÌA-”5 ÌA/”6 ÌA0‘”	 ÌB’” ÌC” ÌC’” ÌE” ÌE–” ÌF”
+ ÌF” ÌF	” ÌF” ÌF”  ÌF’” ÌG” ÌGš” ÌH” ÌH”! ÌH”$ ÌH”( ÌH"”9 ÌH3”: ÌH4”ÌI ÌHÌC”ÌK ÌHÌE”ÌL ÌHÌF™” ÌI” ÌI” ÌI” ÌI”! ÌI”0 ÌI*”1 ÌI+”7 ÌI1”8 ÌI2”” ÌJ” ÌJ”! ÌJ”" ÌJ“” ÌK” ÌK” ÌK	Ü ” ÌM” ÌM” ÌM” ÌM” ÌM” ÌM” ÌM”0 ÌM*”2 ÌM,”> ÌM8”ÌB ÌM<”ÌC ÌM=”ÌL ÌMÌF”ÌM ÌMÌG”ÌS ÌMÌM”ÌT ÌMÌN”ÌV ÌMÌP”ÌW ÌMÌQ”ÌX ÌMÌRÜ ” ÌO” ÌO
+” ÌO” ÌO”  ÌO”! ÌO”* ÌO$”. ÌO(”4 ÌO.”5 ÌO/”> ÌO8”? ÌO9”ÌE ÌO?”ÌH ÌOÌB”ÌI ÌOÌC”ÌK ÌOÌE›” ÌP” ÌP”! ÌP”$ ÌP”* ÌP"”+ ÌP#”4 ÌP,”5 ÌP-”6 ÌP.”7 ÌP/”8 ÌP0” ÌQ” ÌQ” ÌQ” ÌQ” ÌQ”! ÌQ”# ÌQ”4 ÌQ,”6 ÌQ.”ÌC ÌQ;”ÌN ÌQÌF”ÌP ÌQÌH”ÌQ ÌQÌI”ÌR ÌQÌJ”” ÌR” ÌR”" ÌR”# ÌR‘” ÌS”” ÌT” ÌT” ÌT” ÌT‘”	 ÌU”” ÌU” ÌU” ÌU” ÌUÜ ” ÌV” ÌV” ÌV” ÌV” ÌV” ÌV”  ÌV”1 ÌV+”3 ÌV-”= ÌV7”Ì@ ÌV:”ÌD ÌV>”ÌE ÌV?”ÌN ÌVÌH”ÌO ÌVÌI”ÌR ÌVÌL”ÌS ÌVÌM”ÌT ÌVÌN”ÌU ÌVÌO”” ÌW” ÌW” ÌW” ÌW‘”	 ÌX’” ÌY” ÌYš” Ì[”
+ Ì[” Ì[	” Ì[” Ì[”# Ì[!”$ Ì["”+ Ì[9”- Ì[:”0 Ì[ÌE’” Ì\” Ì\’” Ì]” Ì]›” Ì^” Ì^” Ì^” Ì^”! Ì^”" Ì^”4 Ì^.”6 Ì^0”9 Ì^3”? Ì^9”Ì@ Ì^:’” Ì`” Ì`œ” Ìa” Ìa” Ìa” Ìa”& Ìa ”' Ìa!”/ Ìa)”2 Ìa,”5 Ìa/”8 Ìa2”Ì@ Ìa:”ÌA Ìa;Ü ” Ìc” Ìc” Ìc” Ìc” Ìc” Ìc” Ìc”ÌE Ìc?”ÌG ÌcÌA”ÌR ÌcÌL”ÌU ÌcÌO”Ì\ ÌcÌV”Ìf ÌcÌ`”Ìh ÌcÌb”Ìi ÌcÌc”Ìj ÌcÌd’” Ìe” ÌeÜ ” Ìf” Ìf” Ìf” Ìf”% Ìf”& Ìf ”. Ìf(”/ Ìf)”2 Ìf,”4 Ìf-”: Ìf3”; Ìf4”ÌC Ìf<”ÌD Ìf=”ÌM ÌfÌF”ÌN ÌfÌG”ÌO ÌfÌHÜ ” Ìg” Ìg” Ìg” Ìg”% Ìg”& Ìg ”. Ìg(”/ Ìg)”9 Ìg3”; Ìg4”ÌA Ìg:”ÌB Ìg;”ÌJ ÌgÌC”ÌK ÌgÌD”ÌQ ÌgÌJ”ÌT ÌgÌM”ÌZ ÌgÌS”Ì[ ÌgÌT”Ìc ÌgÌ\”Ìd ÌgÌ]”Ìn ÌgÌg”Ìo ÌgÌh”Ìp ÌgÌi” Ìh” Ìh” Ìh” Ìh”  Ìh”* Ìh$”+ Ìh%”- Ìh'”/ Ìh(”9 Ìh2”: Ìh3”< Ìh5”= Ìh6”> Ìh7’” Ìj” Ìjš” Ìk” Ìk” Ìk” Ìk” Ìk”' Ìk!”( Ìk"”* Ìk$”+ Ìk%”, Ìk&š” Ìl” Ìl” Ìl” Ìl” Ìl”' Ìl!”( Ìl"”* Ìl$”+ Ìl%”, Ìl&›” Ìn” Ìn” Ìn”  Ìn”& Ìn ”' Ìn!”1 Ìn+”2 Ìn,”< Ìn6”= Ìn7”> Ìn8”” Ìo” Ìo
+” Ìo” Ìo” Ìp” Ìp” Ìp” Ìp” Ìp”! Ìp”# Ìp”6 Ìp.”8 Ìp0”ÌE Ìp=”ÌO ÌpÌG”ÌQ ÌpÌI”ÌR ÌpÌJ”ÌS ÌpÌK’” Ìq”> Ìq6’” Ìr”ÌC Ìr;”” Ìs” Ìs”! Ìs”" Ìs‘” Ìt‘” Ìt” Ìu” Ìu” Ìu” Ìu” Ìu”" Ìu”$ Ìu”7 Ìu/”9 Ìu1”ÌG Ìu?”ÌQ ÌuÌI”ÌS ÌuÌK”ÌT ÌuÌL”ÌU ÌuÌM”” Ìv” Ìv” Ìv” Ìv‘” Ìw‘”	 Ìy”” Ìy” Ìy” Ìy” ÌyŸ” Ìz” Ìz” Ìz” Ìz” Ìz”$ Ìz”' Ìz!”+ Ìz%”, Ìz&”5 Ìz/”6 Ìz0”9 Ìz3”: Ìz4”; Ìz5”< Ìz6”” Ì{” Ì{” Ì{” Ì{‘”	 Ì|’” Ì}” Ì}‘” Ì‘” Ìƒ”” Ì„” Ì„” Ì„” Ì„œ” Ì…” Ì…” Ì…	” Ì…” Ì…” Ì…” Ì…” Ì…” Ì…”# Ì…”% Ì…!”' Ì…#œ” Ì†” Ì†” Ì†” Ì†” Ì†” Ì†” Ì†”< Ì†6”> Ì†8”ÌM Ì†ÌG”ÌN Ì†ÌH”ÌO Ì†ÌI’” Ì‡”Ìy Ì‡'‘”	 Ìˆ’” Ì‰” Ì‰Ü ” ÌŠ” ÌŠ” ÌŠ” ÌŠ” ÌŠ” ÌŠ” ÌŠ” ÌŠ”# ÌŠ”& ÌŠ"”' ÌŠ#”1 ÌŠ-”2 ÌŠ.”; ÌŠ7”< ÌŠ8”> ÌŠ9” Ì‹” Ì‹” Ì‹” Ì‹” Ì‹” Ì‹” Ì‹”< Ì‹6”> Ì‹8”ÌJ Ì‹ÌD”ÌM Ì‹ÌG”ÌO Ì‹ÌI”ÌP Ì‹ÌJ”ÌQ Ì‹ÌK’” Ì” Ì
+’” Ì” Ì›” Ì” Ì”! Ì”$ Ì”* Ì"”+ Ì#”5 Ì-”6 Ì.”9 Ì1”: Ì2”; Ì3”” Ì” Ì” Ì”! Ì” Ì‘
+” Ì‘” Ì‘” Ì‘” Ì‘”% Ì‘”' Ì‘”ÌD Ì‘:”ÌF Ì‘<”ÌO Ì‘ÌE”ÌR Ì‘ÌH”ÌT Ì‘ÌJ”ÌU Ì‘ÌK”ÌV Ì‘ÌL’” Ì’
+”' Ì’™” Ì“
+” Ì“”" Ì“”# Ì“”1 Ì“'”2 Ì“(”5 Ì“+”6 Ì“,”7 Ì“-‘” Ì”	‘” Ì•” Ì–
+” Ì–” Ì–” Ì–”  Ì–”& Ì–”( Ì–”ÌE Ì–;”ÌG Ì–=”ÌQ Ì–ÌG”ÌT Ì–ÌJ”ÌV Ì–ÌL”ÌW Ì–ÌM”ÌX Ì–ÌN‘” Ì—	‘” Ì˜”” Ì˜” Ì˜” Ì˜” Ì˜Ü ” Ì™” Ì™” Ì™” Ì™” Ì™”" Ì™”$ Ì™”ÌA Ì™9”ÌC Ì™;”ÌN Ì™ÌF”ÌQ Ì™ÌI”Ì] Ì™ÌU”Ìa Ì™ÌY”Ìb Ì™ÌZ”Ìk Ì™Ìc”Ìl Ì™Ìd”Ìo Ì™Ìg”Ìp Ì™Ìh”Ìr Ì™Ìj”Ìs Ì™Ìk”Ìt Ì™Ìl‘” Ìš’” Ì›”Ìy Ì›'‘”	 Ìœ’” Ì” Ì›” ÌŸ” ÌŸ” ÌŸ” ÌŸ” ÌŸ” ÌŸ”! ÌŸ”" ÌŸ”. ÌŸ*”/ ÌŸ+”1 ÌŸ-œ” Ì ” Ì ” Ì ” Ì ” Ì ” Ì ” Ì ”- Ì '”/ Ì )”< Ì 6”= Ì 7”> Ì 8”” Ì¡” Ì¡” Ì¡” Ì¡‘”	 Ì¢’” Ì£” Ì£›” Ì¤” Ì¤” Ì¤” Ì¤” Ì¤” Ì¤”! Ì¤”" Ì¤”. Ì¤*”/ Ì¤+”1 Ì¤-” Ì¥” Ì¥” Ì¥” Ì¥” Ì¥” Ì¥” Ì¥”- Ì¥'”/ Ì¥)”; Ì¥5”> Ì¥8”Ì@ Ì¥:”ÌA Ì¥;”ÌB Ì¥<’” Ì¦” Ì¦
+—” Ì§” Ì§” Ì§”ÌB Ì§”ÌE Ì§”Ì Ì§ ”Ì€ Ì§!”” Ì¨” Ì¨” Ì¨” Ì¨”” Ì©
+” Ì©”# Ì©”$ Ì©‘” Ìª	‘” Ì«”” Ì«” Ì«” Ì«” Ì«Ü ” Ì¬” Ì¬” Ì¬” Ì¬” Ì¬”" Ì¬”$ Ì¬”2 Ì¬*”4 Ì¬,”ÌA Ì¬9”ÌD Ì¬<”ÌP Ì¬ÌH”ÌT Ì¬ÌL”ÌU Ì¬ÌM”Ì^ Ì¬ÌV”Ì_ Ì¬ÌW”Ìd Ì¬Ì\”Ìe Ì¬Ì]”Ìg Ì¬Ì_”Ìh Ì¬Ì`”Ìi Ì¬Ìa‘” Ì­‘”	 Ì®’” Ì¯” Ì¯Ü ” Ì°” Ì°” Ì°” Ì°” Ì°” Ì°” Ì°”  Ì°”! Ì°”$ Ì° ”% Ì°!”) Ì°%”* Ì°&”- Ì°)”. Ì°*”6 Ì°2”7 Ì°3”; Ì°7”< Ì°8”> Ì°:’” Ì±” Ì±’” Ì²” Ì²
+™” Ì³” Ì³” Ì³”  Ì³”* Ì³"”+ Ì³#”/ Ì³'”0 Ì³:”1 Ì³;œ” Ì´” Ì´” Ì´”! Ì´”( Ì´ ”) Ì´!”1 Ì´)”4 Ì´,”7 Ì´/”: Ì´2”= Ì´5”> Ì´6” Ìµ” Ìµ” Ìµ” Ìµ” Ìµ”! Ìµ”# Ìµ”1 Ìµ)”3 Ìµ+”Ì@ Ìµ8”ÌH ÌµÌ@”ÌJ ÌµÌB”ÌK ÌµÌC”ÌL ÌµÌD”” Ì¶” Ì¶” Ì¶”  Ì¶‘” Ì·”” Ì·” Ì·” Ì·” Ì·Ü ” Ì¸” Ì¸” Ì¸” Ì¸” Ì¸”" Ì¸”$ Ì¸”2 Ì¸*”4 Ì¸,”Ì@ Ì¸8”ÌC Ì¸;”ÌG Ì¸?”ÌH Ì¸Ì@”ÌQ Ì¸ÌI”ÌR Ì¸ÌJ”ÌU Ì¸ÌM”ÌV Ì¸ÌN”ÌW Ì¸ÌO”ÌX Ì¸ÌP‘” Ì¹‘”	 Ìº’” Ì¼” Ì¼” Ì½” Ì½	” Ì½
+” Ì½” Ì½” Ì½” Ì½”) Ì½%”+ Ì½'”; Ì½7”> Ì½:”Ì@ Ì½<”ÌA Ì½=”ÌB Ì½>’” Ì¾”Ìu Ì¾%’” Ì¿” Ì¿‘” ÌÃÔrI–§version¤file§sources®sourcesContent¥names¨mappingsÀ‘À‘ÀÜ ®‘”    ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”  	 ‘”  
+ ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”    ‘”  ! ‘”  " ‘”  # ‘”  $ ‘”  % ‘”  & ‘”  ' ‘”  ( ‘”  ) ‘”  * ‘”  + ‘”  , ‘”  - ‘”  . ‘”  / ‘”  0 ‘”  1 ‘”  2 ‘”  3 ‘”  4 ‘”  5 ‘”  6 ‘”  7 ‘”  8 ‘”  9 ‘”  : ‘”  ; ‘”  < ‘”  = ‘”  > ‘”  ? ‘”  Ì@ ‘”  ÌA ‘”  ÌB ‘”  ÌC ‘”  ÌD ‘”  ÌE ‘”  ÌF ‘”  ÌG ‘”  ÌH ‘”  ÌI ‘”  ÌJ ‘”  ÌK ‘”  ÌL ‘”  ÌM ‘”  ÌN ‘”  ÌO ‘”  ÌP ‘”  ÌQ ‘”  ÌR ‘”  ÌS ‘”  ÌT ‘”  ÌU ‘”  ÌV ‘”  ÌW ‘”  ÌX ‘”  ÌY ‘”  ÌZ ‘”  Ì[ ‘”  Ì\ ‘”  Ì] ‘”  Ì^ ‘”  Ì_ ‘”  Ì` ‘”  Ìa ‘”  Ìb ‘”  Ìc ‘”  Ìd ‘”  Ìe ‘”  Ìf ‘”  Ìg ‘”  Ìh ‘”  Ìi ‘”  Ìj ‘”  Ìk ‘”  Ìl ‘”  Ìm ‘”  Ìn ‘”  Ìo ‘”  Ìp ‘”  Ìq ‘”  Ìr ‘”  Ìs ‘”  Ìt ‘”  Ìu ‘”  Ìv ‘”  Ìw ‘”  Ìx ‘”  Ìy ‘”  Ìz ‘”  Ì{ ‘”  Ì| ‘”  Ì} ‘”  Ì~ ‘”  Ì ‘”  Ì€ ‘”  Ì ‘”  Ì‚ ‘”  Ìƒ ‘”  Ì„ ‘”  Ì… ‘”  Ì† ‘”  Ì‡ ‘”  Ìˆ ‘”  Ì‰ ‘”  ÌŠ ‘”  Ì‹ ‘”  ÌŒ ‘”  Ì ‘”  Ì ‘”  Ì ‘”  Ì ‘”  Ì‘ ‘”  Ì’ ‘”  Ì“ ‘”  Ì” ‘”  Ì• ‘”  Ì– ‘”  Ì— ‘”  Ì˜ ‘”  Ì™ ‘”  Ìš ‘”  Ì› ‘”  Ìœ ‘”  Ì ‘”  Ì ‘”  ÌŸ ‘”  Ì  ‘”  Ì¡ ‘”  Ì¢ ‘”  Ì£ ‘”  Ì¤ ‘”  Ì¥ ‘”  Ì¦ ‘”  Ì§ ‘”  Ì¨ ‘”  Ì© ‘”  Ìª ‘”  Ì« ‘”  Ì¬ ‘”  Ì­ ÔrJ’§missing¦pluginÃ¦genAbcÂÔ  ÔrK”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache•ÔrL•¤type¥start£endªspecifiers¦source±ImportDeclaration =‘ÔrM”¤type¥start£end¥local¶ImportDefaultSpecifierÔrN”¤type¥start£end¤nameªIdentifier±photoAccessHelperÔrO•¤type¥start£end¥value£raw§Literal<¼@ohos.file.photoAccessHelper¾"@ohos.file.photoAccessHelper"L±ImportDeclaration?Ì]‘M¶ImportDefaultSpecifierÌFÌJNªIdentifierÌFÌJ¤utilO§LiteralÌPÌ\ª@ohos.util¬"@ohos.util"L±ImportDeclarationÌ_Ì‚‘M¶ImportDefaultSpecifierÌfÌlNªIdentifierÌfÌl¦fileIoO§LiteralÌrÌ­@ohos.file.fs¯"@ohos.file.fs"L±ImportDeclarationÌ„Ì­‘M¶ImportDefaultSpecifierÌ‹Ì’NªIdentifierÌ‹Ì’§fileUriO§LiteralÌ˜Ì¬²@ohos.file.fileuri´"@ohos.file.fileuri"L±ImportDeclarationÌ¯ÌÏ‘M¶ImportDefaultSpecifierÌ¶Ì»NªIdentifierÌ¶Ì»¥hilogO§LiteralÌÁÌÎ«@ohos.hilog­"@ohos.hilog"

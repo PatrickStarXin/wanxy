@@ -1,0 +1,844 @@
+{
+  "ohos-module-router_manage": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\common\\router_manage\\build",
+    "DEPENDENCY_INFO": {},
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\common\\router_manage\\src\\main",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\common\\router_manage\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\cache\\default\\default@HarCompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\common\\router_manage\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": true,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              },
+              "consumerFiles": [
+                "./consumer-rules.txt"
+              ]
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-module-phone": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\product\\phone\\build",
+    "DEPENDENCY_INFO": {
+      "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage",
+      "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils",
+      "feature_home": "E:\\Chrome\\download\\Food\\feature\\feature_home",
+      "feature_food": "E:\\Chrome\\download\\Food\\feature\\feature_food",
+      "feature_order": "E:\\Chrome\\download\\Food\\feature\\feature_order",
+      "feature_mine": "E:\\Chrome\\download\\Food\\feature\\feature_mine",
+      "feature_map": "E:\\Chrome\\download\\Food\\feature\\feature_map",
+      "@hw-agconnect/auth": "E:\\Chrome\\download\\Food\\oh_modules\\.ohpm\\@hw-agconnect+auth@1.0.5\\oh_modules\\@hw-agconnect\\auth"
+    },
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\product\\phone\\src\\main",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\product\\phone\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\cache\\default\\default@CompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      },
+      "ohosTest": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\product\\phone\\src\\ohosTest",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\product\\phone\\src\\ohosTest\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\outputs\\ohosTest",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\loader_out\\ohosTest",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\loader_out_lite\\ohosTest",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\res\\ohosTest",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\res\\ohosTest\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\cache\\ohosTest\\ohosTest@OhosTestCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\cache\\ohosTest\\ohosTest@OhosTestCompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\loader\\ohosTest\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\manifest\\ohosTest",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\hap_metadata\\ohosTest\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\product\\phone\\build\\default\\intermediates\\source_map\\ohosTest"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-module-feature_home": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build",
+    "DEPENDENCY_INFO": {
+      "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils",
+      "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage"
+    },
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\cache\\default\\default@HarCompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_home\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              },
+              "consumerFiles": [
+                "./consumer-rules.txt"
+              ]
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-module-feature_food": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build",
+    "DEPENDENCY_INFO": {
+      "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage",
+      "feature_map": "E:\\Chrome\\download\\Food\\feature\\feature_map",
+      "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils",
+      "feature_home": "E:\\Chrome\\download\\Food\\feature\\feature_home"
+    },
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\cache\\default\\default@HarCompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_food\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              },
+              "consumerFiles": [
+                "./consumer-rules.txt"
+              ]
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-module-feature_order": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build",
+    "DEPENDENCY_INFO": {
+      "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage",
+      "feature_food": "E:\\Chrome\\download\\Food\\feature\\feature_food",
+      "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils",
+      "feature_map": "E:\\Chrome\\download\\Food\\feature\\feature_map",
+      "feature_home": "E:\\Chrome\\download\\Food\\feature\\feature_home"
+    },
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\feature\\feature_order\\src\\main",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\feature\\feature_order\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\cache\\default\\default@HarCompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_order\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              },
+              "consumerFiles": [
+                "./consumer-rules.txt"
+              ]
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-module-feature_mine": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build",
+    "DEPENDENCY_INFO": {
+      "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils",
+      "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage",
+      "feature_map": "E:\\Chrome\\download\\Food\\feature\\feature_map",
+      "feature_food": "E:\\Chrome\\download\\Food\\feature\\feature_food",
+      "feature_home": "E:\\Chrome\\download\\Food\\feature\\feature_home"
+    },
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\src\\main",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\feature\\feature_mine\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\cache\\default\\default@HarCompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_mine\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              },
+              "consumerFiles": [
+                "./consumer-rules.txt"
+              ]
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-module-feature_map": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build",
+    "DEPENDENCY_INFO": {
+      "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage",
+      "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils"
+    },
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\feature\\feature_map\\src\\main",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\feature\\feature_map\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\cache\\default\\default@HarCompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\feature\\feature_map\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              },
+              "consumerFiles": [
+                "./consumer-rules.txt"
+              ]
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-module-common_utils": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\common\\common_utils\\build",
+    "DEPENDENCY_INFO": {
+      "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage"
+    },
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "E:\\Chrome\\download\\Food\\common\\common_utils\\src\\main",
+        "RESOURCES_PATH": [
+          "E:\\Chrome\\download\\Food\\common\\common_utils\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\cache\\default\\default@HarCompileJS\\jsbundle",
+          "WORKER_LOADER": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "E:\\Chrome\\download\\Food\\common\\common_utils\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-project": {
+    "SELECT_PRODUCT_NAME": "default",
+    "MODULE_BUILD_DIR": "E:\\Chrome\\download\\Food\\build",
+    "BUNDLE_NAME": "wanxy.food.com",
+    "BUILD_PATH": {
+      "OUTPUT_PATH": "E:\\Chrome\\download\\Food\\build\\outputs\\default"
+    },
+    "MODULES": [
+      {
+        "name": "router_manage",
+        "srcPath": "E:\\Chrome\\download\\Food\\common\\router_manage",
+        "belongProjectPath": "E:\\Chrome\\download\\Food"
+      },
+      {
+        "name": "phone",
+        "srcPath": "E:\\Chrome\\download\\Food\\product\\phone",
+        "targets": [
+          {
+            "name": "default",
+            "applyToProducts": [
+              "default"
+            ]
+          }
+        ],
+        "belongProjectPath": "E:\\Chrome\\download\\Food"
+      },
+      {
+        "name": "feature_home",
+        "srcPath": "E:\\Chrome\\download\\Food\\feature\\feature_home",
+        "belongProjectPath": "E:\\Chrome\\download\\Food"
+      },
+      {
+        "name": "feature_food",
+        "srcPath": "E:\\Chrome\\download\\Food\\feature\\feature_food",
+        "belongProjectPath": "E:\\Chrome\\download\\Food"
+      },
+      {
+        "name": "feature_order",
+        "srcPath": "E:\\Chrome\\download\\Food\\feature\\feature_order",
+        "belongProjectPath": "E:\\Chrome\\download\\Food"
+      },
+      {
+        "name": "feature_mine",
+        "srcPath": "E:\\Chrome\\download\\Food\\feature\\feature_mine",
+        "belongProjectPath": "E:\\Chrome\\download\\Food"
+      },
+      {
+        "name": "feature_map",
+        "srcPath": "E:\\Chrome\\download\\Food\\feature\\feature_map",
+        "belongProjectPath": "E:\\Chrome\\download\\Food"
+      },
+      {
+        "name": "common_utils",
+        "srcPath": "E:\\Chrome\\download\\Food\\common\\common_utils",
+        "targets": [
+          {
+            "name": "default",
+            "applyToProducts": [
+              "default"
+            ]
+          }
+        ],
+        "belongProjectPath": "E:\\Chrome\\download\\Food"
+      }
+    ],
+    "PROFILE_OPT": {
+      "app": {
+        "products": [
+          {
+            "name": "default",
+            "signingConfig": "default",
+            "compatibleSdkVersion": "5.0.1(13)",
+            "runtimeOS": "HarmonyOS",
+            "buildOption": {
+              "strictMode": {
+                "caseSensitiveCheck": true,
+                "useNormalizedOHMUrl": true
+              }
+            }
+          }
+        ],
+        "buildModeSet": [
+          {
+            "name": "debug"
+          },
+          {
+            "name": "release"
+          }
+        ],
+        "signingConfigs": [
+          {
+            "name": "default",
+            "type": "HarmonyOS",
+            "material": {
+              "certpath": "C:\\Users\\wanxy\\.ohos\\config\\default_Food_dzUDgecZv2djog8qkIut4zbC5WHDrPWJQRyS1HyGGV0=.cer",
+              "keyAlias": "debugKey",
+              "keyPassword": "0000001B6D290B78385591B625B6D24A2992FD0036D3AD12AFF2CCF13165A8E05A79A3057327F6A416D989",
+              "profile": "C:\\Users\\wanxy\\.ohos\\config\\default_Food_dzUDgecZv2djog8qkIut4zbC5WHDrPWJQRyS1HyGGV0=.p7b",
+              "signAlg": "SHA256withECDSA",
+              "storeFile": "C:\\Users\\wanxy\\.ohos\\config\\default_Food_dzUDgecZv2djog8qkIut4zbC5WHDrPWJQRyS1HyGGV0=.p12",
+              "storePassword": "0000001B44A9C37A3B5588A77C93137996CECD8538FD6C4CB8C523C848FA1EF2033C4E1B6F2CD80935FBEE"
+            }
+          }
+        ]
+      },
+      "modules": [
+        {
+          "name": "router_manage",
+          "srcPath": "./common/router_manage"
+        },
+        {
+          "name": "phone",
+          "srcPath": "./product/phone",
+          "targets": [
+            {
+              "name": "default",
+              "applyToProducts": [
+                "default"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "feature_home",
+          "srcPath": "./feature/feature_home"
+        },
+        {
+          "name": "feature_food",
+          "srcPath": "./feature/feature_food"
+        },
+        {
+          "name": "feature_order",
+          "srcPath": "./feature/feature_order"
+        },
+        {
+          "name": "feature_mine",
+          "srcPath": "./feature/feature_mine"
+        },
+        {
+          "name": "feature_map",
+          "srcPath": "./feature/feature_map"
+        },
+        {
+          "name": "common_utils",
+          "srcPath": "./common/common_utils",
+          "targets": [
+            {
+              "name": "default",
+              "applyToProducts": [
+                "default"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "CONFIG_PROPERTIES": {
+      "enableSignTask": true,
+      "skipNativeIncremental": false,
+      "hvigor.keepDependency": true
+    },
+    "OVERALL_PROJECT_PATHS": [
+      "E:\\Chrome\\download\\Food"
+    ],
+    "BUILD_CACHE_DIR": ""
+  },
+  "version": 1
+}

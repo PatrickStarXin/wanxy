@@ -1,0 +1,24 @@
+{
+  "color": [
+    {
+      "name": "white",
+      "value": "#FFFFFF"
+    },
+    {
+      "name" : "system_green",
+      "value": "#86C139"
+    },
+    {
+      "name" : "system_bg_white",
+      "value": "#F7F8FA"
+    },
+    {
+      "name" : "border_color",
+      "value": "#fffafafc"
+    },
+    {
+      "name" : "food_des_color",
+      "value": "#ffe2c8c8"
+    }
+  ]
+}

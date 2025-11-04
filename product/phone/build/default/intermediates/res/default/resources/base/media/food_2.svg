@@ -1,0 +1,22 @@
+<svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip96_15044">
+			<rect id="汉堡" width="48.000000" height="48.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip96_15044)">
+		<path id="path" d="M40.98 21.98L41 22C41 22.56 40.56 23 40 23C39.43 23 39 22.56 39 22L39.01 21.98L40.98 21.98ZM8.98 21.98L9 22C9 22.56 8.56 23 8 23C7.43 23 7 22.56 7 22L7.01 21.98L8.98 21.98Z" fill="#000000" fill-opacity="0" fill-rule="nonzero"/>
+		<path id="path" d="M40 22L40 21C40 12.16 32.83 5 24 5C15.16 5 8 12.16 8 21L8 22" stroke="#333333" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path id="path" d="M7.08 33.65L7.07 33.62C7.27 33.1 7.85 32.86 8.37 33.07C8.89 33.27 9.13 33.85 8.92 34.37L8.9 34.38L7.08 33.65ZM39.09 34.38L39.07 34.37C38.86 33.85 39.1 33.27 39.62 33.07C40.14 32.86 40.72 33.1 40.92 33.62L40.91 33.65L39.09 34.38Z" fill="#000000" fill-opacity="0" fill-rule="nonzero"/>
+		<path id="path" d="M8 34C8 34 6 39 10 41C14 43 34 43 38 41C42 39 40 34 40 34" stroke="#333333" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<rect id="rect" x="5.000000" y="21.000000" rx="7.000000" width="38.000000" height="14.000000" fill="#71A336" fill-opacity="1.000000"/>
+		<rect id="rect" x="5.000000" y="21.000000" rx="7.000000" width="38.000000" height="14.000000" stroke="#333333" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+		<path id="path" d="M11.45 29.86L11.44 29.89C10.94 30.14 10.35 29.94 10.1 29.44C9.85 28.94 10.05 28.35 10.55 28.1L10.58 28.11L11.45 29.86ZM37.41 28.11L37.44 28.1C37.94 28.35 38.14 28.94 37.89 29.44C37.64 29.94 37.05 30.14 36.55 29.89L36.54 29.86L37.41 28.11Z" fill="#000000" fill-opacity="0" fill-rule="nonzero"/>
+		<path id="path" d="M11 29L12.59 28.2C14.12 27.43 15.91 27.36 17.5 28L17.92 28.16C19.24 28.69 20.72 28.63 22 28C23.27 27.36 24.75 27.3 26.07 27.83L27.03 28.21C28.28 28.71 29.68 28.65 30.89 28.05C32.21 27.39 33.78 27.39 35.1 28.05L37 29" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<circle id="circle" cx="17.000000" cy="15.049805" r="2.500000" fill="#333333" fill-opacity="1.000000"/>
+		<circle id="circle" cx="23.750000" cy="12.299805" r="2.500000" fill="#333333" fill-opacity="1.000000"/>
+	</g>
+</svg>

@@ -1,0 +1,74 @@
+{
+  "modulePathMap": {
+    "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage",
+    "phone": "E:\\Chrome\\download\\Food\\product\\phone",
+    "feature_home": "E:\\Chrome\\download\\Food\\feature\\feature_home",
+    "feature_food": "E:\\Chrome\\download\\Food\\feature\\feature_food",
+    "feature_order": "E:\\Chrome\\download\\Food\\feature\\feature_order",
+    "feature_mine": "E:\\Chrome\\download\\Food\\feature\\feature_mine",
+    "feature_map": "E:\\Chrome\\download\\Food\\feature\\feature_map",
+    "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils"
+  },
+  "compileMode": "esmodule",
+  "projectRootPath": "E:\\Chrome\\download\\Food",
+  "nodeModulesPath": "E:\\Chrome\\download\\Food\\product\\phone\\.preview\\default\\intermediates\\loader_out\\default\\node_modules",
+  "byteCodeHarInfo": {},
+  "declarationEntry": [],
+  "moduleName": "phone",
+  "hspNameOhmMap": {},
+  "harNameOhmMap": {},
+  "packageManagerType": "ohpm",
+  "compileEntry": [
+    "E:\\Chrome\\download\\Food\\product\\phone\\src\\main\\ets\\pages\\Main.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\ets\\pages\\PageTakeOut.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\ets\\pages\\PageAddAddress.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\pages\\PageFoodDetail.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_order\\src\\main\\ets\\pages\\PageOrderPreview.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_map\\src\\main\\ets\\pages\\PageShopList.ets"
+  ],
+  "otherCompileFiles": [],
+  "dynamicImportLibInfo": {},
+  "routerMap": [
+    {
+      "ohmurl": "@bundle:com.atomicservice.5765880207855620561/phone/ets/pages/Main",
+      "name": "PageMain",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\product\\phone\\src\\main\\ets\\pages\\Main.ets",
+      "buildFunction": "MainPageBuilder"
+    },
+    {
+      "ohmurl": "@bundle:com.atomicservice.5765880207855620561/phone@feature_home/ets/pages/PageTakeOut",
+      "name": "PageTakeOut",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\ets\\pages\\PageTakeOut.ets",
+      "buildFunction": "PageTakeOutBuilder"
+    },
+    {
+      "ohmurl": "@bundle:com.atomicservice.5765880207855620561/phone@feature_home/ets/pages/PageAddAddress",
+      "name": "PageAddAddress",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_home\\src\\main\\ets\\pages\\PageAddAddress.ets",
+      "buildFunction": "PageAddAddressBuilder"
+    },
+    {
+      "ohmurl": "@bundle:com.atomicservice.5765880207855620561/phone@feature_food/ets/pages/PageFoodDetail",
+      "name": "PageFoodDetail",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\pages\\PageFoodDetail.ets",
+      "buildFunction": "PageFoodDetailBuilder"
+    },
+    {
+      "ohmurl": "@bundle:com.atomicservice.5765880207855620561/phone@feature_order/ets/pages/PageOrderPreview",
+      "name": "PageOrderPreview",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_order\\src\\main\\ets\\pages\\PageOrderPreview.ets",
+      "buildFunction": "PageOrderPreviewBuilder"
+    },
+    {
+      "ohmurl": "@bundle:com.atomicservice.5765880207855620561/phone@feature_map/ets/pages/PageShopList",
+      "name": "PageShopList",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_map\\src\\main\\ets\\pages\\PageShopList.ets",
+      "buildFunction": "PageShopListBuilder"
+    }
+  ],
+  "hspResourcesMap": {},
+  "updateVersionInfo": {},
+  "anBuildOutPut": "E:\\Chrome\\download\\Food\\product\\phone\\.preview\\default\\intermediates\\loader_out\\default\\an\\arm64-v8a",
+  "anBuildMode": "type",
+  "buildConfigPath": ".preview\\config\\buildConfig.json"
+}

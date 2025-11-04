@@ -1,0 +1,12 @@
+{
+  "module": {
+    "name": "feature_mine",
+    "type": "har",
+    "routerMap": "$profile:route_map",   // 此处需要添加路由才能跳转
+    "deviceTypes": [
+      "default",
+      "tablet",
+      "2in1"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "routerMap": [
+    {
+      "name": "FoodManagePage",
+      "pageSourceFile": "src/main/ets/pages/FoodManagePage.ets",
+      "buildFunction": "FoodManagePageBuilder",
+      "data": {
+        "description": "this is FoodManagePage"
+      }
+    },
+    {
+      "name": "AddFoodPage",
+      "pageSourceFile": "src/main/ets/pages/AddFoodPage.ets",
+      "buildFunction": "AddFoodPageBuilder",
+      "data": {
+        "description": "this is AddFoodPage"
+      }
+    }
+  ]
+}

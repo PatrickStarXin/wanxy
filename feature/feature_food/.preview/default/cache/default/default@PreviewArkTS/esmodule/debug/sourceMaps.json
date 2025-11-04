@@ -1,0 +1,186 @@
+{
+  "feature_food|feature_food|1.0.0|src/main/ets/model/FoodModelData.js": {
+    "version": 3,
+    "file": "FoodModelData.ts",
+    "sources": [
+      "feature/feature_food/src/main/ets/model/FoodModelData.ts"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;AAQC;AAED;AAGC;AAED;AACE;;AAGF;AACE;;AAGF;AACE;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;;AAGH;AACE;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;AACD;AACE;AACA;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACF;AACF;;AAGH;;AAEA;AAEA;;AAEA;",
+    "entry-package-info": "feature_food|1.0.0"
+  },
+  "feature_food|feature_food|1.0.0|src/main/ets/components/FoodCategory.js": {
+    "version": 3,
+    "file": "FoodCategory.ets",
+    "sources": [
+      "feature/feature_food/src/main/ets/components/FoodCategory.ets"
+    ],
+    "names": [],
+    "mappings": "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",
+    "entry-package-info": "feature_food|1.0.0"
+  },
+  "feature_food|feature_food|1.0.0|src/main/ets/pages/PageFoodDetail.js": {
+    "version": 3,
+    "file": "PageFoodDetail.ets",
+    "sources": [
+      "feature/feature_food/src/main/ets/pages/PageFoodDetail.ets"
+    ],
+    "names": [],
+    "mappings": ";;;AAAA;;;;;;;;;;;;;AAaG;AAEH;AACA;AACA;AAGA;;;;;;;;;;;;;;;;AAEC;AAID;AADA;;;AAKE;;;;AAHgC;;AAIR;AACG;;;AAV5B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAaG;;;AAGC;AAED;AACE;AACD;;AAGH;;;;;;;;;AAGM;;;;;;;;;;;AAEI;;;;AAAA;;;;;;;;AAGE;;;;;;;;;;;;;;;;;;AASJ;;AAAA;;;;;;;AACE;;;;;;;;;;;;AAGE;;;;;;;AACE;AAAA;AAGI;;AAEC;;;;AAEL;;;;;;;;;;;AACA;AAAA;;;;;;;;;AAWJ;AAAA;;;;AAAA;;;AAWE;AACA;AACE;AACA;AACD;AAAM;AACL;AACD;AAED;;;;;;;;;;AAlBA;;;;;;;;;;AAsCT;AACA;;;;AACF;;;;;;;;;;",
+    "entry-package-info": "feature_food|1.0.0"
+  },
+  "feature_food|feature_map|1.0.0|Index.js": {
+    "version": 3,
+    "file": "Index.ets",
+    "sources": [
+      "feature/feature_map/Index.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "feature_map|1.0.0"
+  },
+  "feature_food|routermodule|1.0.0|Index.js": {
+    "version": 3,
+    "file": "Index.ets",
+    "sources": [
+      "common/router_manage/Index.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;AAEA;AAEA;AAEA;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "routermodule|1.0.0"
+  },
+  "feature_food|common_utils|1.0.0|Index.js": {
+    "version": 3,
+    "file": "Index.ets",
+    "sources": [
+      "common/common_utils/Index.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;AACA;AACA;AACA;AACA;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "common_utils|1.0.0"
+  },
+  "feature_food|feature_map|1.0.0|src/main/ets/model/ShopModelData.js": {
+    "version": 3,
+    "file": "ShopModelData.ts",
+    "sources": [
+      "feature/feature_map/src/main/ets/model/ShopModelData.ts"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;AAUC;AAED;AACE;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACD;AACD;AACE;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACD;;AAGH;AACE;;AAEI;AACD;AACF;AACD;AACF;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "feature_map|1.0.0"
+  },
+  "feature_food|routermodule|1.0.0|src/main/ets/models/RouterModule.js": {
+    "version": 3,
+    "file": "RouterModule.ets",
+    "sources": [
+      "common/router_manage/src/main/ets/models/RouterModule.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;AAIA;;AAIS;;;;;;;;;;AAYL;AACE;AACD;AAAM;AACL;AACD;;;;;AAMD;AACE;AACD;AAAM;AACL;AACD;;;AAII;;;;AAKA;AACL;;;AAIK;;;;;;AAOL;;AAEC;AACD;AACA;;;AAtDK;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "routermodule|1.0.0"
+  },
+  "feature_food|routermodule|1.0.0|src/main/ets/commons/AnimateMap.js": {
+    "version": 3,
+    "file": "AnimateMap.ets",
+    "sources": [
+      "common/router_manage/src/main/ets/commons/AnimateMap.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;AAAA;AACE;AACA;AACF;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "routermodule|1.0.0"
+  },
+  "feature_food|routermodule|1.0.0|src/main/ets/commons/NavRouterMap.js": {
+    "version": 3,
+    "file": "NavRouterMap.ets",
+    "sources": [
+      "common/router_manage/src/main/ets/commons/NavRouterMap.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;AAAA;;AAEE;;AAGA;;AAGA;;AAGA;;AAGA;;AAGA;AAGF;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "routermodule|1.0.0"
+  },
+  "feature_food|routermodule|1.0.0|src/main/ets/commons/NavStackMap.js": {
+    "version": 3,
+    "file": "NavStackMap.ets",
+    "sources": [
+      "common/router_manage/src/main/ets/commons/NavStackMap.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;AAAA;AACE;AACF;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "routermodule|1.0.0"
+  },
+  "feature_food|common_utils|1.0.0|src/main/ets/utils/PermissionsUtil.js": {
+    "version": 3,
+    "file": "PermissionsUtil.ets",
+    "sources": [
+      "common/common_utils/src/main/ets/utils/PermissionsUtil.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;AAAA;AAEA;AAEA;AAGA;;;;;AAKI;;;AAGE;;;;;;AAMC;AACF;;;;;;;AASD;;AAEA;;;;;;AAOE;AACA;AACA;AACD;AACD;;AAEE;AACD;;;;;AAMA;AAAC;;AAEA;AACD;AACD;;;AAKF;AACE;;;;;;;AAOG;;AAEC;;;AAGC;AACH;AACC;AACC;AACA;AACE;AACD;AACH;;AAEL;AAQD;AACE;AACE;AACD;AAAM;AACL;AACD;AACH;AAEA;AACA;AACA;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "common_utils|1.0.0"
+  },
+  "feature_food|common_utils|1.0.0|src/main/ets/utils/PreferenceUtil.js": {
+    "version": 3,
+    "file": "PreferenceUtil.ets",
+    "sources": [
+      "common/common_utils/src/main/ets/utils/PreferenceUtil.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;AACA;AACA;AAIA;;;;AAIG;AACH;AAES;AACL;;AAEA;;AAGF;;;;AAIG;;;AAGC;;AAED;;;AAEJ;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "common_utils|1.0.0"
+  },
+  "feature_food|common_utils|1.0.0|src/main/ets/utils/MathUtil.js": {
+    "version": 3,
+    "file": "MathUtil.ets",
+    "sources": [
+      "common/common_utils/src/main/ets/utils/MathUtil.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;;;;;AAKG;AACH;AACE;;;;;;;;;;;;;;;;;AAiBG;AAEH;AACE;AACD;;;;;AAOD;AACE;AACD;;;;AAKD;;AAGA;AACA;;;;AAKA;;;;;;AAQA;AAEA;AAEF;AAGA;;;;;AAKG;AACH;AACE;AACE;AACD;;AAEC;AACD;;;;AAKD;AACE;AACD;;;;AAKD;AAEA;AACA;;;;AAKA;;;AAGA;AACA;AACE;AACD;;AAID;AACE;AACD;;;;AAIH;AAGA;;;;;AAKG;AACH;AACE;AACE;AACD;;;AAID;AACE;AACD;;;AAKD;AAEA;AACA;AACF;AAIA;;;;;AAKG;AAEH;AACE;AACE;AACD;;;AAID;AACE;AACD;;;;AAOD;AAEA;AACF;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "common_utils|1.0.0"
+  },
+  "feature_food|common_utils|1.0.0|src/main/ets/model/OrderType.js": {
+    "version": 3,
+    "file": "OrderType.ets",
+    "sources": [
+      "common/common_utils/src/main/ets/model/OrderType.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;AAAA;AACE;AACA;AACF;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "common_utils|1.0.0"
+  },
+  "feature_food|common_utils|1.0.0|src/main/ets/utils/Logger.js": {
+    "version": 3,
+    "file": "Logger.ets",
+    "sources": [
+      "common/common_utils/src/main/ets/utils/Logger.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;AAEA;;;;AAIG;AACH;AAOE;;;;AAIG;AACH;AACE;;AAGF;;;;AAIG;AACH;AACE;;AAGF;;;;AAIG;AACH;AACE;;AAGF;;;;AAIG;AACH;AACE;;;AAtCa;AACA;AACA;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "common_utils|1.0.0"
+  },
+  "feature_food|common_utils|1.0.0|src/main/ets/constants/CommonConstants.js": {
+    "version": 3,
+    "file": "CommonConstants.ets",
+    "sources": [
+      "common/common_utils/src/main/ets/constants/CommonConstants.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;AAaG;AAEH;;AAEG;AACH;AAAA;AACE;;AAEG;;AAGH;;AAEG;;AAGH;;AAEG;;AAGH;;AAEG;;;AAEJ;AAED;",
+    "entry-package-info": "feature_food|1.0.0",
+    "package-info": "common_utils|1.0.0"
+  }
+}

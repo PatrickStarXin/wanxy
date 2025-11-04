@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8e5d6989-0b86-4466-8e94-2ee6c7804bc7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/common/common_utils/src/main/ets/viewmodel/Specifications.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/cache/file-cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/cache/file-cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/cache/task-cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/cache/task-cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.4" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.5" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.6" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.7" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.8" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.9" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/build-logs/build.log.9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/logs/details/details.json" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/logs/details/details.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/outputs/sync/fileCache.json" beforeDir="false" afterPath="$PROJECT_DIR$/.hvigor/outputs/sync/fileCache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510292249357860.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510292250007580.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510302005249720.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510302010094520.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510302013384860.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510302014147370.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510302025384440.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510302027100910.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510302156256530.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.hvigor/report/report-202510302309034930.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/common/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/common/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/src/main/ets/components/MineComponent.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/src/main/ets/components/MineComponent.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/src/main/ets/pages/AddFoodPage.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/src/main/ets/pages/AddFoodPage.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_mine/src/main/resources/base/profile/route_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_mine/src/main/resources/base/profile/route_map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/feature_order/src/main/ets/model/OrderInfo.ets" beforeDir="false" afterPath="$PROJECT_DIR$/feature/feature_order/src/main/ets/model/OrderInfo.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/.ts_checker_cache" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/.ts_checker_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/.tsbuildinfo.linter" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/.tsbuildinfo.linter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/Index.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/Index.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/Index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/Index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/src/main/ets/constants/SqlConstants.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/src/main/ets/constants/SqlConstants.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/src/main/ets/constants/SqlConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/src/main/ets/constants/SqlConstants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/src/main/ets/service/DatabaseService.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/src/main/ets/service/DatabaseService.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/src/main/ets/service/DatabaseService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/common_utils/src/main/ets/service/DatabaseService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compileContextInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compileContextInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/AnimateMap.ets-b40c80d07882e6a3bfdf59f54de23f3f.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/AnimateMap.ets-b40c80d07882e6a3bfdf59f54de23f3f.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/DatabaseService.ets-6f046bbfad6cd6dc7cc423009d982d12.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/DatabaseService.ets-6f046bbfad6cd6dc7cc423009d982d12.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/EventManager.ets-8adbaf2081bf3229ad2bb99c8ebc40fd.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/EventManager.ets-8adbaf2081bf3229ad2bb99c8ebc40fd.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/FoodCategory.ets-5eda824930f3d9d0358e64bcfa589c23.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/FoodCategory.ets-5eda824930f3d9d0358e64bcfa589c23.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Index.ets-18aefd0c354cd14613a999933c4f15e3.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Index.ets-18aefd0c354cd14613a999933c4f15e3.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Index.ets-4c19337ec8ea3f3f1c7dc25f16d2e169.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Index.ets-4c19337ec8ea3f3f1c7dc25f16d2e169.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Index.ets-4e4f0b7efd85432fa0e745ebd587fe14.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Index.ets-4e4f0b7efd85432fa0e745ebd587fe14.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Index.ets-aaa26ac1305e65c9b779b074e3786ced.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Index.ets-aaa26ac1305e65c9b779b074e3786ced.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/LoginUtil.ets-1780c44949da920291316a05e62b123b.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/LoginUtil.ets-1780c44949da920291316a05e62b123b.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Main.ets-4ae0a474f92a648dc55ff04e46e67cca.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/Main.ets-4ae0a474f92a648dc55ff04e46e67cca.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/MapUtil.ets-b489952facd650db2666fcc689f329cc.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/MapUtil.ets-b489952facd650db2666fcc689f329cc.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/MathUtil.ets-d76fc51ebcb0b00bfed1f3dd625764c7.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/MathUtil.ets-d76fc51ebcb0b00bfed1f3dd625764c7.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/MineComponent.ets-8e2024d3ce36eeb4c738cd39c86d4fbc.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/MineComponent.ets-8e2024d3ce36eeb4c738cd39c86d4fbc.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/MineConfig.ets-ad13268884f6ca9212a88782a43e0e5c.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/MineConfig.ets-ad13268884f6ca9212a88782a43e0e5c.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/NavRouterMap.ets-4b0f33dca9d76a0de8a0c92ec41c0a01.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/NavRouterMap.ets-4b0f33dca9d76a0de8a0c92ec41c0a01.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/OrderInfo.ets-e2fec8b7f6630b3d25885c00c100c88a.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/OrderInfo.ets-e2fec8b7f6630b3d25885c00c100c88a.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/OrderType.ets-c6ddc82dbaa41f10b8a8174b613ed691.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/OrderType.ets-c6ddc82dbaa41f10b8a8174b613ed691.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/PageFoodDetail.ets-ac89506dcdd4fbf5e29790d149dd95ef.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/PageFoodDetail.ets-ac89506dcdd4fbf5e29790d149dd95ef.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/PageOrderPreview.ets-295da4f68d77409973c4df5593ebe706.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/PageOrderPreview.ets-295da4f68d77409973c4df5593ebe706.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/PageShopList.ets-d7fdce8304fbfb4dcec5686dd9370d12.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/PageShopList.ets-d7fdce8304fbfb4dcec5686dd9370d12.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/ShopModelData.ts-c2f13fa3b4e01946afc0e99ba58f884c.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/ShopModelData.ts-c2f13fa3b4e01946afc0e99ba58f884c.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/SqlConstants.ets-2179de7e256042aabbc5e892fdda59ed.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/SqlConstants.ets-2179de7e256042aabbc5e892fdda59ed.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/onSelectImageUtil.ets-c2b9b9a74b7a67e70c9c6d0092a1c48e.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/modules/onSelectImageUtil.ets-c2b9b9a74b7a67e70c9c6d0092a1c48e.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/plugins/plugins.msgpack" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/compiler.cache/plugins/plugins.msgpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_mine/src/main/ets/components/MineComponent.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_mine/src/main/ets/components/MineComponent.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_mine/src/main/ets/components/MineComponent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_mine/src/main/ets/components/MineComponent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_order/src/main/ets/model/OrderInfo.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_order/src/main/ets/model/OrderInfo.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_order/src/main/ets/model/OrderInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_order/src/main/ets/model/OrderInfo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_order/src/main/ets/pages/PageOrderPreview.protoBin" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_order/src/main/ets/pages/PageOrderPreview.protoBin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_order/src/main/ets/pages/PageOrderPreview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/feature_order/src/main/ets/pages/PageOrderPreview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/filesInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/filesInfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/modules.cache" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/modules.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/sourceMaps.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug/sourceMaps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug_widget/compileContextInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug_widget/compileContextInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/intermediates/loader/default/loader.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/intermediates/loader/default/loader.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/intermediates/loader/default/widget_loader.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/intermediates/loader/default/widget_loader.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/intermediates/loader_out/default/ets/modules.abc" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/intermediates/loader_out/default/ets/modules.abc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/intermediates/loader_out/default/ets/sourceMaps.map" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/intermediates/loader_out/default/ets/sourceMaps.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/intermediates/res/default/resources/base/profile/route_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/intermediates/res/default/resources/base/profile/route_map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/intermediates/router_map/default/loader-router-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/intermediates/router_map/default/loader-router-map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/intermediates/router_map/default/route_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/intermediates/router_map/default/route_map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/intermediates/source_map/default/sourceMaps.map" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/intermediates/source_map/default/sourceMaps.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/outputs/default/mapping/sourceMaps.map" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/outputs/default/mapping/sourceMaps.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/outputs/default/phone-default-signed.hap" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/outputs/default/phone-default-signed.hap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/build/default/outputs/default/phone-default-unsigned.hap" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/build/default/outputs/default/phone-default-unsigned.hap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/src/main/ets/components/MineComponent.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/src/main/ets/components/MineComponent.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/src/main/ets/pages/AddFoodPage.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/src/main/ets/pages/AddFoodPage.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/src/main/resources/base/profile/route_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_mine/src/main/resources/base/profile/route_map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/feature_home/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/constants/SqlConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/oh_modules/feature_food/oh_modules/feature_map/oh_modules/common_utils/src/main/ets/service/DatabaseService.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/src/main/ets/model/OrderInfo.ets" beforeDir="false" afterPath="$PROJECT_DIR$/product/phone/oh_modules/feature_order/src/main/ets/model/OrderInfo.ets" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ArkTS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HiLogStateProjectLevelPreference">
+    <panelStates>
+      <hilogPanelState>
+        <option name="filterName" value="User logs of selected app" />
+        <option name="logPanelType" value="ONLINE" />
+        <option name="processName" value="wanxy.food.com" />
+      </hilogPanelState>
+    </panelStates>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="31pJPSgl17HxC7jB531RndywR7Q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "127.0.0.1:5555": "5377515801756216418012",
+    "2HZ0224321000858": "5369027121763992114442",
+    "Application.phone.executor": "Run",
+    "MODULE_HAP_TIME": "{\"127.0.0.1:5555phone\":\"2025-08-26T13:53:36.643099100Z\",\"2HZ0224321000858phone\":\"2025-11-24T13:48:32.937435300Z\"}",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ace.nodejs.version": "18.20.1",
+    "auto_debug_bundleName": "0000001E41FBB9710BF5F8CA1169B85EF4CCBB19052A603ABED944A191AE0CB9DC31CE2CCFD2A657BAB46B60EB39",
+    "auto_debug_cert_list": "00000023E6D2337C92A0A341E113883D845089FD32BBAF7D660174F897697AA3D3C02E57775662F4C27F62FBD45954C1DF165F",
+    "auto_debug_device_list": "000000239FE4D7740391E342803F0FDE287A775AB980A6355CFA16C2637D04F23694BF84C645D5B2E01A22AA1C8A400E39DA63",
+    "auto_debug_package_name": "0000001E75F0978CFE807914AFA205976C866D60A52593ABDE077E5106C821E3CFBD580A7747822E10AE223F023B",
+    "auto_debug_team_id": "000000214A4394AB35C1ECAA0BE7EAD12242F74B88E47B6ECC8624FBE04766026D0C0507B94F93C996ACD5A9C8D66C796C",
+    "last_opened_file_path": "E:/Chrome/download/Food/common/common_utils",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications"
+  },
+  "keyToStringList": {
+    "reqPermissions": [
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Chrome\download\Food\common\common_utils" />
+      <recent name="E:\Chrome\download\Food\AppScope\resources\rawfile" />
+      <recent name="E:\Chrome\download\Food\feature\feature_mine\src\main\resources\base\element" />
+      <recent name="E:\Chrome\download\Food\feature\feature_mine\src\main\resources\base" />
+      <recent name="E:\Chrome\download\Food\feature\feature_food\src\main\ets\viewmodel" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Chrome\download\Food\common\common_utils\src\main\ets\viewmodel" />
+      <recent name="E:\Chrome\download\Food\common\common_utils\src\main\ets" />
+      <recent name="E:\Chrome\download\Food\common\common_utils\src\main\ets\constants" />
+      <recent name="E:\Chrome\download\Food\feature\feature_mine\src\main\ets\pages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.phone">
+    <configuration name="phone" type="HotReLoadTask" factoryName="Hot Reload">
+      <MODULE_NAME />
+      <REINSTALL_APPLICATION>true</REINSTALL_APPLICATION>
+      <ENVIRONMENT_VARIABLES>[]</ENVIRONMENT_VARIABLES>
+      <DEBUG_LINE_ENABLE_DATA>false</DEBUG_LINE_ENABLE_DATA>
+      <AUTO_DEPENDENCIES_DATA>true</AUTO_DEPENDENCIES_DATA>
+      <WEB_VIEW_DEBUG>false</WEB_VIEW_DEBUG>
+      <INSTALL_FLAGS_CONFIG_KEY />
+      <LAUNCH_FLAGS_CONFIG_KEY />
+      <LAUNCH_ABILITY_CONFIG_TYPE>Default Ability</LAUNCH_ABILITY_CONFIG_TYPE>
+      <LAUNCH_ABILITY_CONFIG_VALUE />
+      <SYMBOL_DIRS>[]</SYMBOL_DIRS>
+      <DEBUGGER_TYPE>Detect Automatically</DEBUGGER_TYPE>
+      <MULTI_HAP_MODULE_DATA>[]</MULTI_HAP_MODULE_DATA>
+      <SHOW_STATIC_VARIABLES>true</SHOW_STATIC_VARIABLES>
+      <LOGGING_TARGET_CHANNELS>lldb process:gdb-remote packets</LOGGING_TARGET_CHANNELS>
+      <USER_POST_ATTACH_COMMANDS>[]</USER_POST_ATTACH_COMMANDS>
+      <USER_STARTUP_COMMANDS>[]</USER_STARTUP_COMMANDS>
+      <ETS_SOURCE_PARIS>[]</ETS_SOURCE_PARIS>
+      <DEPLOY_MULTI_HAP>false</DEPLOY_MULTI_HAP>
+      <ASAN_ENABLE_DATA>false</ASAN_ENABLE_DATA>
+      <TSAN_ENABLE_DATA>false</TSAN_ENABLE_DATA>
+      <ERROR_INFO_ENHANCE_ENABLE_DATA>false</ERROR_INFO_ENHANCE_ENABLE_DATA>
+      <MULTI_THREAD_CHECK_SELECTED_DATA>false</MULTI_THREAD_CHECK_SELECTED_DATA>
+      <UBSAN_ENABLE_DATA>false</UBSAN_ENABLE_DATA>
+      <HWASAN_ENABLE_DATA>false</HWASAN_ENABLE_DATA>
+      <HOT_RELOAD_MODULE_NAME>phone</HOT_RELOAD_MODULE_NAME>
+      <method v="2">
+        <option name="Build.Hvigor.HotReloadBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Food [clean]" type="HvigorRunConfiguration" factoryName="HvigorRunConfiguration" temporary="true">
+      <option name="applicationParameters" value=" -p product=default clean --analyze=normal --parallel --incremental" />
+      <option name="nodeInterpreter" value="C:/Program Files/Huawei/DevEcoStudio\tools\node" />
+      <option name="scriptFile" value="C:/Program Files/Huawei/DevEcoStudio\tools\hvigor\bin\hvigorw.js" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Food [clean,assembleHap]" type="HvigorRunConfiguration" factoryName="HvigorRunConfiguration" temporary="true">
+      <option name="applicationParameters" value="clean --mode module -p product=default assembleHap --analyze=normal --parallel --incremental" />
+      <option name="nodeInterpreter" value="C:/Program Files/Huawei/DevEcoStudio\tools\node" />
+      <option name="scriptFile" value="C:/Program Files/Huawei/DevEcoStudio\tools\hvigor\bin\hvigorw.js" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phone" type="OhosDebugTask" factoryName="OpenHarmony App">
+      <MODULE_NAME>phone</MODULE_NAME>
+      <REINSTALL_APPLICATION>true</REINSTALL_APPLICATION>
+      <ENVIRONMENT_VARIABLES>[]</ENVIRONMENT_VARIABLES>
+      <DEBUG_LINE_ENABLE_DATA>false</DEBUG_LINE_ENABLE_DATA>
+      <AUTO_DEPENDENCIES_DATA>true</AUTO_DEPENDENCIES_DATA>
+      <WEB_VIEW_DEBUG>false</WEB_VIEW_DEBUG>
+      <INSTALL_FLAGS_CONFIG_KEY />
+      <LAUNCH_FLAGS_CONFIG_KEY />
+      <LAUNCH_ABILITY_CONFIG_TYPE>Default Ability</LAUNCH_ABILITY_CONFIG_TYPE>
+      <LAUNCH_ABILITY_CONFIG_VALUE />
+      <SYMBOL_DIRS>[]</SYMBOL_DIRS>
+      <DEBUGGER_TYPE>Detect Automatically</DEBUGGER_TYPE>
+      <MULTI_HAP_MODULE_DATA>[]</MULTI_HAP_MODULE_DATA>
+      <SHOW_STATIC_VARIABLES>true</SHOW_STATIC_VARIABLES>
+      <LOGGING_TARGET_CHANNELS>lldb process:gdb-remote packets</LOGGING_TARGET_CHANNELS>
+      <USER_POST_ATTACH_COMMANDS>[]</USER_POST_ATTACH_COMMANDS>
+      <USER_STARTUP_COMMANDS>[]</USER_STARTUP_COMMANDS>
+      <ETS_SOURCE_PARIS>[]</ETS_SOURCE_PARIS>
+      <DEPLOY_MULTI_HAP>false</DEPLOY_MULTI_HAP>
+      <ASAN_ENABLE_DATA>false</ASAN_ENABLE_DATA>
+      <TSAN_ENABLE_DATA>false</TSAN_ENABLE_DATA>
+      <ERROR_INFO_ENHANCE_ENABLE_DATA>false</ERROR_INFO_ENHANCE_ENABLE_DATA>
+      <MULTI_THREAD_CHECK_SELECTED_DATA>false</MULTI_THREAD_CHECK_SELECTED_DATA>
+      <UBSAN_ENABLE_DATA>false</UBSAN_ENABLE_DATA>
+      <HWASAN_ENABLE_DATA>false</HWASAN_ENABLE_DATA>
+      <method v="2">
+        <option name="Build.Hvigor.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Hvigor.Food [clean,assembleHap]" />
+        <item itemvalue="Hvigor.Food [clean]" />
+        <item itemvalue="Hvigor.Food [clean]" />
+        <item itemvalue="Hvigor.Food [clean]" />
+        <item itemvalue="Hvigor.Food [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>

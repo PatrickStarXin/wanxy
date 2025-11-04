@@ -1,0 +1,11 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "餐饮店"
+    },{
+      "name": "agcit_40717667622463713810",
+      "value": "@ohos-agcit/food-01/1.0.0"
+    }
+  ]
+}

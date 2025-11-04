@@ -1,0 +1,632 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚ:if (!("finalizeConstruction" in ViewPU.prototype)) {
+    Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
+}
+/*
+ * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+import { addition, multiply } from 'common_utils';
+import { NavRouterMap, NavStackMap, RouterModule } from 'router_manage';
+import { FoodDetail } from '../model/FoodModelData';
+import hilog from "@ohos.hilog";
+import fileIo from "@ohos.file.fs";
+import fileUri from "@ohos.file.fileuri";
+export function PageFoodDetailBuilder(parent = null) {
+    {
+        (parent ? parent : this).observeComponentCreation2((elmtId, isInitialRender) => {
+            if (isInitialRender) {
+                let componentCall = new PageFoodDetail(parent ? parent : this, {}, undefined, elmtId, () => { }, { page: "feature/feature_food/src/main/ets/pages/PageFoodDetail.ets", line: 25, col: 3 });
+                ViewPU.create(componentCall);
+                let paramsLambda = () => {
+                    return {};
+                };
+                componentCall.paramsGenerator_ = paramsLambda;
+            }
+            else {
+                (parent ? parent : this).updateStateVarsOfChildByElmtId(elmtId, {});
+            }
+        }, { name: "PageFoodDetail" });
+    }
+}
+export class PageFoodDetail extends ViewPU {
+    constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
+        super(parent, __localStorage, elmtId, extraInfo);
+        this.__choosePrice = this.createLocalStorageLink("choosePrice", 0, "choosePrice");
+        this.__buyFoods = this.createLocalStorageLink("buyFoods", new Map(), "buyFoods");
+        if (typeof paramsLambda === "function") {
+            this.paramsGenerator_ = paramsLambda;
+        }
+        this.__foodDetail = new ObservedPropertyObjectPU(new FoodDetail(), this, "foodDetail");
+        this.__buyNum = new ObservedPropertySimplePU(1, this, "buyNum");
+        this.topRectHeight = AppStorage.get('topRectHeight') + 'px';
+        this.bottomRectHeight = AppStorage.get('bottomRectHeight') + 'px';
+        this.setInitiallyProvidedValue(params);
+        this.finalizeConstruction();
+    }
+    setInitiallyProvidedValue(params) {
+        if (params.foodDetail !== undefined) {
+            this.foodDetail = params.foodDetail;
+        }
+        if (params.buyNum !== undefined) {
+            this.buyNum = params.buyNum;
+        }
+        if (params.topRectHeight !== undefined) {
+            this.topRectHeight = params.topRectHeight;
+        }
+        if (params.bottomRectHeight !== undefined) {
+            this.bottomRectHeight = params.bottomRectHeight;
+        }
+    }
+    updateStateVars(params) {
+    }
+    purgeVariableDependenciesOnElmtId(rmElmtId) {
+        this.__foodDetail.purgeDependencyOnElmtId(rmElmtId);
+        this.__buyNum.purgeDependencyOnElmtId(rmElmtId);
+        this.__choosePrice.purgeDependencyOnElmtId(rmElmtId);
+        this.__buyFoods.purgeDependencyOnElmtId(rmElmtId);
+    }
+    aboutToBeDeleted() {
+        this.__foodDetail.aboutToBeDeleted();
+        this.__buyNum.aboutToBeDeleted();
+        this.__choosePrice.aboutToBeDeleted();
+        this.__buyFoods.aboutToBeDeleted();
+        SubscriberManager.Get().delete(this.id__());
+        this.aboutToBeDeletedInternal();
+    }
+    get foodDetail() {
+        return this.__foodDetail.get();
+    }
+    set foodDetail(newValue) {
+        this.__foodDetail.set(newValue);
+    }
+    get buyNum() {
+        return this.__buyNum.get();
+    }
+    set buyNum(newValue) {
+        this.__buyNum.set(newValue);
+    }
+    get choosePrice() {
+        return this.__choosePrice.get();
+    }
+    set choosePrice(newValue) {
+        this.__choosePrice.set(newValue);
+    }
+    get buyFoods() {
+        return this.__buyFoods.get();
+    }
+    set buyFoods(newValue) {
+        this.__buyFoods.set(newValue);
+    }
+    aboutToAppear() {
+        const paramList = RouterModule.getNavParam({
+            stackName: NavStackMap.MAIN_STACK,
+            url: NavRouterMap.PAGE_FOOD_DETAIL,
+        });
+        if (paramList?.length && paramList[paramList.length - 1]) {
+            this.foodDetail = JSON.parse(paramList[paramList.length - 1]);
+        }
+    }
+    /**
+     * è·å–å›¾ç‰‡æ•°æ®æº
+     * æ”¯æŒbase64å’Œresourseä¸¤ç§æ ¼å¼
+     * é‡å¤ï¼Œåç»­æ¢æˆé€šç”¨æ¥å£
+     */
+    getImageSource(pic) {
+        if (!pic || pic.trim() === '') {
+            hilog.info(0x0000, 'FoodCategory_getImageSource', 'å›¾ç‰‡è·¯å¾„ä¸ºç©ºï¼Œä½¿ç”¨é»˜è®¤å›¾ç‰‡');
+            return { "id": 134217790, "type": 20000, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" };
+        }
+        // å¦‚æœæ˜¯å®Œæ•´çš„æ–‡ä»¶è·¯å¾„
+        if (pic.startsWith('/') || pic.startsWith('file://')) {
+            hilog.info(0x0000, 'FoodCategory_getImageSource', `è¯†åˆ«ä¸ºæ–‡ä»¶è·¯å¾„: ${pic}`);
+            try {
+                // æ£€æŸ¥æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+                const isFileExist = fileIo.accessSync(pic);
+                if (isFileExist) {
+                    hilog.info(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶å­˜åœ¨: ${pic}`);
+                    // ä½¿ç”¨ fileUri æ¥è®¿é—®æ–‡ä»¶
+                    return fileUri.getUriFromPath(pic);
+                }
+                else {
+                    hilog.error(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶ä¸å­˜åœ¨: ${pic}`);
+                }
+            }
+            catch (err) {
+                hilog.error(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶è®¿é—®å¤±è´¥: ${pic}, error: ${JSON.stringify(err)}`);
+            }
+            return { "id": 134217790, "type": 20000, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" };
+        }
+        // å¦‚æœæ˜¯base64æ•°æ®uri
+        if (pic && pic.startsWith('data:image')) {
+            hilog.info(0x0000, 'FoodCategory', 'è¯†åˆ«ä¸ºbase64å›¾ç‰‡');
+            return pic;
+        }
+        // å¦‚æœæ˜¯èµ„æºè·¯å¾„
+        if (pic && pic.startsWith('app.media.')) {
+            hilog.info(0x0000, 'FoodCategory', `è¯†åˆ«ä¸ºèµ„æºè·¯å¾„: ${pic}`);
+            try {
+                const resource = { "id": -1, "type": -1, params: [pic], "bundleName": "wanxy.food.com", "moduleName": "phone" };
+                if (resource) {
+                    return resource;
+                }
+            }
+            catch (error) {
+                hilog.error(0x0000, 'FoodCategory', `èµ„æºè·¯å¾„è½¬æ¢å¤±è´¥: ${pic}, error: ${JSON.stringify(error)}`);
+            }
+        }
+        // å¦‚æœæ˜¯æ–‡ä»¶åï¼Œæ²¡æœ‰è·¯å¾„åˆ†éš”ç¬¦
+        if (pic && !pic.includes('/') && !pic.includes('\\')) {
+            // å°è¯•æ„å»ºå®Œæ•´è·¯å¾„
+            try {
+                const context = getContext(this);
+                const fullPath = context.filesDir + '/' + pic;
+                hilog.info(0x0000, 'FoodCategory', `æ„å»ºå®Œæ•´æ–‡ä»¶è·¯å¾„: ${fullPath}`);
+                return fullPath;
+            }
+            catch (err) {
+                hilog.error(0x0000, 'FoodCategory', 'æ„å»ºå›¾ç‰‡è·¯å¾„å¤±è´¥: ' + JSON.stringify(err));
+            }
+        }
+        // è¿”å›ä¸€ä¸ªå±•ä½å›¾
+        hilog.warn(0x0000, 'FoodCategory', `æ— æ³•è¯†åˆ«çš„å›¾ç‰‡è·¯å¾„æ ¼å¼: ${pic}`);
+        return { "id": 134217790, "type": 20000, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" };
+    }
+    initialRender() {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            NavDestination.create(() => {
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Row.create();
+                    Row.height('100%');
+                }, Row);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Stack.create({ alignContent: Alignment.BottomStart });
+                    Stack.height('100%');
+                }, Stack);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Column.create();
+                    Column.width('100%');
+                    Column.height('100%');
+                }, Column);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Image.create(this.getImageSource(this.foodDetail.pic));
+                    Image.height('40%');
+                    Image.width('100%');
+                    Image.objectFit(ImageFit.Fill);
+                }, Image);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Column.create();
+                    Column.height('60%');
+                }, Column);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create(this.foodDetail.title);
+                    Text.fontSize(16);
+                }, Text);
+                Text.pop();
+                Column.pop();
+                Column.pop();
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    // æ‚¬æµ®è´­ç‰©è½¦
+                    Column.create();
+                    // æ‚¬æµ®è´­ç‰©è½¦
+                    Column.height(90);
+                    // æ‚¬æµ®è´­ç‰©è½¦
+                    Column.width('100%');
+                    // æ‚¬æµ®è´­ç‰©è½¦
+                    Column.padding({ left: '5%', right: '5%' });
+                    // æ‚¬æµ®è´­ç‰©è½¦
+                    Column.borderWidth({ top: 2 });
+                    // æ‚¬æµ®è´­ç‰©è½¦
+                    Column.borderColor({ "id": 134217758, "type": 10001, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" });
+                }, Column);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Row.create();
+                    Row.layoutWeight(1);
+                    Row.width('100%');
+                    Row.justifyContent(FlexAlign.SpaceBetween);
+                }, Row);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create('ï¿¥' + this.foodDetail.price + '');
+                    Text.fontSize(16);
+                    Text.fontWeight(600);
+                }, Text);
+                Text.pop();
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Row.create();
+                    Row.justifyContent(FlexAlign.SpaceBetween);
+                }, Row);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Image.create({ "id": 134217777, "type": 20000, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" });
+                    Image.width(25);
+                    Image.height(25);
+                    Image.objectFit(ImageFit.Fill);
+                    Image.onClick(() => {
+                        if (this.buyNum > 1) {
+                            this.buyNum--;
+                        }
+                    });
+                }, Image);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create(this.buyNum + '');
+                    Text.fontSize(16);
+                    Text.margin({ left: 10, right: 10 });
+                }, Text);
+                Text.pop();
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Image.create({ "id": 134217764, "type": 20000, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" });
+                    Image.width(25);
+                    Image.height(25);
+                    Image.objectFit(ImageFit.Fill);
+                    Image.onClick(() => {
+                        this.buyNum++;
+                    });
+                }, Image);
+                Row.pop();
+                Row.pop();
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Row.create();
+                    Row.justifyContent(FlexAlign.Center);
+                    Row.backgroundColor({ "id": 134217761, "type": 10001, params: [], "bundleName": "wanxy.food.com", "moduleName": "phone" });
+                    Row.width('100%');
+                    Row.layoutWeight(1);
+                    Row.borderRadius(16);
+                    Row.onClick(() => {
+                        this.foodDetail.buyNum = this.buyNum;
+                        this.choosePrice = addition(this.choosePrice, multiply(this.foodDetail.price, this.foodDetail.buyNum));
+                        let exist = this.buyFoods.get(this.foodDetail.id);
+                        if (exist) {
+                            exist.buyNum += this.buyNum;
+                            this.buyFoods.set(this.foodDetail.id, exist);
+                        }
+                        else {
+                            this.buyFoods.set(this.foodDetail.id, ObservedObject.GetRawObject(this.foodDetail));
+                        }
+                        RouterModule.pop(NavStackMap.MAIN_STACK);
+                        // RouterModule.push({
+                        //   stackName: NavStackMap.MAIN_STACK,
+                        //   url: NavRouterMap.PAGE_MAIN,
+                        //   animateSwitch: AnimatedMap.ON,
+                        //   param: JSON.stringify(this.foodDetail)
+                        // })
+                    });
+                }, Row);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create("åŠ å…¥è´­ç‰©è½¦");
+                }, Text);
+                Text.pop();
+                Row.pop();
+                // æ‚¬æµ®è´­ç‰©è½¦
+                Column.pop();
+                Stack.pop();
+                Row.pop();
+            }, { moduleName: "phone", pagePath: "feature/feature_food/src/main/ets/pages/PageFoodDetail" });
+            NavDestination.title('ç¾é£Ÿè¯¦æƒ…');
+            NavDestination.padding({ bottom: this.bottomRectHeight, top: this.topRectHeight });
+        }, NavDestination);
+        NavDestination.pop();
+    }
+    rerender() {
+        this.updateDirtyElements();
+    }
+}
+(function () {
+    if (typeof NavigationBuilderRegister === "function") {
+        NavigationBuilderRegister("PageFoodDetail", wrapBuilder(PageFoodDetailBuilder));
+    }
+})();
+//# sourceMappingURL=PageFoodDetail.js.mapÂ–Ù5E:\Chrome\download\Food\common\common_utils\Index.etsÙ6E:\Chrome\download\Food\common\router_manage\Index.etsÙPE:\Chrome\download\Food\feature\feature_food\src\main\ets\model\FoodModelData.tsÙd hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.hilog.d.tsÙf hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.fs.d.tsÙk hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.fileuri.d.tsÙRE:\Chrome\download\Food\feature\feature_food\src\main\ets\pages\PageFoodDetail.etsÔrBšªmoduleName±isLocalDependency¯isNodeEntryFile§pkgPath±belongProjectPath§pkgNameªpkgVersion±dependencyPkgInfo°belongModulePath¬shouldEmitJs¬feature_foodÃÂÙ,E:\Chrome\download\Food\feature\feature_food·E:\Chrome\download\Food¬feature_food¥1.0.0ÔrC’§pkgNameªpkgVersion¬feature_food¥1.0.0Ù,E:\Chrome\download\Food\feature\feature_foodÃÃÚ/*
+ * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import { addition, multiply } from 'common_utils';
+import { NavRouterMap, NavStackMap, RouterModule } from 'router_manage';
+import { FoodDetail } from '../model/FoodModelData';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { fileIo, fileUri } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+@Builder
+export function PageFoodDetailBuilder() {
+  PageFoodDetail()
+}
+
+
+@Component
+export struct PageFoodDetail {
+  @State foodDetail: FoodDetail = new FoodDetail();
+  @State buyNum: number = 1;
+  @LocalStorageLink("choosePrice") choosePrice: number = 0;
+  @LocalStorageLink("buyFoods") buyFoods: Map<string, FoodDetail> = new Map<string, FoodDetail>();
+  topRectHeight: string = AppStorage.get<number>('topRectHeight') + 'px';
+  bottomRectHeight: string = AppStorage.get<number>('bottomRectHeight') + 'px';
+
+  aboutToAppear(): void {
+    const paramList: string[] = RouterModule.getNavParam({
+      stackName: NavStackMap.MAIN_STACK,
+      url: NavRouterMap.PAGE_FOOD_DETAIL,
+    })
+
+    if (paramList?.length && paramList[paramList.length - 1]) {
+      this.foodDetail = JSON.parse(paramList[paramList.length - 1])
+    }
+  }
+  /**
+   * è·å–å›¾ç‰‡æ•°æ®æº
+   * æ”¯æŒbase64å’Œresourseä¸¤ç§æ ¼å¼
+   * é‡å¤ï¼Œåç»­æ¢æˆé€šç”¨æ¥å£
+   */
+  getImageSource(pic: string): Resource | string | PixelMap{
+    if (!pic || pic.trim() === '') {
+      hilog.info(0x0000, 'FoodCategory_getImageSource', 'å›¾ç‰‡è·¯å¾„ä¸ºç©ºï¼Œä½¿ç”¨é»˜è®¤å›¾ç‰‡');
+      return $r("app.media.food_main");
+    }
+    // å¦‚æœæ˜¯å®Œæ•´çš„æ–‡ä»¶è·¯å¾„
+    if (pic.startsWith('/') || pic.startsWith('file://')){
+      hilog.info(0x0000, 'FoodCategory_getImageSource', `è¯†åˆ«ä¸ºæ–‡ä»¶è·¯å¾„: ${pic}`);
+
+      try {
+        // æ£€æŸ¥æ–‡ä»¶æ˜¯å¦å­˜åœ¨
+        const isFileExist = fileIo.accessSync(pic);
+        if (isFileExist) {
+          hilog.info(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶å­˜åœ¨: ${pic}`);
+          // ä½¿ç”¨ fileUri æ¥è®¿é—®æ–‡ä»¶
+          return fileUri.getUriFromPath(pic);
+        }
+        else {
+          hilog.error(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶ä¸å­˜åœ¨: ${pic}`);
+        }
+      } catch (err) {
+        hilog.error(0x0000, 'FoodCategory_getImageSource', `æ–‡ä»¶è®¿é—®å¤±è´¥: ${pic}, error: ${JSON.stringify(err)}`);
+      }
+      return $r("app.media.food_main");
+    }
+
+    // å¦‚æœæ˜¯base64æ•°æ®uri
+    if (pic && pic.startsWith('data:image')) {
+      hilog.info(0x0000, 'FoodCategory', 'è¯†åˆ«ä¸ºbase64å›¾ç‰‡');
+      return pic;
+    }
+    // å¦‚æœæ˜¯èµ„æºè·¯å¾„
+    if (pic && pic.startsWith('app.media.')) {
+      hilog.info(0x0000, 'FoodCategory', `è¯†åˆ«ä¸ºèµ„æºè·¯å¾„: ${pic}`);
+      try {
+        const resource = $r(pic);
+        if (resource) {
+          return resource;
+        }
+      } catch (error) {
+        hilog.error(0x0000, 'FoodCategory', `èµ„æºè·¯å¾„è½¬æ¢å¤±è´¥: ${pic}, error: ${JSON.stringify(error)}`);
+      }
+    }
+    // å¦‚æœæ˜¯æ–‡ä»¶åï¼Œæ²¡æœ‰è·¯å¾„åˆ†éš”ç¬¦
+    if (pic && !pic.includes('/') && !pic.includes('\\')) {
+      // å°è¯•æ„å»ºå®Œæ•´è·¯å¾„
+      try {
+        const context = getContext(this) as common.Context;
+        const fullPath = context.filesDir + '/' + pic;
+        hilog.info(0x0000, 'FoodCategory', `æ„å»ºå®Œæ•´æ–‡ä»¶è·¯å¾„: ${fullPath}`);
+        return fullPath;
+      } catch (err) {
+        hilog.error(0x0000, 'FoodCategory', 'æ„å»ºå›¾ç‰‡è·¯å¾„å¤±è´¥: ' + JSON.stringify(err));
+      }
+    }
+
+    // è¿”å›ä¸€ä¸ªå±•ä½å›¾
+    hilog.warn(0x0000, 'FoodCategory', `æ— æ³•è¯†åˆ«çš„å›¾ç‰‡è·¯å¾„æ ¼å¼: ${pic}`);
+    return $r("app.media.food_main");
+  }
+
+  build() {
+    NavDestination() {
+      Row() {
+        Stack({ alignContent: Alignment.BottomStart }) {
+          Column() {
+            Image(this.getImageSource(this.foodDetail.pic))
+              .height('40%').width('100%').objectFit(ImageFit.Fill)
+            Column() {
+              Text(this.foodDetail.title)
+                .fontSize(16)
+            }.height('60%')
+
+          }
+          .width('100%')
+          .height('100%')
+
+          // æ‚¬æµ®è´­ç‰©è½¦
+          Column() {
+            Row() {
+              Text('ï¿¥' + this.foodDetail.price + '').fontSize(16).fontWeight(600)
+
+              Row() {
+                Image($r('app.media.ic_public_remove'))
+                  .width(25).height(25).objectFit(ImageFit.Fill)
+                  .onClick(() => {
+                    if (this.buyNum > 1) {
+                      this.buyNum --
+                    }
+                  });
+                Text(this.buyNum + '').fontSize(16).margin({ left: 10, right: 10 });
+                Image($r('app.media.ic_public_add_norm'))
+                  .width(25).height(25).objectFit(ImageFit.Fill)
+                  .onClick(() => {
+                    this.buyNum ++
+                  })
+              }.justifyContent(FlexAlign.SpaceBetween)
+
+            }.layoutWeight(1)
+            .width('100%')
+            .justifyContent(FlexAlign.SpaceBetween)
+
+            Row() {
+              Text("åŠ å…¥è´­ç‰©è½¦")
+            }.justifyContent(FlexAlign.Center)
+            .backgroundColor($r("app.color.system_green"))
+            .width('100%')
+            .layoutWeight(1)
+            .borderRadius(16)
+            .onClick(() => {
+              this.foodDetail.buyNum = this.buyNum
+
+              this.choosePrice = addition(this.choosePrice, multiply(this.foodDetail.price, this.foodDetail.buyNum))
+              let exist = this.buyFoods.get(this.foodDetail.id)
+              if (exist) {
+                exist.buyNum += this.buyNum
+                this.buyFoods.set(this.foodDetail.id, exist)
+              } else {
+                this.buyFoods.set(this.foodDetail.id, this.foodDetail)
+              }
+
+              RouterModule.pop(NavStackMap.MAIN_STACK)
+              // RouterModule.push({
+              //   stackName: NavStackMap.MAIN_STACK,
+              //   url: NavRouterMap.PAGE_MAIN,
+              //   animateSwitch: AnimatedMap.ON,
+              //   param: JSON.stringify(this.foodDetail)
+              // })
+            })
+
+          }.height(90)
+          .width('100%')
+          .padding({left:'5%', right:'5%'})
+          .borderWidth({ top: 2 })
+          .borderColor($r("app.color.border_color"))
+
+        }.height('100%')
+
+      }
+      .height('100%')
+    }
+    .title('ç¾é£Ÿè¯¦æƒ…')
+    .padding({ bottom: this.bottomRectHeight, top: this.topRectHeight})
+  }
+}
+ÀÔrD–«@ohos.hilog­@ohos.file.fs²@ohos.file.fileuri¶../model/FoodModelData¬common_utils­router_manageÔrE—ªassertions¨external¢id¤meta±moduleSideEffectsªresolvedByµsyntheticNamedExportsAÃÙd hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.hilog.d.tsÔrF‘¯hostModulesInfoÔrG’²hostDependencyName®hostModuleName«@ohos.hilog¬feature_foodG«@ohos.hilog­feature_orderG«@ohos.hilog¬feature_mineG«@ohos.hilog¬feature_mineG«@ohos.hilog¥phoneG«@ohos.hilog¬feature_mineG«@ohos.hilog¬common_utilsG«@ohos.hilog¬common_utilsG«@ohos.hilog¬common_utilsG«@ohos.hilog¬common_utilsG«@ohos.hilog¬feature_mineG«@ohos.hilog¬feature_foodG«@ohos.hilog¬common_utilsÃªoh-resolveÂEAÃÙf hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.fs.d.tsF•G­@ohos.file.fs¬feature_foodG­@ohos.file.fs¬feature_mineG­@ohos.file.fs¬feature_mineG­@ohos.file.fs¬feature_mineG­@ohos.file.fs¬feature_foodÃªoh-resolveÂEAÃÙk hvigor_ignore_C:_Program Files_Huawei_DevEcoStudio_sdk_default_openharmony_ets_api_@ohos.file.fileuri.d.tsF•G²@ohos.file.fileuri¬feature_foodG²@ohos.file.fileuri¬feature_mineG²@ohos.file.fileuri¬feature_mineG²@ohos.file.fileuri¬feature_mineG²@ohos.file.fileuri¬feature_foodÃªoh-resolveÂEAÂÙPE:\Chrome\download\Food\feature\feature_food\src\main\ets\model\FoodModelData.tsAÃªoh-resolveÂEAÂÙ5E:\Chrome\download\Food\common\common_utils\Index.etsAÃªoh-resolveÂEAÂÙ6E:\Chrome\download\Food\common\router_manage\Index.etsAÃªoh-resolveÂ“ÔrH–§version¤fileªsourceRoot§sources¥names¨mappings±PageFoodDetail.js ‘²PageFoodDetail.etsÜ<‘”    ‘” š”   ” ”	 	” ” ” ” ”# #”1 1”2 2œ”   ” ”	 	” ” ”" "”$ $”0 0”2 2”8 8”ÌG ÌG”ÌH ÌH˜”   ” ”	 	” ” ” ”3 3”4 4–”   ” 	” ” ” 3”  4–”   ” 	” ”  ”" 2”# 3–”   ” ” ”  ”( 2”) 3””   ” ” ”% %’”( ”6 ‘” ””   ” ” ” ‘”  –”  ”9  ”ÌF  !”ÌH  9”ÌI  :”ÌZ  ;˜” !”6 !”Ì@ !”ÌB !ÌD”ÌF !ÌH”ÌI !ÌK”ÌK !Ìa”ÌY !Ìb””9 "”= &”ÌG 0”ÌI 2’”5 ”6 ™” "”' "$”( "%”+ "(”, "1”; "Ì@”< "ÌA”? "ÌD”ÌC "ÌH™”  #”* #'”+ #(”. #+”/ #4”ÌA #ÌF”ÌB #ÌG”ÌE #ÌJ”ÌI #ÌN‘” ’” 	” ’” 	” ’” 	” ’” 	” ’”  #”  .’”  #”  .’” ! ” !(’” ! ” !(’” %” %˜” &” &
+” &” & ”& &,”' &-”2 &8”3 &9–” '” '” '”" '”# '”- ''–” (” (	” (” (” (”. ((“”	 )”
+ )” )Ÿ” +” +” +” +” +”! +”* +&”+ +'”4 +0”5 +1”; +7”> +:”? +;”Ì@ +<”ÌB +>Ü ” ,” ,
+” ,” ,” ,”" ,”# ,”( ,"”) ,#”2 ,,”3 ,-”< ,6”= ,7”ÌC ,=”ÌF ,Ì@”ÌG ,ÌA”ÌH ,ÌB”ÌI ,ÌC”ÌJ ,ÌC‘”	 -’” .” .‘” /‘” 3”” 4” 4” 4” 4œ” 5” 5” 5	” 5” 5” 5” 5” 5” 5”# 5”% 5!”' 5#œ” 6” 6” 6” 6” 6” 6” 6”< 66”> 68”ÌM 6ÌG”ÌN 6ÌH”ÌO 6ÌI’” 7”Ìy 7'‘”	 8’” 9” 9Ü ” :” :” :” :” :” :” :” :”# :”& :"”' :#”1 :-”2 :.”; :7”< :8”> :9” ;” ;” ;” ;” ;” ;” ;”< ;6”> ;8”ÌJ ;ÌD”ÌM ;ÌG”ÌO ;ÌI”ÌP ;ÌJ”ÌQ ;ÌK’” =” =
+’” >” >›” ?” ?”! ?”$ ?”* ?"”+ ?#”5 ?-”6 ?.”9 ?1”: ?2”; ?3”” Ì@” Ì@” Ì@”! Ì@” ÌA
+” ÌA” ÌA” ÌA” ÌA”% ÌA”' ÌA”ÌD ÌA:”ÌF ÌA<”ÌO ÌAÌE”ÌR ÌAÌH”ÌT ÌAÌJ”ÌU ÌAÌK”ÌV ÌAÌL’” ÌB
+”' ÌB™” ÌC
+” ÌC”" ÌC”# ÌC”1 ÌC'”2 ÌC(”5 ÌC+”6 ÌC,”7 ÌC-‘” ÌD	‘” ÌE” ÌF
+” ÌF” ÌF” ÌF”  ÌF”& ÌF”( ÌF”ÌE ÌF;”ÌG ÌF=”ÌQ ÌFÌG”ÌT ÌFÌJ”ÌV ÌFÌL”ÌW ÌFÌM”ÌX ÌFÌN‘” ÌG	‘” ÌH”” ÌH” ÌH” ÌH” ÌHÜ ” ÌI” ÌI” ÌI” ÌI” ÌI”" ÌI”$ ÌI”ÌA ÌI9”ÌC ÌI;”ÌN ÌIÌF”ÌQ ÌIÌI”Ì] ÌIÌU”Ìa ÌIÌY”Ìb ÌIÌZ”Ìk ÌIÌc”Ìl ÌIÌd”Ìo ÌIÌg”Ìp ÌIÌh”Ìr ÌIÌj”Ìs ÌIÌk”Ìt ÌIÌl‘” ÌJ’” ÌK”Ìy ÌK'‘”	 ÌL’” ÌN” ÌN›” ÌO” ÌO” ÌO” ÌO” ÌO” ÌO”! ÌO”" ÌO”. ÌO*”/ ÌO+”1 ÌO-œ” ÌP” ÌP” ÌP” ÌP” ÌP” ÌP” ÌP”- ÌP'”/ ÌP)”< ÌP6”= ÌP7”> ÌP8”” ÌQ” ÌQ” ÌQ” ÌQ‘”	 ÌR’” ÌS” ÌS›” ÌT” ÌT” ÌT” ÌT” ÌT” ÌT”! ÌT”" ÌT”. ÌT*”/ ÌT+”1 ÌT-” ÌU” ÌU” ÌU” ÌU” ÌU” ÌU” ÌU”- ÌU'”/ ÌU)”; ÌU5”> ÌU8”Ì@ ÌU:”ÌA ÌU;”ÌB ÌU<’” ÌV” ÌV
+—” ÌW” ÌW” ÌW”ÌB ÌW”ÌE ÌW”Ì ÌW ”Ì€ ÌW!”” ÌX” ÌX” ÌX” ÌX”” ÌY
+” ÌY”# ÌY”$ ÌY‘” ÌZ	‘” Ì[”” Ì[” Ì[” Ì[” Ì[Ü ” Ì\” Ì\” Ì\” Ì\” Ì\”" Ì\”$ Ì\”2 Ì\*”4 Ì\,”ÌA Ì\9”ÌD Ì\<”ÌP Ì\ÌH”ÌT Ì\ÌL”ÌU Ì\ÌM”Ì^ Ì\ÌV”Ì_ Ì\ÌW”Ìd Ì\Ì\”Ìe Ì\Ì]”Ìg Ì\Ì_”Ìh Ì\Ì`”Ìi Ì\Ìa‘” Ì]‘”	 Ì^’” Ì_” Ì_Ü ” Ì`” Ì`” Ì`” Ì`” Ì`” Ì`” Ì`”  Ì`”! Ì`”$ Ì` ”% Ì`!”) Ì`%”* Ì`&”- Ì`)”. Ì`*”6 Ì`2”7 Ì`3”; Ì`7”< Ì`8”> Ì`:’” Ìa” Ìa’” Ìb” Ìb
+™” Ìc” Ìc” Ìc”  Ìc”* Ìc"”+ Ìc#”/ Ìc'”0 Ìc:”1 Ìc;œ” Ìd” Ìd” Ìd”! Ìd”( Ìd ”) Ìd!”1 Ìd)”4 Ìd,”7 Ìd/”: Ìd2”= Ìd5”> Ìd6” Ìe” Ìe” Ìe” Ìe” Ìe”! Ìe”# Ìe”1 Ìe)”3 Ìe+”Ì@ Ìe8”ÌH ÌeÌ@”ÌJ ÌeÌB”ÌK ÌeÌC”ÌL ÌeÌD”” Ìf” Ìf” Ìf”  Ìf‘” Ìg”” Ìg” Ìg” Ìg” ÌgÜ ” Ìh” Ìh” Ìh” Ìh” Ìh”" Ìh”$ Ìh”2 Ìh*”4 Ìh,”Ì@ Ìh8”ÌC Ìh;”ÌG Ìh?”ÌH ÌhÌ@”ÌQ ÌhÌI”ÌR ÌhÌJ”ÌU ÌhÌM”ÌV ÌhÌN”ÌW ÌhÌO”ÌX ÌhÌP‘” Ìi‘”	 Ìj’” Ìl” Ìl” Ìm” Ìm	” Ìm
+” Ìm” Ìm” Ìm” Ìm”) Ìm%”+ Ìm'”; Ìm7”> Ìm:”Ì@ Ìm<”ÌA Ìm=”ÌB Ìm>’” Ìn”Ìu Ìn%’” Ìo” Ìo‘” Ìq’” Ìs” Ìs	–” Ìs” Ìs	” Ì¿” Ì¿” Ì¿”% Ì¿š” Ìt” Ìt”! Ìt”# Ìt”/ Ìt”1 Ìt”: Ìt'”; Ìt(”ÌF Ìt3”ÌH Ìt5–” Ìt” Ìt” Ì¼
+”  Ì¼”! Ì¼”' Ì¼’” Ìu
+” Ìu–” Ìu
+” Ìu” Ì~”  Ì~”! Ì~”' Ì~–” Ìu
+” Ìu” Ì”! Ì”" Ì”( Ì” Ìv” Ìv”! Ìv”% Ìv”& Ìv”4 Ìv%”5 Ìv&”9 Ìv*”: Ìv+”ÌD Ìv5”ÌE Ìv6”ÌH Ìv9”ÌI Ìv:–” Ìv” Ìv” Ìw”  Ìw”! Ìw”& Ìw–” Ìv” Ìv” Ìw” Ìw"”  Ìw#”& Ìw)˜” Ìv” Ìv” Ìw+”# Ìw4”$ Ìw5”, Ìw=”- Ìw>”1 ÌwÌB’” Ìx” Ìx–” Ìx” Ìx” Ì{”! Ì{”" Ì{”' Ì{˜” Ìy” Ìy”  Ìy”$ Ìy”% Ìy”/ Ìy"”0 Ìy#”5 Ìy(–” Ìy” Ìy” Ìz”! Ìz”" Ìz”$ Ìz’” Ìy” Ìy’” Ìx” Ìx’” Ìu
+” Ìu’” Ì
+” Ì’” Ì‚
+” Ì‚’” Ì
+” Ì–” Ì‚
+” Ì‚” Ì¶”! Ì¶”" Ì¶”$ Ì¶’” Ì
+” Ì–” Ì‚
+” Ì‚” Ì·”  Ì·”! Ì·”' Ì·’” Ì
+” Ì” Ì‚
+” Ì‚” Ì¸”" Ì¸”# Ì¸”% Ì¸”) Ì¸”+ Ì¸”/ Ì¸”1 Ì¸”6 Ì¸$”8 Ì¸%”< Ì¸)”> Ì¸*’” Ì
+” Ìš” Ì‚
+” Ì‚” Ì¹”& Ì¹”' Ì¹”) Ì¹”, Ì¹”. Ì¹”/ Ì¹”1 Ì¹!’” Ì
+” Ì”” Ì‚
+” Ì‚” Ìº”& Ìº’” Ìƒ” Ìƒ–” Ìƒ” Ìƒ” Ì–”$ Ì–”% Ì–”& Ì––” Ìƒ” Ìƒ” Ì—” Ì—” Ì—”$ Ì—˜” Ìƒ” Ìƒ” Ì˜”& Ì˜”' Ì˜”0 Ì˜%”1 Ì˜&”= Ì˜2œ” Ì„” Ì„”  Ì„”# Ì„”& Ì„”* Ì„”+ Ì„”5 Ì„(”6 Ì„)”; Ì„.”> Ì„1”Ì@ Ì„3–” Ì„” Ì„” Ì„5”! Ì„=”" Ì„>”$ Ì„Ì@–” Ì„” Ì„” Ì„ÌB”# Ì„ÌL”$ Ì„ÌM”' Ì„ÌP’” Ì„” Ì„’” Ì†” Ì†˜” Ì†” Ì†” Ì””& Ì””' Ì””0 Ì”(”1 Ì”)”= Ì”5’” Ì‡” Ì‡–” Ì‡” Ì‡” Ìˆ” Ìˆ”  Ìˆ”" Ìˆ–” Ì‡” Ì‡” Ìˆ”  Ìˆ#”! Ìˆ$”# Ìˆ&˜” Ì‡” Ì‡” Ìˆ(”# Ìˆ1”$ Ìˆ2”, Ìˆ:”- Ìˆ;”1 Ìˆ?—” Ì‡” Ì‡” Ì‰”! Ì‰”" Ì‰”% Ì‰”' Ì‰ ˜” ÌŠ” ÌŠ”  ÌŠ”! ÌŠ”' ÌŠ#”* ÌŠ&”+ ÌŠ'”- ÌŠ)–” Ì‹”  Ì‹”! Ì‹”' Ì‹!”) Ì‹$”* Ì‹$‘” ÌŒ’” Ì” Ì˜” Ì” Ì”  Ì”$ Ì”% Ì”+ Ì ”. Ì#”0 Ì%–” Ì” Ì” Ì'”! Ì/”" Ì0”$ Ì2” Ì” Ì” Ì4” Ì:”  Ì;”" Ì=”& ÌÌA”( ÌÌC”* ÌÌE”, ÌÌG”1 ÌÌL”3 ÌÌN”5 ÌÌP”7 ÌÌR’” Ì” Ì’” Ì” Ì–” Ì” Ì” Ì” Ì”  Ì”" Ì–” Ì” Ì” Ì”  Ì#”! Ì$”# Ì&˜” Ì” Ì” Ì(”# Ì1”$ Ì2”, Ì:”- Ì;”1 Ì?—” Ì” Ì” Ì‘”! Ì‘”" Ì‘”% Ì‘”' Ì‘ –” Ì’” Ì’” Ì’”# Ì’”% Ì’"”& Ì’"’” Ì“” Ì“’” Ì†” Ì†’” Ìƒ” Ìƒ’” Ìš” Ìš˜” Ìš” Ìš” Ìœ”& Ìœ”' Ìœ”0 Ìœ&”1 Ìœ'”7 Ìœ-”” Ìš” Ìš” Ì”' Ì–” Ìš” Ìš” Ì” Ì” Ì”$ Ì–” Ìš” Ìš” ÌŸ”$ ÌŸ”% ÌŸ”& ÌŸ–” Ìš” Ìš” Ì ”$ Ì ”% Ì ”' Ì —” Ìš” Ìš” Ì¡” Ì¡”  Ì¡”# Ì¡”% Ì¡›” Ì¢” Ì¢” Ì¢”' Ì¢”( Ì¢”. Ì¢$”1 Ì¢'”5 Ì¢+”6 Ì¢,”< Ì¢2”= Ì¢2Ü ” Ì¤” Ì¤” Ì¤”( Ì¤”+ Ì¤!”3 Ì¤)”4 Ì¤*”8 Ì¤.”9 Ì¤/”ÌD Ì¤:”ÌF Ì¤<”ÌN Ì¤ÌD”ÌO Ì¤ÌE”ÌS Ì¤ÌI”ÌT Ì¤ÌJ”Ì^ Ì¤ÌT”Ì_ Ì¤ÌU”Ìd Ì¤ÌZ”Ìf Ì¤Ì\”Ìj Ì¤Ì`”Ìk Ì¤Ìa”Ìu Ì¤Ìk”Ìv Ì¤Ìl”Ì| Ì¤Ìr”Ì} Ì¤Ìs”Ì~ Ì¤Ìt”Ì Ì¤ÌtÜ ” Ì¥” Ì¥”! Ì¥”$ Ì¥”( Ì¥”) Ì¥”1 Ì¥'”2 Ì¥(”5 Ì¥+”6 Ì¥,”: Ì¥0”; Ì¥1”ÌE Ì¥;”ÌF Ì¥<”ÌH Ì¥>”ÌI Ì¥?”ÌJ Ì¥?”” Ì¦” Ì¦”! Ì¦”# Ì¦™” Ì§”! Ì§”" Ì§”( Ì§”, Ì§ ”0 Ì§$”1 Ì§%”7 Ì§+”8 Ì§+Ü ” Ì¨”  Ì¨”! Ì¨”) Ì¨”* Ì¨”- Ì¨!”. Ì¨"”2 Ì¨&”3 Ì¨'”= Ì¨1”> Ì¨2”Ì@ Ì¨4”ÌB Ì¨6”ÌG Ì¨;”ÌH Ì¨<”ÌI Ì¨<‘” Ì©‘” Ì©Ü ” Ìª”  Ìª”! Ìª”) Ìª”* Ìª”- Ìª!”. Ìª"”2 Ìª&”3 Ìª'”= Ìª1”> Ìª2”Ì@ Ìª4”Ì^ Ìª6”Ìb Ìª:”Ìc Ìª;”Ìm ÌªÌE”Ìo ÌªÌF”Ìp ÌªÌF‘” Ì«š” Ì­”$ Ì­”% Ì­”( Ì­”) Ì­”4 Ì­*”5 Ì­+”? Ì­5”Ì@ Ì­6”ÌA Ì­6’” Ì®”. Ì®$’” Ì¯”? Ì¯5’” Ì°”9 Ì°/’” Ì±”; Ì±1’” Ì²”ÌC Ì²9’” Ì³” Ì³’” Ì´” Ì´”” Ì›” Ì›”  Ì›”' Ì›’” Ì›” Ì›’” Ìš” Ìš’” Ì
+” Ì’” Ì‚
+” Ì‚’” Ìt” Ìt’” Ìs” Ìs	”” ÌÁ”  ÌÁ
+”! ÌÁ”' ÌÁÜ ” ÌÂ”" ÌÂ”# ÌÂ”% ÌÂ”+ ÌÂ”- ÌÂ”1 ÌÂ”2 ÌÂ”ÌB ÌÂ,”ÌD ÌÂ.”ÌG ÌÂ1”ÌI ÌÂ3”ÌM ÌÂ7”ÌN ÌÂ8”Ì[ ÌÂÌE”Ì] ÌÂÌF‘” ÌÃÔrI–§version¤file§sources®sourcesContent¥names¨mappingsÀ‘À‘ÀÜF‘”    ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”  	 ‘”  
+ ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”    ‘”  ! ‘”  " ‘”  # ‘”  $ ‘”  % ‘”  & ‘”  ' ‘”  ( ‘”  ) ‘”  * ‘”  + ‘”  , ‘”  - ‘”  . ‘”  / ‘”  0 ‘”  1 ‘”  2 ‘”  3 ‘”  4 ‘”  5 ‘”  6 ‘”  7 ‘”  8 ‘”  9 ‘”  : ‘”  ; ‘”  < ‘”  = ‘”  > ‘”  ? ‘”  Ì@ ‘”  ÌA ‘”  ÌB ‘”  ÌC ‘”  ÌD ‘”  ÌE ‘”  ÌF ‘”  ÌG ‘”  ÌH ‘”  ÌI ‘”  ÌJ ‘”  ÌK ‘”  ÌL ‘”  ÌM ‘”  ÌN ‘”  ÌO ‘”  ÌP ‘”  ÌQ ‘”  ÌR ‘”  ÌS ‘”  ÌT ‘”  ÌU ‘”  ÌV ‘”  ÌW ‘”  ÌX ‘”  ÌY ‘”  ÌZ ‘”  Ì[ ‘”  Ì\ ‘”  Ì] ‘”  Ì^ ‘”  Ì_ ‘”  Ì` ‘”  Ìa ‘”  Ìb ‘”  Ìc ‘”  Ìd ‘”  Ìe ‘”  Ìf ‘”  Ìg ‘”  Ìh ‘”  Ìi ‘”  Ìj ‘”  Ìk ‘”  Ìl ‘”  Ìm ‘”  Ìn ‘”  Ìo ‘”  Ìp ‘”  Ìq ‘”  Ìr ‘”  Ìs ‘”  Ìt ‘”  Ìu ‘”  Ìv ‘”  Ìw ‘”  Ìx ‘”  Ìy ‘”  Ìz ‘”  Ì{ ‘”  Ì| ‘”  Ì} ‘”  Ì~ ‘”  Ì ‘”  Ì€ ‘”  Ì ‘”  Ì‚ ‘”  Ìƒ ‘”  Ì„ ‘”  Ì… ‘”  Ì† ‘”  Ì‡ ‘”  Ìˆ ‘”  Ì‰ ‘”  ÌŠ ‘”  Ì‹ ‘”  ÌŒ ‘”  Ì ‘”  Ì ‘”  Ì ‘”  Ì ‘”  Ì‘ ‘”  Ì’ ‘”  Ì“ ‘”  Ì” ‘”  Ì• ‘”  Ì– ‘”  Ì— ‘”  Ì˜ ‘”  Ì™ ‘”  Ìš ‘”  Ì› ‘”  Ìœ ‘”  Ì ‘”  Ì ‘”  ÌŸ ‘”  Ì  ‘”  Ì¡ ‘”  Ì¢ ‘”  Ì£ ‘”  Ì¤ ‘”  Ì¥ ‘”  Ì¦ ‘”  Ì§ ‘”  Ì¨ ‘”  Ì© ‘”  Ìª ‘”  Ì« ‘”  Ì¬ ‘”  Ì­ ‘”  Ì® ‘”  Ì¯ ‘”  Ì° ‘”  Ì± ‘”  Ì² ‘”  Ì³ ‘”  Ì´ ‘”  Ìµ ‘”  Ì¶ ‘”  Ì· ‘”  Ì¸ ‘”  Ì¹ ‘”  Ìº ‘”  Ì» ‘”  Ì¼ ‘”  Ì½ ‘”  Ì¾ ‘”  Ì¿ ‘”  ÌÀ ‘”  ÌÁ ‘”  ÌÂ ‘”  ÌÃ ‘”  ÌÄ ‘”  ÌÅ ‘”  ÌÆ ‘”  ÌÇ ‘”  ÌÈ ‘”  ÌÉ ‘”  ÌÊ ‘”  ÌË ‘”  ÌÌ ‘”  ÌÍ ‘”  ÌÎ ‘”  ÌÏ ‘”  ÌĞ ‘”  ÌÑ ‘”  ÌÒ ‘”  ÌÓ ‘”  ÌÔ ‘”  ÌÕ ‘”  ÌÖ ‘”  Ì× ‘”  ÌØ ‘”  ÌÙ ‘”  ÌÚ ‘”  ÌÛ ‘”  ÌÜ ‘”  Ìİ ‘”  ÌŞ ‘”  Ìß ‘”  Ìà ‘”  Ìá ‘”  Ìâ ‘”  Ìã ‘”  Ìä ‘”  Ìå ‘”  Ìæ ‘”  Ìç ‘”  Ìè ‘”  Ìé ‘”  Ìê ‘”  Ìë ‘”  Ìì ‘”  Ìí ‘”  Ìî ‘”  Ìï ‘”  Ìğ ‘”  Ìñ ‘”  Ìò ‘”  Ìó ‘”  Ìô ‘”  Ìõ ‘”  Ìö ‘”  Ì÷ ‘”  Ìø ‘”  Ìù ‘”  Ìú ‘”  Ìû ‘”  Ìü ‘”  Ìı ‘”  Ìş ‘”  Ìÿ ‘”  Í  ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í	 ‘”  Í
+ ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í  ‘”  Í! ‘”  Í" ‘”  Í# ‘”  Í$ ‘”  Í% ‘”  Í& ‘”  Í' ‘”  Í( ‘”  Í) ‘”  Í* ‘”  Í+ ‘”  Í, ‘”  Í- ‘”  Í. ‘”  Í/ ‘”  Í0 ‘”  Í1 ‘”  Í2 ‘”  Í3 ‘”  Í4 ‘”  Í5 ‘”  Í6 ‘”  Í7 ‘”  Í8 ‘”  Í9 ‘”  Í: ‘”  Í; ‘”  Í< ‘”  Í= ‘”  Í> ‘”  Í? ‘”  Í@ ‘”  ÍA ‘”  ÍB ‘”  ÍC ‘”  ÍD ‘”  ÍE ÔrJ’§missing¦pluginÃ¦genAbcÂÔ  ÔrK”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache’ÔrL–¤type¥start£end«declarationªspecifiers¦source¶ExportNamedDeclarationÍÍ'ÔrM™¤type¥start£end¢idªexpression©generator¥async¦params¤body³FunctionDeclarationÍÍ'ÔrN”¤type¥start£end¤nameªIdentifierÍ$Í9µPageFoodDetailBuilderÂÂÂ‘ÔrO•¤type¥start£end¤left¥right±AssignmentPatternÍ:ÍGNªIdentifierÍ:Í@¦parentÔrP•¤type¥start£end¥value£raw§LiteralÍCÍGÀ¤nullÔrQ”¤type¥start£end¤body®BlockStatementÍIÍ'‘Q®BlockStatementÍPÍ$‘ÔrR”¤type¥start£endªexpression³ExpressionStatementÍ[ÍÔrS–¤type¥start£end¦callee©arguments¨optional®CallExpressionÍ[ÍÔrT—¤type¥start£end¦object¨property¨computed¨optional°MemberExpressionÍ[ÍÔrU–¤type¥start£end¤testªconsequent©alternateµConditionalExpressionÍ\ÍrNªIdentifierÍ\Íb¦parentNªIdentifierÍeÍk¦parentÔrV“¤type¥start£end®ThisExpressionÍnÍrNªIdentifierÍtÍ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍÍÿÀÂÂÂ’NªIdentifierÍÍ•¦elmtIdNªIdentifierÍ—Í¦¯isInitialRenderQ®BlockStatementÍ«Íÿ‘U«IfStatementÍºÍôNªIdentifierÍ¾ÍÍ¯isInitialRenderQ®BlockStatementÍÏÍ{”ÔrW•¤type¥start£end¬declarations¤kind³VariableDeclarationÍâÍ‘ÔrX•¤type¥start£end¢id¤init²VariableDeclaratorÍæÍœNªIdentifierÍæÍó­componentCallÔrY•¤type¥start£end¦callee©arguments­NewExpressionÍöÍœNªIdentifierÍúÍ®PageFoodDetail–UµConditionalExpressionÍ	ÍNªIdentifierÍ	Í¦parentNªIdentifierÍÍ¦parentV®ThisExpressionÍÍÔrZ”¤type¥start£endªproperties°ObjectExpressionÍ!Í#NªIdentifierÍ%Í.©undefinedNªIdentifierÍ0Í6¦elmtIdM·ArrowFunctionExpressionÍ8ÍAÀÂÂÂQ®BlockStatementÍ>ÍAZ°ObjectExpressionÍCÍ›“Ôr[™¤type¥start£end¦method©shorthand¨computed£key¥value¤kind¨PropertyÍEÍ‡ÂÂÂNªIdentifierÍEÍI¤pageP§LiteralÍKÍ‡Ù:feature/feature_food/src/main/ets/pages/PageFoodDetail.etsÙ<"feature/feature_food/src/main/ets/pages/PageFoodDetail.ets"¤init[¨PropertyÍ‰Í‘ÂÂÂNªIdentifierÍ‰Í¤lineP§LiteralÍÍ‘¢25¤init[¨PropertyÍ“Í™ÂÂÂNªIdentifierÍ“Í–£colP§LiteralÍ˜Í™¡3¤init£letR³ExpressionStatementÍ¯ÍÌS®CallExpressionÍ¯ÍËT°MemberExpressionÍ¯Í¼NªIdentifierÍ¯Íµ¦ViewPUNªIdentifierÍ¶Í¼¦createÂÂ‘NªIdentifierÍ½ÍÊ­componentCallÂW³VariableDeclarationÍŞÍ,‘X²VariableDeclaratorÍâÍ+NªIdentifierÍâÍî¬paramsLambdaM·ArrowFunctionExpressionÍñÍ+ÀÂÂÂQ®BlockStatementÍ÷Í+‘Ôr\”¤type¥start£end¨argument¯ReturnStatementÍÍZ°ObjectExpressionÍÍ£letR³ExpressionStatementÍ>ÍlÔr]–¤type¥start£end¨operator¤left¥right´AssignmentExpressionÍ>Ík¡=T°MemberExpressionÍ>Í\NªIdentifierÍ>ÍK­componentCallNªIdentifierÍLÍ\°paramsGenerator_ÂÂNªIdentifierÍ_Ík¬paramsLambdaQ®BlockStatementÍÍô‘R³ExpressionStatementÍ¡ÍåS®CallExpressionÍ¡ÍäT°MemberExpressionÍ¡ÍØUµConditionalExpressionÍ¢Í¸NªIdentifierÍ¢Í¨¦parentNªIdentifierÍ«Í±¦parentV®ThisExpressionÍ´Í¸NªIdentifierÍºÍØ¾updateStateVarsOfChildByElmtIdÂÂ’NªIdentifierÍÙÍß¦elmtIdZ°ObjectExpressionÍáÍãÂZ°ObjectExpressionÍÍ‘[¨PropertyÍÍÂÂÂNªIdentifierÍÍ¤nameP§LiteralÍ	Í®PageFoodDetail°"PageFoodDetail"¤initÂÀL¶ExportNamedDeclarationÍ)Í7üÔr^–¤type¥start£end¢idªsuperClass¤body°ClassDeclarationÍ0Í7üNªIdentifierÍ6ÍD®PageFoodDetailNªIdentifierÍMÍS¦ViewPUQ©ClassBodyÍTÍ7üÜ Ôr_˜¤type¥start£end¦static¨computed£key¤kind¥value°MethodDefinitionÍ[Í
+¸ÂÂNªIdentifierÍ[Íf«constructor«constructorM²FunctionExpressionÍfÍ
+¸ÀÂÂÂ–NªIdentifierÍgÍm¦parentNªIdentifierÍoÍu¦paramsNªIdentifierÍwÍ…®__localStorageO±AssignmentPatternÍ‡Í’NªIdentifierÍ‡Í¦elmtIdÔr`–¤type¥start£end¨operator¦prefix¨argument¯UnaryExpressionÍÍ’¡-ÃP§LiteralÍ‘Í’¡1O±AssignmentPatternÍ”Í¬NªIdentifierÍ”Í ¬paramsLambdaNªIdentifierÍ£Í¬©undefinedNªIdentifierÍ®Í·©extraInfoQ®BlockStatementÍ¹Í
+¸šR³ExpressionStatementÍÄÍõS®CallExpressionÍÄÍôV¥SuperÍÄÍÉ”NªIdentifierÍÊÍĞ¦parentNªIdentifierÍÒÍà®__localStorageNªIdentifierÍâÍè¦elmtIdNªIdentifierÍêÍó©extraInfoÂR³ExpressionStatementÍÿÍQ]´AssignmentExpressionÍÿÍP¡=T°MemberExpressionÍÿÍV®ThisExpressionÍÿÍNªIdentifierÍÍ­__choosePriceÂÂS®CallExpressionÍÍPT°MemberExpressionÍÍ/V®ThisExpressionÍÍNªIdentifierÍÍ/¶createLocalStorageLinkÂÂ“P§LiteralÍ0Í=«choosePrice­"choosePrice"P§LiteralÍ?Í@ ¡0P§LiteralÍBÍO«choosePrice­"choosePrice"ÂR³ExpressionStatementÍ[Í¬]´AssignmentExpressionÍ[Í«¡=T°MemberExpressionÍ[ÍjV®ThisExpressionÍ[Í_NªIdentifierÍ`Íjª__buyFoodsÂÂS®CallExpressionÍmÍ«T°MemberExpressionÍmÍˆV®ThisExpressionÍmÍqNªIdentifierÍrÍˆ¶createLocalStorageLinkÂÂ“P§LiteralÍ‰Í“¨buyFoodsª"buyFoods"Y­NewExpressionÍ•ÍNªIdentifierÍ™Íœ£MapP§LiteralÍ Íª¨buyFoodsª"buyFoods"ÂU«IfStatementÍ¶Í	Ôra–¤type¥start£end¤left¨operator¥right°BinaryExpressionÍºÍÜ`¯UnaryExpressionÍºÍÍ¦typeofÃNªIdentifierÍÁÍÍ¬paramsLambda£===P§LiteralÍÒÍÜ¨functionª"function"Q®BlockStatementÍŞÍ	‘R³ExpressionStatementÍíÍ	]´AssignmentExpressionÍíÍ	¡=T°MemberExpressionÍíÍ	V®ThisExpressionÍíÍñNªIdentifierÍòÍ	°paramsGenerator_ÂÂNªIdentifierÍ	Í	¬paramsLambdaÀR³ExpressionStatementÍ	'Í	~]´AssignmentExpressionÍ	'Í	}¡=T°MemberExpressionÍ	'Í	8V®ThisExpressionÍ	'Í	+NªIdentifierÍ	,Í	8¬__foodDetailÂÂY­NewExpressionÍ	;Í	}NªIdentifierÍ	?Í	W¸ObservedPropertyObjectPU“Y­NewExpressionÍ	XÍ	hNªIdentifierÍ	\Í	fªFoodDetailV®ThisExpressionÍ	jÍ	nP§LiteralÍ	pÍ	|ªfoodDetail¬"foodDetail"R³ExpressionStatementÍ	ˆÍ	È]´AssignmentExpressionÍ	ˆÍ	Ç¡=T°MemberExpressionÍ	ˆÍ	•V®ThisExpressionÍ	ˆÍ	ŒNªIdentifierÍ	Í	•¨__buyNumÂÂY­NewExpressionÍ	˜Í	ÇNªIdentifierÍ	œÍ	´¸ObservedPropertySimplePU“P§LiteralÍ	µÍ	¶¡1V®ThisExpressionÍ	¸Í	¼P§LiteralÍ	¾Í	Æ¦buyNum¨"buyNum"R³ExpressionStatementÍ	ÒÍ
+]´AssignmentExpressionÍ	ÒÍ
+¡=T°MemberExpressionÍ	ÒÍ	äV®ThisExpressionÍ	ÒÍ	ÖNªIdentifierÍ	×Í	ä­topRectHeightÂÂa°BinaryExpressionÍ	çÍ
+S®CallExpressionÍ	çÍ
+T°MemberExpressionÍ	çÍ	õNªIdentifierÍ	çÍ	ñªAppStorageNªIdentifierÍ	òÍ	õ£getÂÂ‘P§LiteralÍ	öÍ
+­topRectHeight¯'topRectHeight'Â¡+P§LiteralÍ
+	Í
+¢px¤'px'R³ExpressionStatementÍ
+Í
+Z]´AssignmentExpressionÍ
+Í
+Y¡=T°MemberExpressionÍ
+Í
+-V®ThisExpressionÍ
+Í
+NªIdentifierÍ
+Í
+-°bottomRectHeightÂÂa°BinaryExpressionÍ
+0Í
+YS®CallExpressionÍ
+0Í
+RT°MemberExpressionÍ
+0Í
+>NªIdentifierÍ
+0Í
+:ªAppStorageNªIdentifierÍ
+;Í
+>£getÂÂ‘P§LiteralÍ
+?Í
+Q°bottomRectHeight²'bottomRectHeight'Â¡+P§LiteralÍ
+UÍ
+Y¢px¤'px'R³ExpressionStatementÍ
+dÍ
+‹S®CallExpressionÍ
+dÍ
+ŠT°MemberExpressionÍ
+dÍ
+‚V®ThisExpressionÍ
+dÍ
+hNªIdentifierÍ
+iÍ
+‚¹setInitiallyProvidedValueÂÂ‘NªIdentifierÍ
+ƒÍ
+‰¦paramsÂR³ExpressionStatementÍ
+•Í
+±S®CallExpressionÍ
+•Í
+°T°MemberExpressionÍ
+•Í
+®V®ThisExpressionÍ
+•Í
+™NªIdentifierÍ
+šÍ
+®´finalizeConstructionÂÂÂ_°MethodDefinitionÍ
+¾Í«ÂÂNªIdentifierÍ
+¾Í
+×¹setInitiallyProvidedValue¦methodM²FunctionExpressionÍ
+×Í«ÀÂÂÂ‘NªIdentifierÍ
+ØÍ
+Ş¦paramsQ®BlockStatementÍ
+àÍ«”U«IfStatementÍ
+ëÍNa°BinaryExpressionÍ
+ïÍT°MemberExpressionÍ
+ïÍ NªIdentifierÍ
+ïÍ
+õ¦paramsNªIdentifierÍ
+öÍ ªfoodDetailÂÂ£!==NªIdentifierÍÍ©undefinedQ®BlockStatementÍÍN‘R³ExpressionStatementÍÍC]´AssignmentExpressionÍÍB¡=T°MemberExpressionÍÍ.V®ThisExpressionÍÍ#NªIdentifierÍ$Í.ªfoodDetailÂÂT°MemberExpressionÍ1ÍBNªIdentifierÍ1Í7¦paramsNªIdentifierÍ8ÍBªfoodDetailÂÂÀU«IfStatementÍXÍ¯a°BinaryExpressionÍ\ÍwT°MemberExpressionÍ\ÍiNªIdentifierÍ\Íb¦paramsNªIdentifierÍcÍi¦buyNumÂÂ£!==NªIdentifierÍnÍw©undefinedQ®BlockStatementÍyÍ¯‘R³ExpressionStatementÍˆÍ¤]´AssignmentExpressionÍˆÍ£¡=T°MemberExpressionÍˆÍ“V®ThisExpressionÍˆÍŒNªIdentifierÍÍ“¦buyNumÂÂT°MemberExpressionÍ–Í£NªIdentifierÍ–Íœ¦paramsNªIdentifierÍÍ£¦buyNumÂÂÀU«IfStatementÍ¹Í%a°BinaryExpressionÍ½ÍßT°MemberExpressionÍ½ÍÑNªIdentifierÍ½ÍÃ¦paramsNªIdentifierÍÄÍÑ­topRectHeightÂÂ£!==NªIdentifierÍÖÍß©undefinedQ®BlockStatementÍáÍ%‘R³ExpressionStatementÍğÍ]´AssignmentExpressionÍğÍ¡=T°MemberExpressionÍğÍV®ThisExpressionÍğÍôNªIdentifierÍõÍ­topRectHeightÂÂT°MemberExpressionÍÍNªIdentifierÍÍ¦paramsNªIdentifierÍÍ­topRectHeightÂÂÀU«IfStatementÍ/Í¤a°BinaryExpressionÍ3ÍXT°MemberExpressionÍ3ÍJNªIdentifierÍ3Í9¦paramsNªIdentifierÍ:ÍJ°bottomRectHeightÂÂ£!==NªIdentifierÍOÍX©undefinedQ®BlockStatementÍZÍ¤‘R³ExpressionStatementÍiÍ™]´AssignmentExpressionÍiÍ˜¡=T°MemberExpressionÍiÍ~V®ThisExpressionÍiÍmNªIdentifierÍnÍ~°bottomRectHeightÂÂT°MemberExpressionÍÍ˜NªIdentifierÍÍ‡¦paramsNªIdentifierÍˆÍ˜°bottomRectHeightÂÂÀ_°MethodDefinitionÍ±ÍÑÂÂNªIdentifierÍ±ÍÀ¯updateStateVars¦methodM²FunctionExpressionÍÀÍÑÀÂÂÂ‘NªIdentifierÍÁÍÇ¦paramsQ®BlockStatementÍÉÍÑ_°MethodDefinitionÍ×ÍşÂÂNªIdentifierÍ×ÍøÙ!purgeVariableDependenciesOnElmtId¦methodM²FunctionExpressionÍøÍşÀÂÂÂ‘NªIdentifierÍùÍ¨rmElmtIdQ®BlockStatementÍÍş”R³ExpressionStatementÍÍBS®CallExpressionÍÍAT°MemberExpressionÍÍ7T°MemberExpressionÍÍV®ThisExpressionÍÍNªIdentifierÍÍ¬__foodDetailÂÂNªIdentifierÍ Í7·purgeDependencyOnElmtIdÂÂ‘NªIdentifierÍ8Í@¨rmElmtIdÂR³ExpressionStatementÍLÍ|S®CallExpressionÍLÍ{T°MemberExpressionÍLÍqT°MemberExpressionÍLÍYV®ThisExpressionÍLÍPNªIdentifierÍQÍY¨__buyNumÂÂNªIdentifierÍZÍq·purgeDependencyOnElmtIdÂÂ‘NªIdentifierÍrÍz¨rmElmtIdÂR³ExpressionStatementÍ†Í»S®CallExpressionÍ†ÍºT°MemberExpressionÍ†Í°T°MemberExpressionÍ†Í˜V®ThisExpressionÍ†ÍŠNªIdentifierÍ‹Í˜­__choosePriceÂÂNªIdentifierÍ™Í°·purgeDependencyOnElmtIdÂÂ‘NªIdentifierÍ±Í¹¨rmElmtIdÂR³ExpressionStatementÍÅÍ÷S®CallExpressionÍÅÍöT°MemberExpressionÍÅÍìT°MemberExpressionÍÅÍÔV®ThisExpressionÍÅÍÉNªIdentifierÍÊÍÔª__buyFoodsÂÂNªIdentifierÍÕÍì·purgeDependencyOnElmtIdÂÂ‘NªIdentifierÍíÍõ¨rmElmtIdÂ_°MethodDefinitionÍÍ6ÂÂNªIdentifierÍÍ°aboutToBeDeleted¦methodM²FunctionExpressionÍÍ6ÀÂÂÂQ®BlockStatementÍÍ6–R³ExpressionStatementÍ"ÍGS®CallExpressionÍ"ÍFT°MemberExpressionÍ"ÍDT°MemberExpressionÍ"Í3V®ThisExpressionÍ"Í&NªIdentifierÍ'Í3¬__foodDetailÂÂNªIdentifierÍ4ÍD°aboutToBeDeletedÂÂÂR³ExpressionStatementÍQÍrS®CallExpressionÍQÍqT°MemberExpressionÍQÍoT°MemberExpressionÍQÍ^V®ThisExpressionÍQÍUNªIdentifierÍVÍ^¨__buyNumÂÂNªIdentifierÍ_Ío°aboutToBeDeletedÂÂÂR³ExpressionStatementÍ|Í¢S®CallExpressionÍ|Í¡T°MemberExpressionÍ|ÍŸT°MemberExpressionÍ|ÍV®ThisExpressionÍ|Í€NªIdentifierÍÍ­__choosePriceÂÂNªIdentifierÍÍŸ°aboutToBeDeletedÂÂÂR³ExpressionStatementÍ¬ÍÏS®CallExpressionÍ¬ÍÎT°MemberExpressionÍ¬ÍÌT°MemberExpressionÍ¬Í»V®ThisExpressionÍ¬Í°NªIdentifierÍ±Í»ª__buyFoodsÂÂNªIdentifierÍ¼ÍÌ°aboutToBeDeletedÂÂÂR³ExpressionStatementÍÙÍS®CallExpressionÍÙÍT°MemberExpressionÍÙÍ÷S®CallExpressionÍÙÍğT°MemberExpressionÍÙÍîNªIdentifierÍÙÍê±SubscriberManagerNªIdentifierÍëÍî£GetÂÂÂNªIdentifierÍñÍ÷¦deleteÂÂ‘S®CallExpressionÍøÍT°MemberExpressionÍøÍV®ThisExpressionÍøÍüNªIdentifierÍıÍ¤id__ÂÂÂÂR³ExpressionStatementÍÍ/S®CallExpressionÍÍ.T°MemberExpressionÍÍ,V®ThisExpressionÍÍNªIdentifierÍÍ,¸aboutToBeDeletedInternalÂÂÂ_°MethodDefinitionÍ<Í~ÂÂNªIdentifierÍ@ÍJªfoodDetail£getM²FunctionExpressionÍJÍ~ÀÂÂÂQ®BlockStatementÍMÍ~‘\¯ReturnStatementÍXÍwS®CallExpressionÍ_ÍvT°MemberExpressionÍ_ÍtT°MemberExpressionÍ_ÍpV®ThisExpressionÍ_ÍcNªIdentifierÍdÍp¬__foodDetailÂÂNªIdentifierÍqÍt£getÂÂÂ_°MethodDefinitionÍ„ÍÏÂÂNªIdentifierÍˆÍ’ªfoodDetail£setM²FunctionExpressionÍ’ÍÏÀÂÂÂ‘NªIdentifierÍ“Í›¨newValueQ®BlockStatementÍÍÏ‘R³ExpressionStatementÍ¨ÍÈS®CallExpressionÍ¨ÍÇT°MemberExpressionÍ¨Í½T°MemberExpressionÍ¨Í¹V®ThisExpressionÍ¨Í¬NªIdentifierÍ­Í¹¬__foodDetailÂÂNªIdentifierÍºÍ½£setÂÂ‘NªIdentifierÍ¾ÍÆ¨newValueÂ_°MethodDefinitionÍÕÍÂÂNªIdentifierÍÙÍß¦buyNum£getM²FunctionExpressionÍßÍÀÂÂÂQ®BlockStatementÍâÍ‘\¯ReturnStatementÍíÍS®CallExpressionÍôÍT°MemberExpressionÍôÍT°MemberExpressionÍôÍV®ThisExpressionÍôÍøNªIdentifierÍùÍ¨__buyNumÂÂNªIdentifierÍÍ£getÂÂÂ_°MethodDefinitionÍÍXÂÂNªIdentifierÍÍ¦buyNum£setM²FunctionExpressionÍÍXÀÂÂÂ‘NªIdentifierÍ Í(¨newValueQ®BlockStatementÍ*ÍX‘R³ExpressionStatementÍ5ÍQS®CallExpressionÍ5ÍPT°MemberExpressionÍ5ÍFT°MemberExpressionÍ5ÍBV®ThisExpressionÍ5Í9NªIdentifierÍ:ÍB¨__buyNumÂÂNªIdentifierÍCÍF£setÂÂ‘NªIdentifierÍGÍO¨newValueÂ_°MethodDefinitionÍ^Í¢ÂÂNªIdentifierÍbÍm«choosePrice£getM²FunctionExpressionÍmÍ¢ÀÂÂÂQ®BlockStatementÍpÍ¢‘\¯ReturnStatementÍ{Í›S®CallExpressionÍ‚ÍšT°MemberExpressionÍ‚Í˜T°MemberExpressionÍ‚Í”V®ThisExpressionÍ‚Í†NªIdentifierÍ‡Í”­__choosePriceÂÂNªIdentifierÍ•Í˜£getÂÂÂ_°MethodDefinitionÍ¨ÍõÂÂNªIdentifierÍ¬Í·«choosePrice£setM²FunctionExpressionÍ·ÍõÀÂÂÂ‘NªIdentifierÍ¸ÍÀ¨newValueQ®BlockStatementÍÂÍõ‘R³ExpressionStatementÍÍÍîS®CallExpressionÍÍÍíT°MemberExpressionÍÍÍãT°MemberExpressionÍÍÍßV®ThisExpressionÍÍÍÑNªIdentifierÍÒÍß­__choosePriceÂÂNªIdentifierÍàÍã£setÂÂ‘NªIdentifierÍäÍì¨newValueÂ_°MethodDefinitionÍûÍ9ÂÂNªIdentifierÍÿÍ¨buyFoods£getM²FunctionExpressionÍÍ9ÀÂÂÂQ®BlockStatementÍ
+Í9‘\¯ReturnStatementÍÍ2S®CallExpressionÍÍ1T°MemberExpressionÍÍ/T°MemberExpressionÍÍ+V®ThisExpressionÍÍ NªIdentifierÍ!Í+ª__buyFoodsÂÂNªIdentifierÍ,Í/£getÂÂÂ_°MethodDefinitionÍ?Í†ÂÂNªIdentifierÍCÍK¨buyFoods£setM²FunctionExpressionÍKÍ†ÀÂÂÂ‘NªIdentifierÍLÍT¨newValueQ®BlockStatementÍVÍ†‘R³ExpressionStatementÍaÍS®CallExpressionÍaÍ~T°MemberExpressionÍaÍtT°MemberExpressionÍaÍpV®ThisExpressionÍaÍeNªIdentifierÍfÍpª__buyFoodsÂÂNªIdentifierÍqÍt£setÂÂ‘NªIdentifierÍuÍ}¨newValueÂ_°MethodDefinitionÍŒÍäÂÂNªIdentifierÍŒÍ™­aboutToAppear¦methodM²FunctionExpressionÍ™ÍäÀÂÂÂQ®BlockStatementÍœÍä’W³VariableDeclarationÍ§ÍA‘X²VariableDeclaratorÍ­Í@NªIdentifierÍ­Í¶©paramListS®CallExpressionÍ¹Í@T°MemberExpressionÍ¹ÍÑNªIdentifierÍ¹ÍÅ¬RouterModuleNªIdentifierÍÆÍÑ«getNavParamÂÂ‘Z°ObjectExpressionÍÒÍ?’[¨PropertyÍáÍÂÂÂNªIdentifierÍáÍê©stackNameT°MemberExpressionÍìÍNªIdentifierÍìÍ÷«NavStackMapNªIdentifierÍøÍªMAIN_STACKÂÂ¤init[¨PropertyÍÍ3ÂÂÂNªIdentifierÍÍ£urlT°MemberExpressionÍÍ3NªIdentifierÍÍ"¬NavRouterMapNªIdentifierÍ#Í3°PAGE_FOOD_DETAILÂÂ¤initÂ¥constU«IfStatementÍKÍİa±LogicalExpressionÍOÍƒR¯ChainExpressionÍOÍ`T°MemberExpressionÍOÍ`NªIdentifierÍOÍX©paramListNªIdentifierÍZÍ`¦lengthÂÃ¢&&T°MemberExpressionÍdÍƒNªIdentifierÍdÍm©paramLista°BinaryExpressionÍnÍ‚T°MemberExpressionÍnÍ~NªIdentifierÍnÍw©paramListNªIdentifierÍxÍ~¦lengthÂÂ¡-P§LiteralÍÍ‚¡1ÃÂQ®BlockStatementÍ…Íİ‘R³ExpressionStatementÍ”ÍÒ]´AssignmentExpressionÍ”ÍÑ¡=T°MemberExpressionÍ”Í£V®ThisExpressionÍ”Í˜NªIdentifierÍ™Í£ªfoodDetailÂÂS®CallExpressionÍ¦ÍÑT°MemberExpressionÍ¦Í°NªIdentifierÍ¦Íª¤JSONNªIdentifierÍ«Í°¥parseÂÂ‘T°MemberExpressionÍ±ÍĞNªIdentifierÍ±Íº©paramLista°BinaryExpressionÍ»ÍÏT°MemberExpressionÍ»ÍËNªIdentifierÍ»ÍÄ©paramListNªIdentifierÍÅÍË¦lengthÂÂ¡-P§LiteralÍÎÍÏ¡1ÃÂÂÀ_°MethodDefinitionÍ>ÍÕÂÂNªIdentifierÍ>ÍL®getImageSource¦methodM²FunctionExpressionÍLÍÕÀÂÂÂ‘NªIdentifierÍMÍP£picQ®BlockStatementÍRÍÕ—U«IfStatementÍ]ÍTa±LogicalExpressionÍaÍz`¯UnaryExpressionÍaÍe¡!ÃNªIdentifierÍbÍe£pic¢||a°BinaryExpressionÍiÍzS®CallExpressionÍiÍsT°MemberExpressionÍiÍqNªIdentifierÍiÍl£picNªIdentifierÍmÍq¤trimÂÂÂ£===P§LiteralÍxÍz ¢''Q®BlockStatementÍ|ÍT’R³ExpressionStatementÍ‹ÍÎS®CallExpressionÍ‹ÍÍT°MemberExpressionÍ‹Í•NªIdentifierÍ‹Í¥hilogNªIdentifierÍ‘Í•¤infoÂÂ“P§LiteralÍ–Íœ ¦0x0000P§LiteralÍÍ»»FoodCategory_getImageSource½'FoodCategory_getImageSource'P§LiteralÍ½ÍÌÙ'å›¾ç‰‡è·¯å¾„ä¸ºç©ºï¼Œä½¿ç”¨é»˜è®¤å›¾ç‰‡Ù)'å›¾ç‰‡è·¯å¾„ä¸ºç©ºï¼Œä½¿ç”¨é»˜è®¤å›¾ç‰‡'Â\¯ReturnStatementÍÜÍIZ°ObjectExpressionÍãÍH•[¨PropertyÍåÍôÂÂÂP§LiteralÍåÍé¢id¤"id"P§LiteralÍëÍôÎ  >©134217790¤init[¨PropertyÍöÍÂÂÂP§LiteralÍöÍü¤type¦"type"P§LiteralÍşÍÍN ¥20000¤init[¨PropertyÍÍÂÂÂNªIdentifierÍÍ¦paramsÔrb”¤type¥start£end¨elements¯ArrayExpressionÍÍ¤init[¨PropertyÍÍ/ÂÂÂP§LiteralÍÍªbundleName¬"bundleName"P§LiteralÍÍ/®wanxy.food.com°"wanxy.food.com"¤init[¨PropertyÍ1ÍFÂÂÂP§LiteralÍ1Í=ªmoduleName¬"moduleName"P§LiteralÍ?ÍF¥phone§"phone"¤initÀU«IfStatementÍuÍa±LogicalExpressionÍyÍ©S®CallExpressionÍyÍŒT°MemberExpressionÍyÍ‡NªIdentifierÍyÍ|£picNªIdentifierÍ}Í‡ªstartsWithÂÂ‘P§LiteralÍˆÍ‹¡/£'/'Â¢||S®CallExpressionÍÍ©T°MemberExpressionÍÍNªIdentifierÍÍ“£picNªIdentifierÍ”ÍªstartsWithÂÂ‘P§LiteralÍŸÍ¨§file://©'file://'ÂQ®BlockStatementÍ«Í“R³ExpressionStatementÍºÍÿS®CallExpressionÍºÍşT°MemberExpressionÍºÍÄNªIdentifierÍºÍ¿¥hilogNªIdentifierÍÀÍÄ¤infoÂÂ“P§LiteralÍÅÍË ¦0x0000P§LiteralÍÍÍê»FoodCategory_getImageSource½'FoodCategory_getImageSource'Ôrc•¤type¥start£end«expressions¦quasis¯TemplateLiteralÍìÍı‘NªIdentifierÍøÍû£pic’Ôrd•¤type¥start£end¥value¤tail¯TemplateElementÍíÍöÔre’£raw¦cooked·è¯†åˆ«ä¸ºæ–‡ä»¶è·¯å¾„: ·è¯†åˆ«ä¸ºæ–‡ä»¶è·¯å¾„: Âd¯TemplateElementÍüÍüe  ÃÂÔrf–¤type¥start£end¥block§handler©finalizer¬TryStatementÍÍ‘Q®BlockStatementÍÍñ’W³VariableDeclarationÍAÍl‘X²VariableDeclaratorÍGÍkNªIdentifierÍGÍR«isFileExistS®CallExpressionÍUÍkT°MemberExpressionÍUÍfNªIdentifierÍUÍ[¦fileIoNªIdentifierÍ\ÍfªaccessSyncÂÂ‘NªIdentifierÍgÍj£picÂ¥constU«IfStatementÍ~ÍâNªIdentifierÍ‚Í«isFileExistQ®BlockStatementÍÍ]’R³ExpressionStatementÍ¦ÍèS®CallExpressionÍ¦ÍçT°MemberExpressionÍ¦Í°NªIdentifierÍ¦Í«¥hilogNªIdentifierÍ¬Í°¤infoÂÂ“P§LiteralÍ±Í· ¦0x0000P§LiteralÍ¹ÍÖ»FoodCategory_getImageSource½'FoodCategory_getImageSource'c¯TemplateLiteralÍØÍæ‘NªIdentifierÍáÍä£pic’d¯TemplateElementÍÙÍße®æ–‡ä»¶å­˜åœ¨: ®æ–‡ä»¶å­˜åœ¨: Âd¯TemplateElementÍåÍåe  ÃÂ\¯ReturnStatementÍ'ÍJS®CallExpressionÍ.ÍIT°MemberExpressionÍ.ÍDNªIdentifierÍ.Í5§fileUriNªIdentifierÍ6ÍD®getUriFromPathÂÂ‘NªIdentifierÍEÍH£picÂQ®BlockStatementÍtÍâ‘R³ExpressionStatementÍ‹ÍÏS®CallExpressionÍ‹ÍÎT°MemberExpressionÍ‹Í–NªIdentifierÍ‹Í¥hilogNªIdentifierÍ‘Í–¥errorÂÂ“P§LiteralÍ—Í ¦0x0000P§LiteralÍŸÍ¼»FoodCategory_getImageSource½'FoodCategory_getImageSource'c¯TemplateLiteralÍ¾ÍÍ‘NªIdentifierÍÈÍË£pic’d¯TemplateElementÍ¿ÍÆe±æ–‡ä»¶ä¸å­˜åœ¨: ±æ–‡ä»¶ä¸å­˜åœ¨: Âd¯TemplateElementÍÌÍÌe  ÃÂÔrg•¤type¥start£end¥param¤body«CatchClauseÍÿÍ‘NªIdentifierÍÍ	£errQ®BlockStatementÍÍ‘‘R³ExpressionStatementÍÍ‚S®CallExpressionÍÍT°MemberExpressionÍÍ)NªIdentifierÍÍ#¥hilogNªIdentifierÍ$Í)¥errorÂÂ“P§LiteralÍ*Í0 ¦0x0000P§LiteralÍ2ÍO»FoodCategory_getImageSource½'FoodCategory_getImageSource'c¯TemplateLiteralÍQÍ€’NªIdentifierÍ\Í_£picS®CallExpressionÍkÍ~T°MemberExpressionÍkÍyNªIdentifierÍkÍo¤JSONNªIdentifierÍpÍy©stringifyÂÂ‘NªIdentifierÍzÍ}£errÂ“d¯TemplateElementÍRÍZe´æ–‡ä»¶è®¿é—®å¤±è´¥: ´æ–‡ä»¶è®¿é—®å¤±è´¥: Âd¯TemplateElementÍ`Íie©, error: ©, error: Âd¯TemplateElementÍÍe  ÃÂÀ\¯ReturnStatementÍŸÍZ°ObjectExpressionÍ¦Í•[¨PropertyÍ¨Í·ÂÂÂP§LiteralÍ¨Í¬¢id¤"id"P§LiteralÍ®Í·Î  >©134217790¤init[¨PropertyÍ¹ÍÆÂÂÂP§LiteralÍ¹Í¿¤type¦"type"P§LiteralÍÁÍÆÍN ¥20000¤init[¨PropertyÍÈÍÒÂÂÂNªIdentifierÍÈÍÎ¦paramsb¯ArrayExpressionÍĞÍÒ¤init[¨PropertyÍÔÍòÂÂÂP§LiteralÍÔÍàªbundleName¬"bundleName"P§LiteralÍâÍò®wanxy.food.com°"wanxy.food.com"¤init[¨PropertyÍôÍ	ÂÂÂP§LiteralÍôÍ ªmoduleName¬"moduleName"P§LiteralÍÍ	¥phone§"phone"¤initÀU«IfStatementÍ<ÍÊa±LogicalExpressionÍ@ÍcNªIdentifierÍ@ÍC£pic¢&&S®CallExpressionÍGÍcT°MemberExpressionÍGÍUNªIdentifierÍGÍJ£picNªIdentifierÍKÍUªstartsWithÂÂ‘P§LiteralÍVÍbªdata:image¬'data:image'ÂQ®BlockStatementÍeÍÊ’R³ExpressionStatementÍtÍ¦S®CallExpressionÍtÍ¥T°MemberExpressionÍtÍ~NªIdentifierÍtÍy¥hilogNªIdentifierÍzÍ~¤infoÂÂ“P§LiteralÍÍ… ¦0x0000P§LiteralÍ‡Í•¬FoodCategory®'FoodCategory'P§LiteralÍ—Í¤µè¯†åˆ«ä¸ºbase64å›¾ç‰‡·'è¯†åˆ«ä¸ºbase64å›¾ç‰‡'Â\¯ReturnStatementÍ´Í¿NªIdentifierÍ»Í¾£picÀU«IfStatementÍèÍöa±LogicalExpressionÍìÍNªIdentifierÍìÍï£pic¢&&S®CallExpressionÍóÍT°MemberExpressionÍóÍNªIdentifierÍóÍö£picNªIdentifierÍ÷ÍªstartsWithÂÂ‘P§LiteralÍÍªapp.media.¬'app.media.'ÂQ®BlockStatementÍÍö’R³ExpressionStatementÍ ÍVS®CallExpressionÍ ÍUT°MemberExpressionÍ Í*NªIdentifierÍ Í%¥hilogNªIdentifierÍ&Í*¤infoÂÂ“P§LiteralÍ+Í1 ¦0x0000P§LiteralÍ3ÍA¬FoodCategory®'FoodCategory'c¯TemplateLiteralÍCÍT‘NªIdentifierÍOÍR£pic’d¯TemplateElementÍDÍMe·è¯†åˆ«ä¸ºèµ„æºè·¯å¾„: ·è¯†åˆ«ä¸ºèµ„æºè·¯å¾„: Âd¯TemplateElementÍSÍSe  ÃÂf¬TryStatementÍdÍëQ®BlockStatementÍhÍT’W³VariableDeclarationÍ{Íë‘X²VariableDeclaratorÍÍêNªIdentifierÍÍ‰¨resourceZ°ObjectExpressionÍŒÍê•[¨PropertyÍÍ–ÂÂÂP§LiteralÍÍ’¢id¤"id"`¯UnaryExpressionÍ”Í–¡-ÃP§LiteralÍ•Í–¡1¤init[¨PropertyÍ˜Í¢ÂÂÂP§LiteralÍ˜Í¤type¦"type"`¯UnaryExpressionÍ Í¢¡-ÃP§LiteralÍ¡Í¢¡1¤init[¨PropertyÍ¤Í±ÂÂÂNªIdentifierÍ¤Íª¦paramsb¯ArrayExpressionÍ¬Í±‘NªIdentifierÍ­Í°£pic¤init[¨PropertyÍ³ÍÑÂÂÂP§LiteralÍ³Í¿ªbundleName¬"bundleName"P§LiteralÍÁÍÑ®wanxy.food.com°"wanxy.food.com"¤init[¨PropertyÍÓÍèÂÂÂP§LiteralÍÓÍßªmoduleName¬"moduleName"P§LiteralÍáÍè¥phone§"phone"¤init¥constU«IfStatementÍıÍENªIdentifierÍÍ	¨resourceQ®BlockStatementÍÍE‘\¯ReturnStatementÍ"Í2NªIdentifierÍ)Í1¨resourceÀg«CatchClauseÍbÍëNªIdentifierÍiÍn¥errorQ®BlockStatementÍpÍë‘R³ExpressionStatementÍƒÍÜS®CallExpressionÍƒÍÛT°MemberExpressionÍƒÍNªIdentifierÍƒÍˆ¥hilogNªIdentifierÍ‰Í¥errorÂÂ“P§LiteralÍÍ• ¦0x0000P§LiteralÍ—Í¥¬FoodCategory®'FoodCategory'c¯TemplateLiteralÍ§ÍÚ’NªIdentifierÍ´Í·£picS®CallExpressionÍÃÍØT°MemberExpressionÍÃÍÑNªIdentifierÍÃÍÇ¤JSONNªIdentifierÍÈÍÑ©stringifyÂÂ‘NªIdentifierÍÒÍ×¥errorÂ“d¯TemplateElementÍ¨Í²eºèµ„æºè·¯å¾„è½¬æ¢å¤±è´¥: ºèµ„æºè·¯å¾„è½¬æ¢å¤±è´¥: Âd¯TemplateElementÍ¸ÍÁe©, error: ©, error: Âd¯TemplateElementÍÙÍÙe  ÃÂÀÀU«IfStatementÍÍÿa±LogicalExpressionÍÍOa±LogicalExpressionÍÍ8NªIdentifierÍÍ"£pic¢&&`¯UnaryExpressionÍ&Í8¡!ÃS®CallExpressionÍ'Í8T°MemberExpressionÍ'Í3NªIdentifierÍ'Í*£picNªIdentifierÍ+Í3¨includesÂÂ‘P§LiteralÍ4Í7¡/£'/'Â¢&&`¯UnaryExpressionÍ<ÍO¡!ÃS®CallExpressionÍ=ÍOT°MemberExpressionÍ=ÍINªIdentifierÍ=Í@£picNªIdentifierÍAÍI¨includesÂÂ‘P§LiteralÍJÍN¡\¤'\\'ÂQ®BlockStatementÍQÍÿ‘f¬TryStatementÍyÍôQ®BlockStatementÍ}Íp”W³VariableDeclarationÍÍ±‘X²VariableDeclaratorÍ–Í°NªIdentifierÍ–Í§contextS®CallExpressionÍ Í°NªIdentifierÍ ÍªªgetContext‘V®ThisExpressionÍ«Í¯Â¥constW³VariableDeclarationÍÃÍñ‘X²VariableDeclaratorÍÉÍğNªIdentifierÍÉÍÑ¨fullPatha°BinaryExpressionÍÔÍğa°BinaryExpressionÍÔÍêT°MemberExpressionÍÔÍäNªIdentifierÍÔÍÛ§contextNªIdentifierÍÜÍä¨filesDirÂÂ¡+P§LiteralÍçÍê¡/£'/'¡+NªIdentifierÍíÍğ£pic¥constR³ExpressionStatementÍÍ?S®CallExpressionÍÍ>T°MemberExpressionÍÍNªIdentifierÍÍ¥hilogNªIdentifierÍ	Í¤infoÂÂ“P§LiteralÍÍ ¦0x0000P§LiteralÍÍ$¬FoodCategory®'FoodCategory'c¯TemplateLiteralÍ&Í=‘NªIdentifierÍ3Í;¨fullPath’d¯TemplateElementÍ'Í1eºæ„å»ºå®Œæ•´æ–‡ä»¶è·¯å¾„: ºæ„å»ºå®Œæ•´æ–‡ä»¶è·¯å¾„: Âd¯TemplateElementÍ<Í<e  ÃÂ\¯ReturnStatementÍQÍaNªIdentifierÍXÍ`¨fullPathg«CatchClauseÍ~ÍôNªIdentifierÍ…Íˆ£errQ®BlockStatementÍŠÍô‘R³ExpressionStatementÍÍåS®CallExpressionÍÍäT°MemberExpressionÍÍ¨NªIdentifierÍÍ¢¥hilogNªIdentifierÍ£Í¨¥errorÂÂ“P§LiteralÍ©Í¯ ¦0x0000P§LiteralÍ±Í¿¬FoodCategory®'FoodCategory'a°BinaryExpressionÍÁÍãP§LiteralÍÁÍÍºæ„å»ºå›¾ç‰‡è·¯å¾„å¤±è´¥: ¼'æ„å»ºå›¾ç‰‡è·¯å¾„å¤±è´¥: '¡+S®CallExpressionÍĞÍãT°MemberExpressionÍĞÍŞNªIdentifierÍĞÍÔ¤JSONNªIdentifierÍÕÍŞ©stringifyÂÂ‘NªIdentifierÍßÍâ£errÂÂÀÀR³ExpressionStatementÍÍWS®CallExpressionÍÍVT°MemberExpressionÍÍ'NªIdentifierÍÍ"¥hilogNªIdentifierÍ#Í'¤warnÂÂ“P§LiteralÍ(Í. ¦0x0000P§LiteralÍ0Í>¬FoodCategory®'FoodCategory'c¯TemplateLiteralÍ@ÍU‘NªIdentifierÍPÍS£pic’d¯TemplateElementÍAÍNeÙ#æ— æ³•è¯†åˆ«çš„å›¾ç‰‡è·¯å¾„æ ¼å¼: Ù#æ— æ³•è¯†åˆ«çš„å›¾ç‰‡è·¯å¾„æ ¼å¼: Âd¯TemplateElementÍTÍTe  ÃÂ\¯ReturnStatementÍaÍÎZ°ObjectExpressionÍhÍÍ•[¨PropertyÍjÍyÂÂÂP§LiteralÍjÍn¢id¤"id"P§LiteralÍpÍyÎ  >©134217790¤init[¨PropertyÍ{ÍˆÂÂÂP§LiteralÍ{Í¤type¦"type"P§LiteralÍƒÍˆÍN ¥20000¤init[¨PropertyÍŠÍ”ÂÂÂNªIdentifierÍŠÍ¦paramsb¯ArrayExpressionÍ’Í”¤init[¨PropertyÍ–Í´ÂÂÂP§LiteralÍ–Í¢ªbundleName¬"bundleName"P§LiteralÍ¤Í´®wanxy.food.com°"wanxy.food.com"¤init[¨PropertyÍ¶ÍËÂÂÂP§LiteralÍ¶ÍÂªmoduleName¬"moduleName"P§LiteralÍÄÍË¥phone§"phone"¤init_°MethodDefinitionÍÛÍ7»ÂÂNªIdentifierÍÛÍè­initialRender¦methodM²FunctionExpressionÍèÍ7»ÀÂÂÂQ®BlockStatementÍëÍ7»’R³ExpressionStatementÍöÍ7•S®CallExpressionÍöÍ7”T°MemberExpressionÍöÍV®ThisExpressionÍöÍúNªIdentifierÍûÍ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍÍ7ƒÀÂÂÂ’NªIdentifierÍÍ¦elmtIdNªIdentifierÍÍ-¯isInitialRenderQ®BlockStatementÍ2Í7ƒ“R³ExpressionStatementÍAÍ6ìS®CallExpressionÍAÍ6ëT°MemberExpressionÍAÍVNªIdentifierÍAÍO®NavDestinationNªIdentifierÍPÍV¦createÂÂ’M·ArrowFunctionExpressionÍWÍ6ÀÂÂÂQ®BlockStatementÍ]Í6Ü R³ExpressionStatementÍpÍS®CallExpressionÍpÍT°MemberExpressionÍpÍV®ThisExpressionÍpÍtNªIdentifierÍuÍ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍÍÀÂÂÂ’NªIdentifierÍÍ–¦elmtIdNªIdentifierÍ˜Í§¯isInitialRenderQ®BlockStatementÍ¬Í’R³ExpressionStatementÍÃÍĞS®CallExpressionÍÃÍÏT°MemberExpressionÍÃÍÍNªIdentifierÍÃÍÆ£RowNªIdentifierÍÇÍÍ¦createÂÂÂR³ExpressionStatementÍæÍùS®CallExpressionÍæÍøT°MemberExpressionÍæÍğNªIdentifierÍæÍé£RowNªIdentifierÍêÍğ¦heightÂÂ‘P§LiteralÍñÍ÷¤100%¦'100%'ÂNªIdentifierÍÍ£RowÂR³ExpressionStatementÍ%ÍõS®CallExpressionÍ%ÍôT°MemberExpressionÍ%ÍCV®ThisExpressionÍ%Í)NªIdentifierÍ*ÍC¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍDÍìÀÂÂÂ’NªIdentifierÍEÍK¦elmtIdNªIdentifierÍMÍ\¯isInitialRenderQ®BlockStatementÍaÍì’R³ExpressionStatementÍxÍ®S®CallExpressionÍxÍ­T°MemberExpressionÍxÍ„NªIdentifierÍxÍ}¥StackNªIdentifierÍ~Í„¦createÂÂ‘Z°ObjectExpressionÍ…Í¬‘[¨PropertyÍ‡ÍªÂÂÂNªIdentifierÍ‡Í“¬alignContentT°MemberExpressionÍ•ÍªNªIdentifierÍ•Í©AlignmentNªIdentifierÍŸÍª«BottomStartÂÂ¤initÂR³ExpressionStatementÍÄÍÙS®CallExpressionÍÄÍØT°MemberExpressionÍÄÍĞNªIdentifierÍÄÍÉ¥StackNªIdentifierÍÊÍĞ¦heightÂÂ‘P§LiteralÍÑÍ×¤100%¦'100%'ÂNªIdentifierÍîÍó¥StackÂR³ExpressionStatementÍ Í ŞS®CallExpressionÍ Í İT°MemberExpressionÍ Í %V®ThisExpressionÍ Í NªIdentifierÍ Í %¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ &Í ÔÀÂÂÂ’NªIdentifierÍ 'Í -¦elmtIdNªIdentifierÍ /Í >¯isInitialRenderQ®BlockStatementÍ CÍ Ô“R³ExpressionStatementÍ ZÍ jS®CallExpressionÍ ZÍ iT°MemberExpressionÍ ZÍ gNªIdentifierÍ ZÍ `¦ColumnNªIdentifierÍ aÍ g¦createÂÂÂR³ExpressionStatementÍ €Í •S®CallExpressionÍ €Í ”T°MemberExpressionÍ €Í ŒNªIdentifierÍ €Í †¦ColumnNªIdentifierÍ ‡Í Œ¥widthÂÂ‘P§LiteralÍ Í “¤100%¦'100%'ÂR³ExpressionStatementÍ «Í ÁS®CallExpressionÍ «Í ÀT°MemberExpressionÍ «Í ¸NªIdentifierÍ «Í ±¦ColumnNªIdentifierÍ ²Í ¸¦heightÂÂ‘P§LiteralÍ ¹Í ¿¤100%¦'100%'ÂNªIdentifierÍ ÖÍ Ü¦ColumnÂR³ExpressionStatementÍ ğÍ"S®CallExpressionÍ ğÍ"T°MemberExpressionÍ ğÍ!V®ThisExpressionÍ ğÍ ôNªIdentifierÍ õÍ!¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ!Í"ÀÂÂÂ’NªIdentifierÍ!Í!¦elmtIdNªIdentifierÍ!Í!'¯isInitialRenderQ®BlockStatementÍ!,Í"”R³ExpressionStatementÍ!CÍ!zS®CallExpressionÍ!CÍ!yT°MemberExpressionÍ!CÍ!ONªIdentifierÍ!CÍ!H¥ImageNªIdentifierÍ!IÍ!O¦createÂÂ‘S®CallExpressionÍ!PÍ!xT°MemberExpressionÍ!PÍ!cV®ThisExpressionÍ!PÍ!TNªIdentifierÍ!UÍ!c®getImageSourceÂÂ‘T°MemberExpressionÍ!dÍ!wT°MemberExpressionÍ!dÍ!sV®ThisExpressionÍ!dÍ!hNªIdentifierÍ!iÍ!sªfoodDetailÂÂNªIdentifierÍ!tÍ!w£picÂÂÂÂR³ExpressionStatementÍ!Í!¤S®CallExpressionÍ!Í!£T°MemberExpressionÍ!Í!œNªIdentifierÍ!Í!•¥ImageNªIdentifierÍ!–Í!œ¦heightÂÂ‘P§LiteralÍ!Í!¢£40%¥'40%'ÂR³ExpressionStatementÍ!ºÍ!ÎS®CallExpressionÍ!ºÍ!ÍT°MemberExpressionÍ!ºÍ!ÅNªIdentifierÍ!ºÍ!¿¥ImageNªIdentifierÍ!ÀÍ!Å¥widthÂÂ‘P§LiteralÍ!ÆÍ!Ì¤100%¦'100%'ÂR³ExpressionStatementÍ!äÍ"S®CallExpressionÍ!äÍ"T°MemberExpressionÍ!äÍ!óNªIdentifierÍ!äÍ!é¥ImageNªIdentifierÍ!êÍ!ó©objectFitÂÂ‘T°MemberExpressionÍ!ôÍ"NªIdentifierÍ!ôÍ!ü¨ImageFitNªIdentifierÍ!ıÍ"¤FillÂÂÂNªIdentifierÍ"Í"¥ImageÂR³ExpressionStatementÍ"1Í"ÜS®CallExpressionÍ"1Í"ÛT°MemberExpressionÍ"1Í"OV®ThisExpressionÍ"1Í"5NªIdentifierÍ"6Í"O¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ"PÍ"ÒÀÂÂÂ’NªIdentifierÍ"QÍ"W¦elmtIdNªIdentifierÍ"YÍ"h¯isInitialRenderQ®BlockStatementÍ"mÍ"Ò’R³ExpressionStatementÍ"„Í"”S®CallExpressionÍ"„Í"“T°MemberExpressionÍ"„Í"‘NªIdentifierÍ"„Í"Š¦ColumnNªIdentifierÍ"‹Í"‘¦createÂÂÂR³ExpressionStatementÍ"ªÍ"¿S®CallExpressionÍ"ªÍ"¾T°MemberExpressionÍ"ªÍ"·NªIdentifierÍ"ªÍ"°¦ColumnNªIdentifierÍ"±Í"·¦heightÂÂ‘P§LiteralÍ"¸Í"½£60%¥'60%'ÂNªIdentifierÍ"ÔÍ"Ú¦ColumnÂR³ExpressionStatementÍ"îÍ#§S®CallExpressionÍ"îÍ#¦T°MemberExpressionÍ"îÍ#V®ThisExpressionÍ"îÍ"òNªIdentifierÍ"óÍ#¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ#Í#ŸÀÂÂÂ’NªIdentifierÍ#Í#¦elmtIdNªIdentifierÍ#Í#%¯isInitialRenderQ®BlockStatementÍ#*Í#Ÿ’R³ExpressionStatementÍ#AÍ#dS®CallExpressionÍ#AÍ#cT°MemberExpressionÍ#AÍ#LNªIdentifierÍ#AÍ#E¤TextNªIdentifierÍ#FÍ#L¦createÂÂ‘T°MemberExpressionÍ#MÍ#bT°MemberExpressionÍ#MÍ#\V®ThisExpressionÍ#MÍ#QNªIdentifierÍ#RÍ#\ªfoodDetailÂÂNªIdentifierÍ#]Í#b¥titleÂÂÂR³ExpressionStatementÍ#zÍ#ŒS®CallExpressionÍ#zÍ#‹T°MemberExpressionÍ#zÍ#‡NªIdentifierÍ#zÍ#~¤TextNªIdentifierÍ#Í#‡¨fontSizeÂÂ‘P§LiteralÍ#ˆÍ#Š¢16ÂNªIdentifierÍ#¡Í#¥¤TextÂR³ExpressionStatementÍ#¹Í#ÄS®CallExpressionÍ#¹Í#ÃT°MemberExpressionÍ#¹Í#ÁNªIdentifierÍ#¹Í#½¤TextNªIdentifierÍ#¾Í#Á£popÂÂÂR³ExpressionStatementÍ#ÖÍ#ãS®CallExpressionÍ#ÖÍ#âT°MemberExpressionÍ#ÖÍ#àNªIdentifierÍ#ÖÍ#Ü¦ColumnNªIdentifierÍ#İÍ#à£popÂÂÂR³ExpressionStatementÍ#õÍ$S®CallExpressionÍ#õÍ$T°MemberExpressionÍ#õÍ#ÿNªIdentifierÍ#õÍ#û¦ColumnNªIdentifierÍ#üÍ#ÿ£popÂÂÂR³ExpressionStatementÍ$Í&¢S®CallExpressionÍ$Í&¡T°MemberExpressionÍ$Í$2V®ThisExpressionÍ$Í$NªIdentifierÍ$Í$2¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ$3Í&˜ÀÂÂÂ’NªIdentifierÍ$4Í$:¦elmtIdNªIdentifierÍ$<Í$K¯isInitialRenderQ®BlockStatementÍ$PÍ&˜–R³ExpressionStatementÍ$…Í$•S®CallExpressionÍ$…Í$”T°MemberExpressionÍ$…Í$’NªIdentifierÍ$…Í$‹¦ColumnNªIdentifierÍ$ŒÍ$’¦createÂÂÂR³ExpressionStatementÍ$ÉÍ$ÛS®CallExpressionÍ$ÉÍ$ÚT°MemberExpressionÍ$ÉÍ$ÖNªIdentifierÍ$ÉÍ$Ï¦ColumnNªIdentifierÍ$ĞÍ$Ö¦heightÂÂ‘P§LiteralÍ$×Í$ÙÌZ¢90ÂR³ExpressionStatementÍ%Í%$S®CallExpressionÍ%Í%#T°MemberExpressionÍ%Í%NªIdentifierÍ%Í%¦ColumnNªIdentifierÍ%Í%¥widthÂÂ‘P§LiteralÍ%Í%"¤100%¦'100%'ÂR³ExpressionStatementÍ%XÍ%„S®CallExpressionÍ%XÍ%ƒT°MemberExpressionÍ%XÍ%fNªIdentifierÍ%XÍ%^¦ColumnNªIdentifierÍ%_Í%f§paddingÂÂ‘Z°ObjectExpressionÍ%gÍ%‚’[¨PropertyÍ%iÍ%sÂÂÂNªIdentifierÍ%iÍ%m¤leftP§LiteralÍ%oÍ%s¢5%¤'5%'¤init[¨PropertyÍ%uÍ%€ÂÂÂNªIdentifierÍ%uÍ%z¥rightP§LiteralÍ%|Í%€¢5%¤'5%'¤initÂR³ExpressionStatementÍ%¸Í%×S®CallExpressionÍ%¸Í%ÖT°MemberExpressionÍ%¸Í%ÊNªIdentifierÍ%¸Í%¾¦ColumnNªIdentifierÍ%¿Í%Ê«borderWidthÂÂ‘Z°ObjectExpressionÍ%ËÍ%Õ‘[¨PropertyÍ%ÍÍ%ÓÂÂÂNªIdentifierÍ%ÍÍ%Ğ£topP§LiteralÍ%ÒÍ%Ó¡2¤initÂR³ExpressionStatementÍ&Í&…S®CallExpressionÍ&Í&„T°MemberExpressionÍ&Í&NªIdentifierÍ&Í&¦ColumnNªIdentifierÍ&Í&«borderColorÂÂ‘Z°ObjectExpressionÍ&Í&ƒ•[¨PropertyÍ& Í&/ÂÂÂP§LiteralÍ& Í&$¢id¤"id"P§LiteralÍ&&Í&/Î  ©134217758¤init[¨PropertyÍ&1Í&>ÂÂÂP§LiteralÍ&1Í&7¤type¦"type"P§LiteralÍ&9Í&>Í'¥10001¤init[¨PropertyÍ&@Í&JÂÂÂNªIdentifierÍ&@Í&F¦paramsb¯ArrayExpressionÍ&HÍ&J¤init[¨PropertyÍ&LÍ&jÂÂÂP§LiteralÍ&LÍ&XªbundleName¬"bundleName"P§LiteralÍ&ZÍ&j®wanxy.food.com°"wanxy.food.com"¤init[¨PropertyÍ&lÍ&ÂÂÂP§LiteralÍ&lÍ&xªmoduleName¬"moduleName"P§LiteralÍ&zÍ&¥phone§"phone"¤initÂNªIdentifierÍ&šÍ& ¦ColumnÂR³ExpressionStatementÍ&´Í'ÁS®CallExpressionÍ&´Í'ÀT°MemberExpressionÍ&´Í&ÒV®ThisExpressionÍ&´Í&¸NªIdentifierÍ&¹Í&Ò¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ&ÓÍ'ºÀÂÂÂ’NªIdentifierÍ&ÔÍ&Ú¦elmtIdNªIdentifierÍ&ÜÍ&ë¯isInitialRenderQ®BlockStatementÍ&ğÍ'º”R³ExpressionStatementÍ'Í'S®CallExpressionÍ'Í'T°MemberExpressionÍ'Í'NªIdentifierÍ'Í'
+£RowNªIdentifierÍ'Í'¦createÂÂÂR³ExpressionStatementÍ'*Í'>S®CallExpressionÍ'*Í'=T°MemberExpressionÍ'*Í':NªIdentifierÍ'*Í'-£RowNªIdentifierÍ'.Í':¬layoutWeightÂÂ‘P§LiteralÍ';Í'<¡1ÂR³ExpressionStatementÍ'TÍ'fS®CallExpressionÍ'TÍ'eT°MemberExpressionÍ'TÍ']NªIdentifierÍ'TÍ'W£RowNªIdentifierÍ'XÍ']¥widthÂÂ‘P§LiteralÍ'^Í'd¤100%¦'100%'ÂR³ExpressionStatementÍ'|Í'§S®CallExpressionÍ'|Í'¦T°MemberExpressionÍ'|Í'NªIdentifierÍ'|Í'£RowNªIdentifierÍ'€Í'®justifyContentÂÂ‘T°MemberExpressionÍ'Í'¥NªIdentifierÍ'Í'˜©FlexAlignNªIdentifierÍ'™Í'¥¬SpaceBetweenÂÂÂNªIdentifierÍ'¼Í'¿£RowÂR³ExpressionStatementÍ'ÓÍ(ÂS®CallExpressionÍ'ÓÍ(ÁT°MemberExpressionÍ'ÓÍ'ñV®ThisExpressionÍ'ÓÍ'×NªIdentifierÍ'ØÍ'ñ¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ'òÍ(ºÀÂÂÂ’NªIdentifierÍ'óÍ'ù¦elmtIdNªIdentifierÍ'ûÍ(
+¯isInitialRenderQ®BlockStatementÍ(Í(º“R³ExpressionStatementÍ(&Í(TS®CallExpressionÍ(&Í(ST°MemberExpressionÍ(&Í(1NªIdentifierÍ(&Í(*¤TextNªIdentifierÍ(+Í(1¦createÂÂ‘a°BinaryExpressionÍ(2Í(Ra°BinaryExpressionÍ(2Í(MP§LiteralÍ(2Í(5£ï¿¥¥'ï¿¥'¡+T°MemberExpressionÍ(8Í(MT°MemberExpressionÍ(8Í(GV®ThisExpressionÍ(8Í(<NªIdentifierÍ(=Í(GªfoodDetailÂÂNªIdentifierÍ(HÍ(M¥priceÂÂ¡+P§LiteralÍ(PÍ(R ¢''ÂR³ExpressionStatementÍ(jÍ(|S®CallExpressionÍ(jÍ({T°MemberExpressionÍ(jÍ(wNªIdentifierÍ(jÍ(n¤TextNªIdentifierÍ(oÍ(w¨fontSizeÂÂ‘P§LiteralÍ(xÍ(z¢16ÂR³ExpressionStatementÍ(’Í(§S®CallExpressionÍ(’Í(¦T°MemberExpressionÍ(’Í(¡NªIdentifierÍ(’Í(–¤TextNªIdentifierÍ(—Í(¡ªfontWeightÂÂ‘P§LiteralÍ(¢Í(¥ÍX£600ÂNªIdentifierÍ(¼Í(À¤TextÂR³ExpressionStatementÍ(ÔÍ(ßS®CallExpressionÍ(ÔÍ(ŞT°MemberExpressionÍ(ÔÍ(ÜNªIdentifierÍ(ÔÍ(Ø¤TextNªIdentifierÍ(ÙÍ(Ü£popÂÂÂR³ExpressionStatementÍ(ñÍ)¬S®CallExpressionÍ(ñÍ)«T°MemberExpressionÍ(ñÍ)V®ThisExpressionÍ(ñÍ(õNªIdentifierÍ(öÍ)¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ)Í)¥ÀÂÂÂ’NªIdentifierÍ)Í)¦elmtIdNªIdentifierÍ)Í)(¯isInitialRenderQ®BlockStatementÍ)-Í)¥’R³ExpressionStatementÍ)DÍ)QS®CallExpressionÍ)DÍ)PT°MemberExpressionÍ)DÍ)NNªIdentifierÍ)DÍ)G£RowNªIdentifierÍ)HÍ)N¦createÂÂÂR³ExpressionStatementÍ)gÍ)’S®CallExpressionÍ)gÍ)‘T°MemberExpressionÍ)gÍ)yNªIdentifierÍ)gÍ)j£RowNªIdentifierÍ)kÍ)y®justifyContentÂÂ‘T°MemberExpressionÍ)zÍ)NªIdentifierÍ)zÍ)ƒ©FlexAlignNªIdentifierÍ)„Í)¬SpaceBetweenÂÂÂNªIdentifierÍ)§Í)ª£RowÂR³ExpressionStatementÍ)¾Í+ŞS®CallExpressionÍ)¾Í+İT°MemberExpressionÍ)¾Í)ÜV®ThisExpressionÍ)¾Í)ÂNªIdentifierÍ)ÃÍ)Ü¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ)İÍ+ÕÀÂÂÂ’NªIdentifierÍ)ŞÍ)ä¦elmtIdNªIdentifierÍ)æÍ)õ¯isInitialRenderQ®BlockStatementÍ)úÍ+Õ•R³ExpressionStatementÍ*Í*…S®CallExpressionÍ*Í*„T°MemberExpressionÍ*Í*NªIdentifierÍ*Í*¥ImageNªIdentifierÍ*Í*¦createÂÂ‘Z°ObjectExpressionÍ*Í*ƒ•[¨PropertyÍ* Í*/ÂÂÂP§LiteralÍ* Í*$¢id¤"id"P§LiteralÍ*&Í*/Î  1©134217777¤init[¨PropertyÍ*1Í*>ÂÂÂP§LiteralÍ*1Í*7¤type¦"type"P§LiteralÍ*9Í*>ÍN ¥20000¤init[¨PropertyÍ*@Í*JÂÂÂNªIdentifierÍ*@Í*F¦paramsb¯ArrayExpressionÍ*HÍ*J¤init[¨PropertyÍ*LÍ*jÂÂÂP§LiteralÍ*LÍ*XªbundleName¬"bundleName"P§LiteralÍ*ZÍ*j®wanxy.food.com°"wanxy.food.com"¤init[¨PropertyÍ*lÍ*ÂÂÂP§LiteralÍ*lÍ*xªmoduleName¬"moduleName"P§LiteralÍ*zÍ*¥phone§"phone"¤initÂR³ExpressionStatementÍ*›Í*«S®CallExpressionÍ*›Í*ªT°MemberExpressionÍ*›Í*¦NªIdentifierÍ*›Í* ¥ImageNªIdentifierÍ*¡Í*¦¥widthÂÂ‘P§LiteralÍ*§Í*©¢25ÂR³ExpressionStatementÍ*ÁÍ*ÒS®CallExpressionÍ*ÁÍ*ÑT°MemberExpressionÍ*ÁÍ*ÍNªIdentifierÍ*ÁÍ*Æ¥ImageNªIdentifierÍ*ÇÍ*Í¦heightÂÂ‘P§LiteralÍ*ÎÍ*Ğ¢25ÂR³ExpressionStatementÍ*èÍ+S®CallExpressionÍ*èÍ+T°MemberExpressionÍ*èÍ*÷NªIdentifierÍ*èÍ*í¥ImageNªIdentifierÍ*îÍ*÷©objectFitÂÂ‘T°MemberExpressionÍ*øÍ+NªIdentifierÍ*øÍ+ ¨ImageFitNªIdentifierÍ+Í+¤FillÂÂÂR³ExpressionStatementÍ+Í+ÂS®CallExpressionÍ+Í+ÁT°MemberExpressionÍ+Í+*NªIdentifierÍ+Í+"¥ImageNªIdentifierÍ+#Í+*§onClickÂÂ‘M·ArrowFunctionExpressionÍ++Í+ÀÀÂÂÂQ®BlockStatementÍ+1Í+À‘U«IfStatementÍ+LÍ+©a°BinaryExpressionÍ+PÍ+_T°MemberExpressionÍ+PÍ+[V®ThisExpressionÍ+PÍ+TNªIdentifierÍ+UÍ+[¦buyNumÂÂ¡>P§LiteralÍ+^Í+_¡1Q®BlockStatementÍ+aÍ+©‘R³ExpressionStatementÍ+€Í+`°UpdateExpressionÍ+€Í+¢--ÂT°MemberExpressionÍ+€Í+‹V®ThisExpressionÍ+€Í+„NªIdentifierÍ+…Í+‹¦buyNumÂÂÀÂNªIdentifierÍ+×Í+Ü¥ImageÂR³ExpressionStatementÍ+ğÍ,ßS®CallExpressionÍ+ğÍ,ŞT°MemberExpressionÍ+ğÍ,V®ThisExpressionÍ+ğÍ+ôNªIdentifierÍ+õÍ,¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ,Í,×ÀÂÂÂ’NªIdentifierÍ,Í,¦elmtIdNªIdentifierÍ,Í,'¯isInitialRenderQ®BlockStatementÍ,,Í,×“R³ExpressionStatementÍ,CÍ,aS®CallExpressionÍ,CÍ,`T°MemberExpressionÍ,CÍ,NNªIdentifierÍ,CÍ,G¤TextNªIdentifierÍ,HÍ,N¦createÂÂ‘a°BinaryExpressionÍ,OÍ,_T°MemberExpressionÍ,OÍ,ZV®ThisExpressionÍ,OÍ,SNªIdentifierÍ,TÍ,Z¦buyNumÂÂ¡+P§LiteralÍ,]Í,_ ¢''ÂR³ExpressionStatementÍ,wÍ,‰S®CallExpressionÍ,wÍ,ˆT°MemberExpressionÍ,wÍ,„NªIdentifierÍ,wÍ,{¤TextNªIdentifierÍ,|Í,„¨fontSizeÂÂ‘P§LiteralÍ,…Í,‡¢16ÂR³ExpressionStatementÍ,ŸÍ,ÄS®CallExpressionÍ,ŸÍ,ÃT°MemberExpressionÍ,ŸÍ,ªNªIdentifierÍ,ŸÍ,£¤TextNªIdentifierÍ,¤Í,ª¦marginÂÂ‘Z°ObjectExpressionÍ,«Í,Â’[¨PropertyÍ,­Í,µÂÂÂNªIdentifierÍ,­Í,±¤leftP§LiteralÍ,³Í,µ
+¢10¤init[¨PropertyÍ,·Í,ÀÂÂÂNªIdentifierÍ,·Í,¼¥rightP§LiteralÍ,¾Í,À
+¢10¤initÂNªIdentifierÍ,ÙÍ,İ¤TextÂR³ExpressionStatementÍ,ñÍ,üS®CallExpressionÍ,ñÍ,ûT°MemberExpressionÍ,ñÍ,ùNªIdentifierÍ,ñÍ,õ¤TextNªIdentifierÍ,öÍ,ù£popÂÂÂR³ExpressionStatementÍ-Í.ßS®CallExpressionÍ-Í.ŞT°MemberExpressionÍ-Í-,V®ThisExpressionÍ-Í-NªIdentifierÍ-Í-,¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ--Í.ÖÀÂÂÂ’NªIdentifierÍ-.Í-4¦elmtIdNªIdentifierÍ-6Í-E¯isInitialRenderQ®BlockStatementÍ-JÍ.Ö•R³ExpressionStatementÍ-aÍ-ÕS®CallExpressionÍ-aÍ-ÔT°MemberExpressionÍ-aÍ-mNªIdentifierÍ-aÍ-f¥ImageNªIdentifierÍ-gÍ-m¦createÂÂ‘Z°ObjectExpressionÍ-nÍ-Ó•[¨PropertyÍ-pÍ-ÂÂÂP§LiteralÍ-pÍ-t¢id¤"id"P§LiteralÍ-vÍ-Î  $©134217764¤init[¨PropertyÍ-Í-ÂÂÂP§LiteralÍ-Í-‡¤type¦"type"P§LiteralÍ-‰Í-ÍN ¥20000¤init[¨PropertyÍ-Í-šÂÂÂNªIdentifierÍ-Í-–¦paramsb¯ArrayExpressionÍ-˜Í-š¤init[¨PropertyÍ-œÍ-ºÂÂÂP§LiteralÍ-œÍ-¨ªbundleName¬"bundleName"P§LiteralÍ-ªÍ-º®wanxy.food.com°"wanxy.food.com"¤init[¨PropertyÍ-¼Í-ÑÂÂÂP§LiteralÍ-¼Í-ÈªmoduleName¬"moduleName"P§LiteralÍ-ÊÍ-Ñ¥phone§"phone"¤initÂR³ExpressionStatementÍ-ëÍ-ûS®CallExpressionÍ-ëÍ-úT°MemberExpressionÍ-ëÍ-öNªIdentifierÍ-ëÍ-ğ¥ImageNªIdentifierÍ-ñÍ-ö¥widthÂÂ‘P§LiteralÍ-÷Í-ù¢25ÂR³ExpressionStatementÍ.Í."S®CallExpressionÍ.Í.!T°MemberExpressionÍ.Í.NªIdentifierÍ.Í.¥ImageNªIdentifierÍ.Í.¦heightÂÂ‘P§LiteralÍ.Í. ¢25ÂR³ExpressionStatementÍ.8Í.WS®CallExpressionÍ.8Í.VT°MemberExpressionÍ.8Í.GNªIdentifierÍ.8Í.=¥ImageNªIdentifierÍ.>Í.G©objectFitÂÂ‘T°MemberExpressionÍ.HÍ.UNªIdentifierÍ.HÍ.P¨ImageFitNªIdentifierÍ.QÍ.U¤FillÂÂÂR³ExpressionStatementÍ.mÍ.ÃS®CallExpressionÍ.mÍ.ÂT°MemberExpressionÍ.mÍ.zNªIdentifierÍ.mÍ.r¥ImageNªIdentifierÍ.sÍ.z§onClickÂÂ‘M·ArrowFunctionExpressionÍ.{Í.ÁÀÂÂÂQ®BlockStatementÍ.Í.Á‘R³ExpressionStatementÍ.œÍ.ª`°UpdateExpressionÍ.œÍ.©¢++ÂT°MemberExpressionÍ.œÍ.§V®ThisExpressionÍ.œÍ. NªIdentifierÍ.¡Í.§¦buyNumÂÂÂNªIdentifierÍ.ØÍ.İ¥ImageÂR³ExpressionStatementÍ.ñÍ.ûS®CallExpressionÍ.ñÍ.úT°MemberExpressionÍ.ñÍ.øNªIdentifierÍ.ñÍ.ô£RowNªIdentifierÍ.õÍ.ø£popÂÂÂR³ExpressionStatementÍ/Í/S®CallExpressionÍ/Í/T°MemberExpressionÍ/Í/NªIdentifierÍ/Í/£RowNªIdentifierÍ/Í/£popÂÂÂR³ExpressionStatementÍ/)Í5=S®CallExpressionÍ/)Í5<T°MemberExpressionÍ/)Í/GV®ThisExpressionÍ/)Í/-NªIdentifierÍ/.Í/G¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ/HÍ56ÀÂÂÂ’NªIdentifierÍ/IÍ/O¦elmtIdNªIdentifierÍ/QÍ/`¯isInitialRenderQ®BlockStatementÍ/eÍ56—R³ExpressionStatementÍ/|Í/‰S®CallExpressionÍ/|Í/ˆT°MemberExpressionÍ/|Í/†NªIdentifierÍ/|Í/£RowNªIdentifierÍ/€Í/†¦createÂÂÂR³ExpressionStatementÍ/ŸÍ/ÄS®CallExpressionÍ/ŸÍ/ÃT°MemberExpressionÍ/ŸÍ/±NªIdentifierÍ/ŸÍ/¢£RowNªIdentifierÍ/£Í/±®justifyContentÂÂ‘T°MemberExpressionÍ/²Í/ÂNªIdentifierÍ/²Í/»©FlexAlignNªIdentifierÍ/¼Í/Â¦CenterÂÂÂR³ExpressionStatementÍ/ÚÍ0US®CallExpressionÍ/ÚÍ0TT°MemberExpressionÍ/ÚÍ/íNªIdentifierÍ/ÚÍ/İ£RowNªIdentifierÍ/ŞÍ/í¯backgroundColorÂÂ‘Z°ObjectExpressionÍ/îÍ0S•[¨PropertyÍ/ğÍ/ÿÂÂÂP§LiteralÍ/ğÍ/ô¢id¤"id"P§LiteralÍ/öÍ/ÿÎ  !©134217761¤init[¨PropertyÍ0Í0ÂÂÂP§LiteralÍ0Í0¤type¦"type"P§LiteralÍ0	Í0Í'¥10001¤init[¨PropertyÍ0Í0ÂÂÂNªIdentifierÍ0Í0¦paramsb¯ArrayExpressionÍ0Í0¤init[¨PropertyÍ0Í0:ÂÂÂP§LiteralÍ0Í0(ªbundleName¬"bundleName"P§LiteralÍ0*Í0:®wanxy.food.com°"wanxy.food.com"¤init[¨PropertyÍ0<Í0QÂÂÂP§LiteralÍ0<Í0HªmoduleName¬"moduleName"P§LiteralÍ0JÍ0Q¥phone§"phone"¤initÂR³ExpressionStatementÍ0kÍ0}S®CallExpressionÍ0kÍ0|T°MemberExpressionÍ0kÍ0tNªIdentifierÍ0kÍ0n£RowNªIdentifierÍ0oÍ0t¥widthÂÂ‘P§LiteralÍ0uÍ0{¤100%¦'100%'ÂR³ExpressionStatementÍ0“Í0§S®CallExpressionÍ0“Í0¦T°MemberExpressionÍ0“Í0£NªIdentifierÍ0“Í0–£RowNªIdentifierÍ0—Í0£¬layoutWeightÂÂ‘P§LiteralÍ0¤Í0¥¡1ÂR³ExpressionStatementÍ0½Í0ÒS®CallExpressionÍ0½Í0ÑT°MemberExpressionÍ0½Í0ÍNªIdentifierÍ0½Í0À£RowNªIdentifierÍ0ÁÍ0Í¬borderRadiusÂÂ‘P§LiteralÍ0ÎÍ0Ğ¢16ÂR³ExpressionStatementÍ0èÍ5#S®CallExpressionÍ0èÍ5"T°MemberExpressionÍ0èÍ0óNªIdentifierÍ0èÍ0ë£RowNªIdentifierÍ0ìÍ0ó§onClickÂÂ‘M·ArrowFunctionExpressionÍ0ôÍ5!ÀÂÂÂQ®BlockStatementÍ0úÍ5!•R³ExpressionStatementÍ1Í1:]´AssignmentExpressionÍ1Í19¡=T°MemberExpressionÍ1Í1+T°MemberExpressionÍ1Í1$V®ThisExpressionÍ1Í1NªIdentifierÍ1Í1$ªfoodDetailÂÂNªIdentifierÍ1%Í1+¦buyNumÂÂT°MemberExpressionÍ1.Í19V®ThisExpressionÍ1.Í12NªIdentifierÍ13Í19¦buyNumÂÂR³ExpressionStatementÍ1TÍ1»]´AssignmentExpressionÍ1TÍ1º¡=T°MemberExpressionÍ1TÍ1dV®ThisExpressionÍ1TÍ1XNªIdentifierÍ1YÍ1d«choosePriceÂÂS®CallExpressionÍ1gÍ1ºNªIdentifierÍ1gÍ1o¨addition’T°MemberExpressionÍ1pÍ1€V®ThisExpressionÍ1pÍ1tNªIdentifierÍ1uÍ1€«choosePriceÂÂS®CallExpressionÍ1‚Í1¹NªIdentifierÍ1‚Í1Š¨multiply’T°MemberExpressionÍ1‹Í1 T°MemberExpressionÍ1‹Í1šV®ThisExpressionÍ1‹Í1NªIdentifierÍ1Í1šªfoodDetailÂÂNªIdentifierÍ1›Í1 ¥priceÂÂT°MemberExpressionÍ1¢Í1¸T°MemberExpressionÍ1¢Í1±V®ThisExpressionÍ1¢Í1¦NªIdentifierÍ1§Í1±ªfoodDetailÂÂNªIdentifierÍ1²Í1¸¦buyNumÂÂÂÂW³VariableDeclarationÍ1ÕÍ2‘X²VariableDeclaratorÍ1ÙÍ2NªIdentifierÍ1ÙÍ1Ş¥existS®CallExpressionÍ1áÍ2T°MemberExpressionÍ1áÍ1òT°MemberExpressionÍ1áÍ1îV®ThisExpressionÍ1áÍ1åNªIdentifierÍ1æÍ1î¨buyFoodsÂÂNªIdentifierÍ1ïÍ1ò£getÂÂ‘T°MemberExpressionÍ1óÍ2T°MemberExpressionÍ1óÍ2V®ThisExpressionÍ1óÍ1÷NªIdentifierÍ1øÍ2ªfoodDetailÂÂNªIdentifierÍ2Í2¢idÂÂÂ£letU«IfStatementÍ2!Í3zNªIdentifierÍ2%Í2*¥existQ®BlockStatementÍ2,Í2Í’R³ExpressionStatementÍ2KÍ2g]´AssignmentExpressionÍ2KÍ2f¢+=T°MemberExpressionÍ2KÍ2WNªIdentifierÍ2KÍ2P¥existNªIdentifierÍ2QÍ2W¦buyNumÂÂT°MemberExpressionÍ2[Í2fV®ThisExpressionÍ2[Í2_NªIdentifierÍ2`Í2f¦buyNumÂÂR³ExpressionStatementÍ2…Í2²S®CallExpressionÍ2…Í2±T°MemberExpressionÍ2…Í2–T°MemberExpressionÍ2…Í2’V®ThisExpressionÍ2…Í2‰NªIdentifierÍ2ŠÍ2’¨buyFoodsÂÂNªIdentifierÍ2“Í2–£setÂÂ’T°MemberExpressionÍ2—Í2©T°MemberExpressionÍ2—Í2¦V®ThisExpressionÍ2—Í2›NªIdentifierÍ2œÍ2¦ªfoodDetailÂÂNªIdentifierÍ2§Í2©¢idÂÂNªIdentifierÍ2«Í2°¥existÂQ®BlockStatementÍ2ìÍ3z‘R³ExpressionStatementÍ3Í3_S®CallExpressionÍ3Í3^T°MemberExpressionÍ3Í3T°MemberExpressionÍ3Í3V®ThisExpressionÍ3Í3NªIdentifierÍ3Í3¨buyFoodsÂÂNªIdentifierÍ3Í3£setÂÂ’T°MemberExpressionÍ3Í3/T°MemberExpressionÍ3Í3,V®ThisExpressionÍ3Í3!NªIdentifierÍ3"Í3,ªfoodDetailÂÂNªIdentifierÍ3-Í3/¢idÂÂS®CallExpressionÍ31Í3]T°MemberExpressionÍ31Í3LNªIdentifierÍ31Í3?®ObservedObjectNªIdentifierÍ3@Í3L¬GetRawObjectÂÂ‘T°MemberExpressionÍ3MÍ3\V®ThisExpressionÍ3MÍ3QNªIdentifierÍ3RÍ3\ªfoodDetailÂÂÂÂR³ExpressionStatementÍ3”Í3½S®CallExpressionÍ3”Í3¼T°MemberExpressionÍ3”Í3¤NªIdentifierÍ3”Í3 ¬RouterModuleNªIdentifierÍ3¡Í3¤£popÂÂ‘T°MemberExpressionÍ3¥Í3»NªIdentifierÍ3¥Í3°«NavStackMapNªIdentifierÍ3±Í3»ªMAIN_STACKÂÂÂÂNªIdentifierÍ58Í5;£RowÂR³ExpressionStatementÍ5OÍ5ÒS®CallExpressionÍ5OÍ5ÑT°MemberExpressionÍ5OÍ5mV®ThisExpressionÍ5OÍ5SNªIdentifierÍ5TÍ5m¹observeComponentCreation2ÂÂ’M·ArrowFunctionExpressionÍ5nÍ5ÊÀÂÂÂ’NªIdentifierÍ5oÍ5u¦elmtIdNªIdentifierÍ5wÍ5†¯isInitialRenderQ®BlockStatementÍ5‹Í5Ê‘R³ExpressionStatementÍ5¢Í5·S®CallExpressionÍ5¢Í5¶T°MemberExpressionÍ5¢Í5­NªIdentifierÍ5¢Í5¦¤TextNªIdentifierÍ5§Í5­¦createÂÂ‘P§LiteralÍ5®Í5µ¯åŠ å…¥è´­ç‰©è½¦±"åŠ å…¥è´­ç‰©è½¦"ÂNªIdentifierÍ5ÌÍ5Ğ¤TextÂR³ExpressionStatementÍ5äÍ5ïS®CallExpressionÍ5äÍ5îT°MemberExpressionÍ5äÍ5ìNªIdentifierÍ5äÍ5è¤TextNªIdentifierÍ5éÍ5ì£popÂÂÂR³ExpressionStatementÍ6Í6S®CallExpressionÍ6Í6
+T°MemberExpressionÍ6Í6NªIdentifierÍ6Í6£RowNªIdentifierÍ6Í6£popÂÂÂR³ExpressionStatementÍ67Í6DS®CallExpressionÍ67Í6CT°MemberExpressionÍ67Í6ANªIdentifierÍ67Í6=¦ColumnNªIdentifierÍ6>Í6A£popÂÂÂR³ExpressionStatementÍ6VÍ6bS®CallExpressionÍ6VÍ6aT°MemberExpressionÍ6VÍ6_NªIdentifierÍ6VÍ6[¥StackNªIdentifierÍ6\Í6_£popÂÂÂR³ExpressionStatementÍ6tÍ6~S®CallExpressionÍ6tÍ6}T°MemberExpressionÍ6tÍ6{NªIdentifierÍ6tÍ6w£RowNªIdentifierÍ6xÍ6{£popÂÂÂZ°ObjectExpressionÍ6Í6ê’[¨PropertyÍ6‘Í6¤ÂÂÂNªIdentifierÍ6‘Í6›ªmoduleNameP§LiteralÍ6Í6¤¥phone§"phone"¤init[¨PropertyÍ6¦Í6èÂÂÂNªIdentifierÍ6¦Í6®¨pagePathP§LiteralÍ6°Í6èÙ6feature/feature_food/src/main/ets/pages/PageFoodDetailÙ8"feature/feature_food/src/main/ets/pages/PageFoodDetail"¤initÂR³ExpressionStatementÍ6úÍ7S®CallExpressionÍ6úÍ7T°MemberExpressionÍ6úÍ7NªIdentifierÍ6úÍ7®NavDestinationNªIdentifierÍ7	Í7¥titleÂÂ‘P§LiteralÍ7Í7¬ç¾é£Ÿè¯¦æƒ…®'ç¾é£Ÿè¯¦æƒ…'ÂR³ExpressionStatementÍ7%Í7xS®CallExpressionÍ7%Í7wT°MemberExpressionÍ7%Í7;NªIdentifierÍ7%Í73®NavDestinationNªIdentifierÍ74Í7;§paddingÂÂ‘Z°ObjectExpressionÍ7<Í7v’[¨PropertyÍ7>Í7[ÂÂÂNªIdentifierÍ7>Í7D¦bottomT°MemberExpressionÍ7FÍ7[V®ThisExpressionÍ7FÍ7JNªIdentifierÍ7KÍ7[°bottomRectHeightÂÂ¤init[¨PropertyÍ7]Í7tÂÂÂNªIdentifierÍ7]Í7`£topT°MemberExpressionÍ7bÍ7tV®ThisExpressionÍ7bÍ7fNªIdentifierÍ7gÍ7t­topRectHeightÂÂ¤initÂNªIdentifierÍ7…Í7“®NavDestinationÂR³ExpressionStatementÍ7ŸÍ7´S®CallExpressionÍ7ŸÍ7³T°MemberExpressionÍ7ŸÍ7±NªIdentifierÍ7ŸÍ7­®NavDestinationNªIdentifierÍ7®Í7±£popÂÂÂ_°MethodDefinitionÍ7ÁÍ7ùÂÂNªIdentifierÍ7ÁÍ7É¨rerender¦methodM²FunctionExpressionÍ7ÉÍ7ùÀÂÂÂQ®BlockStatementÍ7ÌÍ7ù‘R³ExpressionStatementÍ7×Í7òS®CallExpressionÍ7×Í7ñT°MemberExpressionÍ7×Í7ïV®ThisExpressionÍ7×Í7ÛNªIdentifierÍ7ÜÍ7ï³updateDirtyElementsÂÂÂÀ–Ôrh•¤type¥start£endªspecifiers¦source±ImportDeclarationÍîÍ ’Ôri•¤type¥start£end¨imported¥local¯ImportSpecifierÍ÷ÍÿNªIdentifierÍ÷Íÿ¨additionNªIdentifierÍ÷Íÿ¨additioni¯ImportSpecifierÍÍ	NªIdentifierÍÍ	¨multiplyNªIdentifierÍÍ	¨multiplyP§LiteralÍÍ¬common_utils®'common_utils'h±ImportDeclarationÍ"Íj“i¯ImportSpecifierÍ+Í7NªIdentifierÍ+Í7¬NavRouterMapNªIdentifierÍ+Í7¬NavRouterMapi¯ImportSpecifierÍ9ÍDNªIdentifierÍ9ÍD«NavStackMapNªIdentifierÍ9ÍD«NavStackMapi¯ImportSpecifierÍFÍRNªIdentifierÍFÍR¬RouterModuleNªIdentifierÍFÍR¬RouterModuleP§LiteralÍZÍi­router_manage¯'router_manage'h±ImportDeclarationÍlÍ ‘i¯ImportSpecifierÍuÍNªIdentifierÍuÍªFoodDetailNªIdentifierÍuÍªFoodDetailP§LiteralÍ‡ÍŸ¶../model/FoodModelData¸'../model/FoodModelData'h±ImportDeclarationÍ¢ÍÂ‘Ôrj”¤type¥start£end¥local¶ImportDefaultSpecifierÍ©Í®NªIdentifierÍ©Í®¥hilogP§LiteralÍ´ÍÁ«@ohos.hilog­"@ohos.hilog"h±ImportDeclarationÍÄÍç‘j¶ImportDefaultSpecifierÍËÍÑNªIdentifierÍËÍÑ¦fileIoP§LiteralÍ×Íæ­@ohos.file.fs¯"@ohos.file.fs"h±ImportDeclarationÍéÍ‘j¶ImportDefaultSpecifierÍğÍ÷NªIdentifierÍğÍ÷§fileUriP§LiteralÍıÍ²@ohos.file.fileuri´"@ohos.file.fileuri"

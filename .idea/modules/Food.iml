@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="EMPTY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../..">
+      <excludeFolder url="file://$MODULE_DIR$/../../.arkui-x/android/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../.arkui-x/android/app/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../.arkui-x/android/app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../.arkui-x/android/library/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../.arkui-x/android/library/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../.arkui-x/ios/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/common_utils/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/common_utils/.preview" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/common_utils/.test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/common_utils/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/common_utils/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/common_utils/oh_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/router_manage/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/router_manage/.preview" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/router_manage/.test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/router_manage/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/router_manage/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../common/router_manage/oh_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_food/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_food/.preview" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_food/.test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_food/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_food/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_food/oh_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_home/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_home/.preview" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_home/.test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_home/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_home/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_home/oh_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_map/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_map/.preview" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_map/.test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_map/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_map/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_map/oh_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_mine/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_mine/.preview" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_mine/.test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_mine/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_mine/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_mine/oh_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_order/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_order/.preview" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_order/.test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_order/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_order/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../feature/feature_order/oh_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../oh_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../product/phone/.cxx" />
+      <excludeFolder url="file://$MODULE_DIR$/../../product/phone/.preview" />
+      <excludeFolder url="file://$MODULE_DIR$/../../product/phone/.test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../product/phone/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../product/phone/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/../../product/phone/oh_modules" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="" scope="PROVIDED">
+      <library name="ArkTS-HarmonyOS-5.0.5(hms)" type="ArkUI">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$APPLICATION_HOME_DIR$/sdk/default/hms/ets/api" />
+          <root url="file://$APPLICATION_HOME_DIR$/sdk/default/hms/ets/kits" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="" scope="PROVIDED">
+      <library name="ArkTS-HarmonyOS-5.0.5(openharmony)" type="ArkUI">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$APPLICATION_HOME_DIR$/sdk/default/openharmony/ets/api" />
+          <root url="file://$APPLICATION_HOME_DIR$/sdk/default/openharmony/ets/component" />
+          <root url="file://$APPLICATION_HOME_DIR$/sdk/default/openharmony/ets/kits" />
+          <root url="file://$APPLICATION_HOME_DIR$/sdk/default/openharmony/ets/arkts" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

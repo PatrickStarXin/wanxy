@@ -1,0 +1,251 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚ…/*
+ * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+import { AnimatedMap } from '../commons/AnimateMap';
+export class RouterModule {
+    // æ³¨å†Œè·¯ç”±æ ˆï¼Œå­˜å…¥stackMap
+    // å°†è·¯ç”±æ ˆå®ä¾‹æ³¨å†Œåˆ°ç®¡ç†å™¨ä¸­ï¼Œåº”ç”¨å¯åŠ¨æ—¶åˆå§‹åŒ–å„ä¸ªå¯¼èˆªæ ˆ
+    static createStack(name, stack) {
+        RouterModule.stackMap.set(name, stack);
+    }
+    // è·å–æŒ‡å®šæ ˆåçš„è·¯ç”±æ ˆ
+    static getStack(name) {
+        return RouterModule.stackMap.get(name);
+    }
+    // è·³è½¬åˆ°æŒ‡å®šè·¯ç”±æ ˆçš„æŒ‡å®šè·¯ç”±é¡µé¢
+    // æŸ¥æ‰¾æ ˆï¼Œè°ƒç”¨æ ˆçš„pushæ–¹æ³•ï¼Œå‘æŒ‡å®šæ ˆå‹å…¥æ–°é¡µé¢
+    /***
+     * RouterModule.push({
+     * stackName: NavStackMap.MAIN_STACK,      // ç›®æ ‡å¯¼èˆªæ ˆï¼ˆä¸šåŠ¡å¯¼èˆªæ ˆï¼Œå¯ä»¥æœ‰å¤šä¸ªï¼Œç›¸åŒä¸šåŠ¡æ”¾åˆ°ä¸€ä¸ªå¯¼èˆªæ ˆä¸­ï¼‰
+     * url: NavRouterMap.PAGE_FOOD_DETAIL,     // ç›®æ ‡é¡µé¢è·¯ç”±
+     * animateSwitch: AnimatedMap.ON,          // æ˜¯å¦å¼€å¯åŠ¨ç”»ï¼Œæ˜¯å¦æ˜¾ç¤ºè¿‡æ¸¡åŠ¨ç”»
+     * param: JSON.stringify(foodDetail)       // ä¼ é€’çš„å‚æ•°æ•°æ®ï¼ŒfoodDetail æ˜¯å½“å‰é£Ÿç‰©çš„è¯¦ç»†ä¿¡æ¯å¯¹è±¡ï¼ŒJSON.stringify() å°†å¯¹è±¡åºåˆ—åŒ–ä¸ºå­—ç¬¦ä¸²è¿›è¡Œä¼ é€’ï¼Œåœ¨ç›®æ ‡é¡µé¢é€šè¿‡ RouterModule.getNavParam() æ¥æ”¶å¹¶è§£æï¼Œè¿™æ ·è¯¦æƒ…é¡µå°±çŸ¥é“è¦æ˜¾ç¤ºå“ªä¸ªé£Ÿç‰©çš„ä¿¡æ¯
+     * })
+     * å¦‚ä¸Šæ˜¯è°ƒç”¨å®ä¾‹
+     */
+    static push(info) {
+        const stack = RouterModule.getStack(info.stackName);
+        if (stack) {
+            stack.pushPathByName(info.url, info.param, info.animateSwitch === AnimatedMap.ON);
+        }
+        else {
+            console.error('push nav failed, stackName:' + info.stackName + ', url:' + info.url);
+        }
+    }
+    // å°†æŒ‡å®šè·¯ç”±æ ˆçš„æ ˆé¡¶é¡µé¢é€€å‡ºï¼Œå°†infoæŒ‡å®šçš„NavDestinationé¡µé¢ä¿¡æ¯å…¥æ ˆ
+    // æ›¿æ¢å½“å‰é¡µé¢ï¼Œä¸ä¿ç•™åœ¨æ ˆä¸­
+    static replace(info) {
+        const stack = RouterModule.getStack(info.stackName);
+        if (stack) {
+            stack.replacePathByName(info.url, info.param, info.animateSwitch === AnimatedMap.ON);
+        }
+        else {
+            console.error('replace nav failed, stackName:' + info.stackName + ', url:' + info.url);
+        }
+    }
+    // å¼¹å‡ºæ ˆé¡¶å…ƒç´ 
+    // è¿”å›
+    static pop(stackName, animated) {
+        RouterModule.getStack(stackName)?.pop(animated);
+    }
+    // å›é€€è·¯ç”±æ ˆåˆ°ç”±æ ˆåº•å¼€å§‹ç¬¬ä¸€ä¸ªåä¸ºnameçš„NavDestinationé¡µé¢
+    static popToName(stackName, url, animated) {
+        RouterModule.getStack(stackName)?.popToName(url, animated);
+    }
+    // æ¸…é™¤æŒ‡å®šæ ˆä¸­çš„æ‰€æœ‰é¡µé¢
+    static clear(stackName, animated) {
+        RouterModule.getStack(stackName)?.clear(animated);
+    }
+    // è·å–æŒ‡å®šæ ˆä¸­æŒ‡å®šé¡µé¢çš„å‚æ•°
+    static getNavParam(info) {
+        const stack = RouterModule.getStack(info.stackName);
+        if (stack) {
+            return stack.getParamByName(info.url);
+        }
+        console.info('stack does not exist');
+        return [];
+    }
+}
+// ç»´æŠ¤ä¸€ä¸ªè·¯ç”±æ ˆçš„æ˜ å°„è¡¨ï¼Œkeyæ˜¯æ ˆåï¼Œvalueæ˜¯å¯¹åº”çš„å¯¼èˆªæ ˆå®ä¾‹
+RouterModule.stackMap = new Map();
+//# sourceMappingURL=RouterModule.js.mapÂ‘ÙPE:\Chrome\download\Food\common\router_manage\src\main\ets\commons\AnimateMap.etsÙQE:\Chrome\download\Food\common\router_manage\src\main\ets\models\RouterModule.etsÔrB›ªmoduleName±isLocalDependency¯isNodeEntryFile§pkgPath±belongProjectPath§pkgNameªpkgVersion±dependencyPkgInfo°belongModulePath¯hostModulesInfo¬shouldEmitJs­router_manageÃÂÙ,E:\Chrome\download\Food\common\router_manage·E:\Chrome\download\Food­router_manage¥1.0.0ÔrC’§pkgNameªpkgVersion­router_manage¥1.0.0Ù,E:\Chrome\download\Food\common\router_manage‘ÔrD’²hostDependencyName®hostModuleNameÙ"./src/main/ets/models/RouterModule­router_manageÃÃÚ(/*
+ * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import { AnimatedMap } from '../commons/AnimateMap';
+import { NavRouterMap } from '../commons/NavRouterMap';
+import NavRouterInfo from './NavRouterInfo';
+
+export class RouterModule {
+  // ç»´æŠ¤ä¸€ä¸ªè·¯ç”±æ ˆçš„æ˜ å°„è¡¨ï¼Œkeyæ˜¯æ ˆåï¼Œvalueæ˜¯å¯¹åº”çš„å¯¼èˆªæ ˆå®ä¾‹
+  static stackMap: Map<string, NavPathStack> = new Map<string, NavPathStack>()
+
+  // æ³¨å†Œè·¯ç”±æ ˆï¼Œå­˜å…¥stackMap
+  // å°†è·¯ç”±æ ˆå®ä¾‹æ³¨å†Œåˆ°ç®¡ç†å™¨ä¸­ï¼Œåº”ç”¨å¯åŠ¨æ—¶åˆå§‹åŒ–å„ä¸ªå¯¼èˆªæ ˆ
+  public static createStack(name: string, stack: NavPathStack) {
+    RouterModule.stackMap.set(name, stack);
+  }
+
+  // è·å–æŒ‡å®šæ ˆåçš„è·¯ç”±æ ˆ
+  public static getStack(name: string): NavPathStack | undefined {
+    return RouterModule.stackMap.get(name)
+  }
+
+  // è·³è½¬åˆ°æŒ‡å®šè·¯ç”±æ ˆçš„æŒ‡å®šè·¯ç”±é¡µé¢
+  // æŸ¥æ‰¾æ ˆï¼Œè°ƒç”¨æ ˆçš„pushæ–¹æ³•ï¼Œå‘æŒ‡å®šæ ˆå‹å…¥æ–°é¡µé¢
+  /***
+   * RouterModule.push({
+   * stackName: NavStackMap.MAIN_STACK,      // ç›®æ ‡å¯¼èˆªæ ˆï¼ˆä¸šåŠ¡å¯¼èˆªæ ˆï¼Œå¯ä»¥æœ‰å¤šä¸ªï¼Œç›¸åŒä¸šåŠ¡æ”¾åˆ°ä¸€ä¸ªå¯¼èˆªæ ˆä¸­ï¼‰
+   * url: NavRouterMap.PAGE_FOOD_DETAIL,     // ç›®æ ‡é¡µé¢è·¯ç”±
+   * animateSwitch: AnimatedMap.ON,          // æ˜¯å¦å¼€å¯åŠ¨ç”»ï¼Œæ˜¯å¦æ˜¾ç¤ºè¿‡æ¸¡åŠ¨ç”»
+   * param: JSON.stringify(foodDetail)       // ä¼ é€’çš„å‚æ•°æ•°æ®ï¼ŒfoodDetail æ˜¯å½“å‰é£Ÿç‰©çš„è¯¦ç»†ä¿¡æ¯å¯¹è±¡ï¼ŒJSON.stringify() å°†å¯¹è±¡åºåˆ—åŒ–ä¸ºå­—ç¬¦ä¸²è¿›è¡Œä¼ é€’ï¼Œåœ¨ç›®æ ‡é¡µé¢é€šè¿‡ RouterModule.getNavParam() æ¥æ”¶å¹¶è§£æï¼Œè¿™æ ·è¯¦æƒ…é¡µå°±çŸ¥é“è¦æ˜¾ç¤ºå“ªä¸ªé£Ÿç‰©çš„ä¿¡æ¯
+   * })
+   * å¦‚ä¸Šæ˜¯è°ƒç”¨å®ä¾‹
+   */
+  public static push(info: NavRouterInfo) {
+    const stack = RouterModule.getStack(info.stackName)
+    if (stack) {
+      stack.pushPathByName(info.url, info.param, info.animateSwitch === AnimatedMap.ON)
+    } else {
+      console.error('push nav failed, stackName:' + info.stackName + ', url:' + info.url)
+    }
+  }
+
+  // å°†æŒ‡å®šè·¯ç”±æ ˆçš„æ ˆé¡¶é¡µé¢é€€å‡ºï¼Œå°†infoæŒ‡å®šçš„NavDestinationé¡µé¢ä¿¡æ¯å…¥æ ˆ
+  // æ›¿æ¢å½“å‰é¡µé¢ï¼Œä¸ä¿ç•™åœ¨æ ˆä¸­
+  public static replace(info: NavRouterInfo) {
+    const stack = RouterModule.getStack(info.stackName)
+    if (stack) {
+      stack.replacePathByName(info.url, info.param, info.animateSwitch === AnimatedMap.ON)
+    } else {
+      console.error('replace nav failed, stackName:' + info.stackName + ', url:' + info.url)
+    }
+  }
+
+  // å¼¹å‡ºæ ˆé¡¶å…ƒç´ 
+  // è¿”å›
+  public static pop(stackName: string, animated?: boolean) {
+    RouterModule.getStack(stackName)?.pop(animated)
+  }
+
+  // å›é€€è·¯ç”±æ ˆåˆ°ç”±æ ˆåº•å¼€å§‹ç¬¬ä¸€ä¸ªåä¸ºnameçš„NavDestinationé¡µé¢
+  public static popToName(stackName: string, url: NavRouterMap, animated?: boolean) {
+    RouterModule.getStack(stackName)?.popToName(url, animated)
+  }
+
+  // æ¸…é™¤æŒ‡å®šæ ˆä¸­çš„æ‰€æœ‰é¡µé¢
+  public static clear(stackName: string, animated?: boolean) {
+    RouterModule.getStack(stackName)?.clear(animated)
+  }
+
+  // è·å–æŒ‡å®šæ ˆä¸­æŒ‡å®šé¡µé¢çš„å‚æ•°
+  public static getNavParam(info: NavRouterInfo): Array<ESObject> {
+    const stack = RouterModule.getStack(info.stackName)
+    if (stack) {
+      return stack.getParamByName(info.url)
+    }
+    console.info('stack does not exist')
+    return []
+  }
+}
+ÀÔrE‘µ../commons/AnimateMapÔrF—ªassertions¨external¢id¤meta±moduleSideEffectsªresolvedByµsyntheticNamedExportsAÂÙPE:\Chrome\download\Food\common\router_manage\src\main\ets\commons\AnimateMap.etsAÃªoh-resolveÂ“ÔrG–§version¤fileªsourceRoot§sources¥names¨mappings¯RouterModule.js ‘°RouterModule.etsÜ Q‘”    ‘” ˜”   ” ”	 	” ” ” ”3 3”4 4””   ” ” ” ’” ” ’” ”"  ˜” 	”
+ ” ” ” ” (” *”" =œ” ” ” ” ” ”! ”" ”& "”( $”- )”. *”/ +’” ” ’” ” –” 	”
+ ” ” ” ” %›” ” ” ” ”$  ”% !”( $”) %”- )”. *”/ *’”  ”  ’” "” "’” #” #‘” $‘” ,–” -	”
+ -” -” -” -” -(” .” .
+” .” .”" .”# .”+ .'”, .(”0 .,”1 .-”: .6”; .7”< .7”” /” /” /” /Ü ” 0” 0” 0”  0”! 0”% 0”& 0 ”) 0#”+ 0%”/ 0)”0 0*”5 0/”7 01”; 05”< 06”ÌI 0ÌC”ÌN 0ÌH”ÌY 0ÌS”ÌZ 0ÌT”Ì\ 0ÌV”Ì] 0ÌW”Ì^ 0ÌW‘”	 1‘” 1Ü ” 2” 2” 2” 2” 2”7 21”: 24”> 28”? 29”ÌH 2ÌB”ÌK 2ÌE”ÌS 2ÌM”ÌV 2ÌP”ÌZ 2ÌT”Ì[ 2ÌU”Ì^ 2ÌX”Ì_ 2ÌY”Ì` 2ÌY‘”	 3’” 4” 4’” 6”1 6/’” 7” 7–” 8	”
+ 8” 8” 8” 8” 8+” 9” 9
+” 9” 9”" 9”# 9”+ 9'”, 9(”0 9,”1 9-”: 96”; 97”< 97”” :” :” :” :Ü ” ;” ;” ;”# ;”$ ;”( ;"”) ;#”, ;&”. ;(”2 ;,”3 ;-”8 ;2”: ;4”> ;8”? ;9”ÌL ;ÌF”ÌQ ;ÌK”Ì\ ;ÌV”Ì] ;ÌW”Ì_ ;ÌY”Ì` ;ÌZ”Ìa ;ÌZ‘”	 <‘” <Ü ” =” =” =” =” =”: =4”= =7”ÌA =;”ÌB =<”ÌK =ÌE”ÌN =ÌH”ÌV =ÌP”ÌY =ÌS”Ì] =ÌW”Ì^ =ÌX”Ìa =Ì[”Ìb =Ì\”Ìc =Ì\‘”	 >’” ?” ?’” ÌA” ÌA’” ÌB”	 ÌB˜” ÌC	”
+ ÌC” ÌC” ÌC” ÌC” ÌC%” ÌC'”" ÌC9” ÌD” ÌD” ÌD” ÌD” ÌD”' ÌD#”( ÌD$”* ÌD&”- ÌD)”. ÌD*”6 ÌD2”7 ÌD3”8 ÌD3’” ÌE” ÌE’” ÌG”, ÌG*š” ÌH	”
+ ÌH” ÌH” ÌH” ÌH” ÌH+”  ÌH-”# ÌH>”% ÌHÌ@”- ÌHÌRŸ” ÌI” ÌI” ÌI” ÌI” ÌI”' ÌI#”( ÌI$”* ÌI&”3 ÌI/”4 ÌI0”7 ÌI3”9 ÌI5”ÌA ÌI=”ÌB ÌI>”ÌC ÌI>’” ÌJ” ÌJ’” ÌL” ÌL˜” ÌM	”
+ ÌM” ÌM” ÌM” ÌM” ÌM'” ÌM)”$ ÌM;” ÌN” ÌN” ÌN” ÌN” ÌN”' ÌN#”( ÌN$”* ÌN&”/ ÌN+”0 ÌN,”8 ÌN4”9 ÌN5”: ÌN5’” ÌO” ÌO’” ÌQ” ÌQ–” ÌR	”
+ ÌR” ÌR” ÌR” ÌR” ÌR/” ÌS” ÌS
+” ÌS” ÌS”" ÌS”# ÌS”+ ÌS'”, ÌS(”0 ÌS,”1 ÌS-”: ÌS6”; ÌS7”< ÌS7”” ÌT” ÌT” ÌT” ÌT›” ÌU” ÌU” ÌU” ÌU”' ÌU!”( ÌU"”, ÌU&”- ÌU'”0 ÌU*”1 ÌU+”2 ÌU+‘”	 ÌV˜” ÌW” ÌW” ÌW” ÌW” ÌW”+ ÌW'”, ÌW(”- ÌW(”” ÌX” ÌX” ÌX” ÌX’” ÌY” ÌY’”  ”$ &—”  	” ” /” 3” 6”! ÌN”" ÌNÔrH–§version¤file§sources®sourcesContent¥names¨mappingsÀ‘À‘ÀÜ R‘”    ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”  	 ‘”  
+ ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”    ‘”  ! ‘”  " ‘”  # ‘”  $ ‘”  % ‘”  & ‘”  ' ‘”  ( ‘”  ) ‘”  * ‘”  + ‘”  , ‘”  - ‘”  . ‘”  / ‘”  0 ‘”  1 ‘”  2 ‘”  3 ‘”  4 ‘”  5 ‘”  6 ‘”  7 ‘”  8 ‘”  9 ‘”  : ‘”  ; ‘”  < ‘”  = ‘”  > ‘”  ? ‘”  Ì@ ‘”  ÌA ‘”  ÌB ‘”  ÌC ‘”  ÌD ‘”  ÌE ‘”  ÌF ‘”  ÌG ‘”  ÌH ‘”  ÌI ‘”  ÌJ ‘”  ÌK ‘”  ÌL ‘”  ÌM ‘”  ÌN ‘”  ÌO ‘”  ÌP ‘”  ÌQ ÔrI’§missing¦pluginÃ¦genAbcÂÔ  ÔrJ”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache‘ÔrK–¤type¥start£end«declarationªspecifiers¦source¶ExportNamedDeclarationÍ¤Í“ÔrL–¤type¥start£end¢idªsuperClass¤body°ClassDeclarationÍ«Í“ÔrM”¤type¥start£end¤nameªIdentifierÍ±Í½¬RouterModuleÀÔrN”¤type¥start£end¤body©ClassBodyÍ¾Í“˜ÔrO˜¤type¥start£end¦static¨computed£key¤kind¥value°MethodDefinitionÍÍ[ÃÂMªIdentifierÍ	Í«createStack¦methodÔrP™¤type¥start£end¢idªexpression©generator¥async¦params¤body²FunctionExpressionÍÍ[ÀÂÂÂ’MªIdentifierÍÍ¤nameMªIdentifierÍÍ ¥stackN®BlockStatementÍ"Í[‘ÔrQ”¤type¥start£endªexpression³ExpressionStatementÍ-ÍTÔrR–¤type¥start£end¦callee©arguments¨optional®CallExpressionÍ-ÍSÔrS—¤type¥start£end¦object¨property¨computed¨optional°MemberExpressionÍ-ÍFS°MemberExpressionÍ-ÍBMªIdentifierÍ-Í9¬RouterModuleMªIdentifierÍ:ÍB¨stackMapÂÂMªIdentifierÍCÍF£setÂÂ’MªIdentifierÍGÍK¤nameMªIdentifierÍMÍR¥stackÂO°MethodDefinitionÍtÍÃÃÂMªIdentifierÍ{Íƒ¨getStack¦methodP²FunctionExpressionÍƒÍÃÀÂÂÂ‘MªIdentifierÍ„Íˆ¤nameN®BlockStatementÍŠÍÃ‘ÔrT”¤type¥start£end¨argument¯ReturnStatementÍ•Í¼R®CallExpressionÍœÍ»S°MemberExpressionÍœÍµS°MemberExpressionÍœÍ±MªIdentifierÍœÍ¨¬RouterModuleMªIdentifierÍ©Í±¨stackMapÂÂMªIdentifierÍ²Íµ£getÂÂ‘MªIdentifierÍ¶Íº¤nameÂO°MethodDefinitionÍËÍ!ÃÂMªIdentifierÍÒÍÖ¤push¦methodP²FunctionExpressionÍÖÍ!ÀÂÂÂ‘MªIdentifierÍ×ÍÛ¤infoN®BlockStatementÍİÍ!’ÔrU•¤type¥start£end¬declarations¤kind³VariableDeclarationÍèÍ‘ÔrV•¤type¥start£end¢id¤init²VariableDeclaratorÍîÍMªIdentifierÍîÍó¥stackR®CallExpressionÍöÍS°MemberExpressionÍöÍMªIdentifierÍöÍ¬RouterModuleMªIdentifierÍÍ¨getStackÂÂ‘S°MemberExpressionÍÍMªIdentifierÍÍ¤infoMªIdentifierÍÍ©stackNameÂÂÂ¥constÔrW–¤type¥start£end¤testªconsequent©alternate«IfStatementÍ&ÍMªIdentifierÍ*Í/¥stackN®BlockStatementÍ1Í‘Q³ExpressionStatementÍ@Í’R®CallExpressionÍ@Í‘S°MemberExpressionÍ@ÍTMªIdentifierÍ@ÍE¥stackMªIdentifierÍFÍT®pushPathByNameÂÂ“S°MemberExpressionÍUÍ]MªIdentifierÍUÍY¤infoMªIdentifierÍZÍ]£urlÂÂS°MemberExpressionÍ_ÍiMªIdentifierÍ_Íc¤infoMªIdentifierÍdÍi¥paramÂÂÔrX–¤type¥start£end¤left¨operator¥right°BinaryExpressionÍkÍS°MemberExpressionÍkÍ}MªIdentifierÍkÍo¤infoMªIdentifierÍpÍ}­animateSwitchÂÂ£===S°MemberExpressionÍ‚ÍMªIdentifierÍ‚Í«AnimatedMapMªIdentifierÍÍ¢ONÂÂÂN®BlockStatementÍ¬Í‘Q³ExpressionStatementÍ»ÍR®CallExpressionÍ»ÍS°MemberExpressionÍ»ÍÈMªIdentifierÍ»ÍÂ§consoleMªIdentifierÍÃÍÈ¥errorÂÂ‘X°BinaryExpressionÍÉÍX°BinaryExpressionÍÉÍX°BinaryExpressionÍÉÍ÷ÔrY•¤type¥start£end¥value£raw§LiteralÍÉÍæ»push nav failed, stackName:½'push nav failed, stackName:'¡+S°MemberExpressionÍéÍ÷MªIdentifierÍéÍí¤infoMªIdentifierÍîÍ÷©stackNameÂÂ¡+Y§LiteralÍúÍ¦, url:¨', url:'¡+S°MemberExpressionÍÍMªIdentifierÍÍ	¤infoMªIdentifierÍ
+Í£urlÂÂÂO°MethodDefinitionÍpÍÏÃÂMªIdentifierÍwÍ~§replace¦methodP²FunctionExpressionÍ~ÍÏÀÂÂÂ‘MªIdentifierÍÍƒ¤infoN®BlockStatementÍ…ÍÏ’U³VariableDeclarationÍÍÄ‘V²VariableDeclaratorÍ–ÍÃMªIdentifierÍ–Í›¥stackR®CallExpressionÍÍÃS°MemberExpressionÍÍ³MªIdentifierÍÍª¬RouterModuleMªIdentifierÍ«Í³¨getStackÂÂ‘S°MemberExpressionÍ´ÍÂMªIdentifierÍ´Í¸¤infoMªIdentifierÍ¹ÍÂ©stackNameÂÂÂ¥constW«IfStatementÍÎÍÈMªIdentifierÍÒÍ×¥stackN®BlockStatementÍÙÍH‘Q³ExpressionStatementÍèÍ=R®CallExpressionÍèÍ<S°MemberExpressionÍèÍÿMªIdentifierÍèÍí¥stackMªIdentifierÍîÍÿ±replacePathByNameÂÂ“S°MemberExpressionÍ ÍMªIdentifierÍ Í¤infoMªIdentifierÍÍ£urlÂÂS°MemberExpressionÍ
+ÍMªIdentifierÍ
+Í¤infoMªIdentifierÍÍ¥paramÂÂX°BinaryExpressionÍÍ;S°MemberExpressionÍÍ(MªIdentifierÍÍ¤infoMªIdentifierÍÍ(­animateSwitchÂÂ£===S°MemberExpressionÍ-Í;MªIdentifierÍ-Í8«AnimatedMapMªIdentifierÍ9Í;¢ONÂÂÂN®BlockStatementÍWÍÈ‘Q³ExpressionStatementÍfÍ½R®CallExpressionÍfÍ¼S°MemberExpressionÍfÍsMªIdentifierÍfÍm§consoleMªIdentifierÍnÍs¥errorÂÂ‘X°BinaryExpressionÍtÍ»X°BinaryExpressionÍtÍ°X°BinaryExpressionÍtÍ¥Y§LiteralÍtÍ”¾replace nav failed, stackName:Ù 'replace nav failed, stackName:'¡+S°MemberExpressionÍ—Í¥MªIdentifierÍ—Í›¤infoMªIdentifierÍœÍ¥©stackNameÂÂ¡+Y§LiteralÍ¨Í°¦, url:¨', url:'¡+S°MemberExpressionÍ³Í»MªIdentifierÍ³Í·¤infoMªIdentifierÍ¸Í»£urlÂÂÂO°MethodDefinitionÍïÍ	QÃÂMªIdentifierÍöÍù£pop¦methodP²FunctionExpressionÍùÍ	QÀÂÂÂ’MªIdentifierÍúÍ	©stackNameMªIdentifierÍ	Í	¨animatedN®BlockStatementÍ	Í	Q‘Q³ExpressionStatementÍ	Í	JQ¯ChainExpressionÍ	Í	IR®CallExpressionÍ	Í	IS°MemberExpressionÍ	Í	?R®CallExpressionÍ	Í	:S°MemberExpressionÍ	Í	/MªIdentifierÍ	Í	&¬RouterModuleMªIdentifierÍ	'Í	/¨getStackÂÂ‘MªIdentifierÍ	0Í	9©stackNameÂMªIdentifierÍ	<Í	?£popÂÃ‘MªIdentifierÍ	@Í	H¨animatedÂO°MethodDefinitionÍ	…Í	ıÃÂMªIdentifierÍ	ŒÍ	•©popToName¦methodP²FunctionExpressionÍ	•Í	ıÀÂÂÂ“MªIdentifierÍ	–Í	Ÿ©stackNameMªIdentifierÍ	¡Í	¤£urlMªIdentifierÍ	¦Í	®¨animatedN®BlockStatementÍ	°Í	ı‘Q³ExpressionStatementÍ	»Í	öQ¯ChainExpressionÍ	»Í	õR®CallExpressionÍ	»Í	õS°MemberExpressionÍ	»Í	æR®CallExpressionÍ	»Í	ÛS°MemberExpressionÍ	»Í	ĞMªIdentifierÍ	»Í	Ç¬RouterModuleMªIdentifierÍ	ÈÍ	Ğ¨getStackÂÂ‘MªIdentifierÍ	ÑÍ	Ú©stackNameÂMªIdentifierÍ	İÍ	æ©popToNameÂÃ’MªIdentifierÍ	çÍ	ê£urlMªIdentifierÍ	ìÍ	ô¨animatedÂO°MethodDefinitionÍ
+Í
+}ÃÂMªIdentifierÍ
+Í
+#¥clear¦methodP²FunctionExpressionÍ
+#Í
+}ÀÂÂÂ’MªIdentifierÍ
+$Í
+-©stackNameMªIdentifierÍ
+/Í
+7¨animatedN®BlockStatementÍ
+9Í
+}‘Q³ExpressionStatementÍ
+DÍ
+vQ¯ChainExpressionÍ
+DÍ
+uR®CallExpressionÍ
+DÍ
+uS°MemberExpressionÍ
+DÍ
+kR®CallExpressionÍ
+DÍ
+dS°MemberExpressionÍ
+DÍ
+YMªIdentifierÍ
+DÍ
+P¬RouterModuleMªIdentifierÍ
+QÍ
+Y¨getStackÂÂ‘MªIdentifierÍ
+ZÍ
+c©stackNameÂMªIdentifierÍ
+fÍ
+k¥clearÂÃ‘MªIdentifierÍ
+lÍ
+t¨animatedÂO°MethodDefinitionÍ
+™ÍÃÂMªIdentifierÍ
+ Í
+««getNavParam¦methodP²FunctionExpressionÍ
+«ÍÀÂÂÂ‘MªIdentifierÍ
+¬Í
+°¤infoN®BlockStatementÍ
+²Í”U³VariableDeclarationÍ
+½Í
+ñ‘V²VariableDeclaratorÍ
+ÃÍ
+ğMªIdentifierÍ
+ÃÍ
+È¥stackR®CallExpressionÍ
+ËÍ
+ğS°MemberExpressionÍ
+ËÍ
+àMªIdentifierÍ
+ËÍ
+×¬RouterModuleMªIdentifierÍ
+ØÍ
+à¨getStackÂÂ‘S°MemberExpressionÍ
+áÍ
+ïMªIdentifierÍ
+áÍ
+å¤infoMªIdentifierÍ
+æÍ
+ï©stackNameÂÂÂ¥constW«IfStatementÍ
+ûÍFMªIdentifierÍ
+ÿÍ¥stackN®BlockStatementÍÍF‘T¯ReturnStatementÍÍ;R®CallExpressionÍÍ:S°MemberExpressionÍÍ0MªIdentifierÍÍ!¥stackMªIdentifierÍ"Í0®getParamByNameÂÂ‘S°MemberExpressionÍ1Í9MªIdentifierÍ1Í5¤infoMªIdentifierÍ6Í9£urlÂÂÂÀQ³ExpressionStatementÍPÍuR®CallExpressionÍPÍtS°MemberExpressionÍPÍ\MªIdentifierÍPÍW§consoleMªIdentifierÍXÍ\¤infoÂÂ‘Y§LiteralÍ]Ís´stack does not exist¶'stack does not exist'ÂT¯ReturnStatementÍÍ‰ÔrZ”¤type¥start£end¨elements¯ArrayExpressionÍ†ÍˆÀ‘Ôr[•¤type¥start£endªspecifiers¦source±ImportDeclarationÍnÍ¢‘Ôr\•¤type¥start£end¨imported¥local¯ImportSpecifierÍwÍ‚MªIdentifierÍwÍ‚«AnimatedMapMªIdentifierÍwÍ‚«AnimatedMapY§LiteralÍŠÍ¡µ../commons/AnimateMap·'../commons/AnimateMap'

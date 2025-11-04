@@ -1,0 +1,12 @@
+{
+  "routerMap": [
+    {
+      "name": "PageShopList",
+      "pageSourceFile": "src/main/ets/pages/PageShopList.ets",
+      "buildFunction": "PageShopListBuilder",
+      "data": {
+        "description": "this is PageShopList"
+      }
+    }
+  ]
+}

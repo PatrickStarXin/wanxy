@@ -1,0 +1,36 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "PhoneAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "PhoneAbility_label",
+      "value": "餐饮店"
+    },
+    {
+      "name": "PhoneFormAbility_desc",
+      "value": "form_description"
+    },
+    {
+      "name": "PhoneFormAbility_label",
+      "value": "form_label"
+    },
+    {
+      "name": "FoodDemo_desc",
+      "value": "This is a service widget."
+    },
+    {
+      "name": "FoodDemo_display_name",
+      "value": "FoodDemo"
+    },
+    {
+      "name": "permission_reason",
+      "value": "permission_reason"
+    }
+  ]
+}

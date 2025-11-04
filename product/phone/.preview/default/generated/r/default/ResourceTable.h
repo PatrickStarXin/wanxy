@@ -1,0 +1,92 @@
+/*
+ * Copyright (c) 2023 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef RESOURCE_TABLE_H
+#define RESOURCE_TABLE_H
+
+#include<stdint.h>
+
+namespace OHOS {
+const int32_t STRING_FOODDEMO_DESC = 0x0800000b;
+const int32_t STRING_FOODDEMO_DISPLAY_NAME = 0x0800000c;
+const int32_t STRING_PHONEABILITY_DESC = 0x0800000d;
+const int32_t STRING_PHONEABILITY_LABEL = 0x0800000e;
+const int32_t STRING_PHONEFORMABILITY_DESC = 0x0800000f;
+const int32_t STRING_PHONEFORMABILITY_LABEL = 0x08000010;
+const int32_t STRING_AGCIT_40717667622463713810 = 0x08000001;
+const int32_t STRING_APP_NAME = 0x08000002;
+const int32_t STRING_DATA_IS_NULL_MSG = 0x08000033;
+const int32_t STRING_MODULE_DESC = 0x08000011;
+const int32_t STRING_PAGE_SHOW = 0x0800001b;
+const int32_t STRING_PERMISSION_REASON = 0x08000016;
+const int32_t STRING_SHARED_DESC = 0x08000034;
+const int32_t COLOR_BORDER_COLOR = 0x0800001d;
+const int32_t COLOR_FOOD_DES_COLOR = 0x0800001e;
+const int32_t COLOR_ITEM_TITLE_FONT = 0x08000019;
+const int32_t COLOR_START_WINDOW_BACKGROUND = 0x0800001a;
+const int32_t COLOR_SYSTEM_BG_WHITE = 0x0800001f;
+const int32_t COLOR_SYSTEM_GREEN = 0x08000020;
+const int32_t COLOR_WHITE = 0x08000021;
+const int32_t FLOAT_FONT_SIZE = 0x08000013;
+const int32_t MEDIA_APP_ICON = 0x08000000;
+const int32_t MEDIA_BG_BANNER = 0x08000038;
+const int32_t MEDIA_BG_MAIN = 0x08000037;
+const int32_t MEDIA_FOOD_1 = 0x08000041;
+const int32_t MEDIA_FOOD_2 = 0x08000039;
+const int32_t MEDIA_FOOD_3 = 0x0800003f;
+const int32_t MEDIA_FOOD_4 = 0x08000042;
+const int32_t MEDIA_FOOD_5 = 0x0800003b;
+const int32_t MEDIA_FOOD_DEMO_SHOP1 = 0x08000043;
+const int32_t MEDIA_FOOD_DEMO_SHOP2 = 0x08000044;
+const int32_t MEDIA_FOOD_MAIN = 0x0800003d;
+const int32_t MEDIA_IC_FOOD_NEW = 0x08000003;
+const int32_t MEDIA_IC_FOOD_NEW_SELECTED = 0x08000017;
+const int32_t MEDIA_IC_HOME_DINEIN = 0x08000035;
+const int32_t MEDIA_IC_HOME_HEADER = 0x0800002c;
+const int32_t MEDIA_IC_HOME_NEW = 0x08000015;
+const int32_t MEDIA_IC_HOME_NEW_SELECTED = 0x08000012;
+const int32_t MEDIA_IC_HOME_TAKEOUT = 0x08000036;
+const int32_t MEDIA_IC_MINE_NEW = 0x08000009;
+const int32_t MEDIA_IC_MINE_NEW_SELECTED = 0x0800000a;
+const int32_t MEDIA_IC_ORDER_NEW = 0x08000004;
+const int32_t MEDIA_IC_ORDER_NEW_SELECTED = 0x08000014;
+const int32_t MEDIA_IC_PUBLIC_ADD_NORM = 0x08000024;
+const int32_t MEDIA_IC_PUBLIC_ARROW_DOWN_0 = 0x08000023;
+const int32_t MEDIA_IC_PUBLIC_ARROW_RIGHT = 0x0800002b;
+const int32_t MEDIA_IC_PUBLIC_ARROW_UP_0 = 0x08000030;
+const int32_t MEDIA_IC_PUBLIC_CHOOSE = 0x08000025;
+const int32_t MEDIA_IC_PUBLIC_CHOOSE_NEW = 0x08000029;
+const int32_t MEDIA_IC_PUBLIC_CHOOSE_SELECTED = 0x08000027;
+const int32_t MEDIA_IC_PUBLIC_DELETE = 0x0800001c;
+const int32_t MEDIA_IC_PUBLIC_MAP = 0x08000026;
+const int32_t MEDIA_IC_PUBLIC_MESSAGE = 0x0800002e;
+const int32_t MEDIA_IC_PUBLIC_PEOPLE = 0x0800002d;
+const int32_t MEDIA_IC_PUBLIC_PHONE = 0x08000032;
+const int32_t MEDIA_IC_PUBLIC_POSTBACK = 0x08000022;
+const int32_t MEDIA_IC_PUBLIC_REMOVE = 0x08000028;
+const int32_t MEDIA_IC_PUBLIC_SCAN = 0x0800002a;
+const int32_t MEDIA_IC_PUBLIC_SETTING = 0x0800002f;
+const int32_t MEDIA_IC_PUBLIC_SHOP = 0x08000031;
+const int32_t MEDIA_ICON_SELECTED = 0x0800003e;
+const int32_t MEDIA_ICON_UNSELECTED = 0x0800003a;
+const int32_t MEDIA_MILK_TEE = 0x08000040;
+const int32_t MEDIA_STARTICON = 0x08000018;
+const int32_t MEDIA_TEE = 0x0800003c;
+const int32_t PROFILE_BACKUP_CONFIG = 0x08000007;
+const int32_t PROFILE_FORM_CONFIG = 0x08000008;
+const int32_t PROFILE_MAIN_PAGES = 0x08000006;
+const int32_t PROFILE_ROUTE_MAP = 0x08000005;
+}
+#endif

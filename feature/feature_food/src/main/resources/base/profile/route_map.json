@@ -1,0 +1,12 @@
+{
+  "routerMap": [
+    {
+      "name": "PageFoodDetail",
+      "pageSourceFile": "src/main/ets/pages/PageFoodDetail.ets",
+      "buildFunction": "PageFoodDetailBuilder",
+      "data": {
+        "description": "this is PageFoodDetail"
+      }
+    }
+  ]
+}

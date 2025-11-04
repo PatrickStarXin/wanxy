@@ -1,0 +1,2 @@
+E:/Chrome/download/Food/product/phone/build/default/cache/default/default@CompileArkTS/esmodule/debug_widget/phone/src/main/ets/food/pages/FoodCard.ts;&phone/src/main/ets/food/pages/FoodCard&;esm;phone|phone|1.0.0|src/main/ets/food/pages/FoodCard.ts;phone;false
+E:/Chrome/download/Food/oh_modules/.ohpm/@hw-agconnect+auth@1.0.5/oh_modules/@hw-agconnect/auth/ets/modules.abc;;;;@hw-agconnect/auth;

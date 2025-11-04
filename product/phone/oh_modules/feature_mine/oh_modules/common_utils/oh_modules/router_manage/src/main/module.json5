@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "router_manage",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet",
+      "2in1"
+    ]
+  }
+}

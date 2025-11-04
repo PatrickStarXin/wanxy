@@ -1,0 +1,1 @@
+{"name":"feature_home","version":"1.0.0","description":"Please describe the basic information.","main":"Index.ets","author":"","license":"Apache-2.0","dependencies":{"common_utils":"file:../../common/common_utils","router_manage":"file:../../common/router_manage"}}

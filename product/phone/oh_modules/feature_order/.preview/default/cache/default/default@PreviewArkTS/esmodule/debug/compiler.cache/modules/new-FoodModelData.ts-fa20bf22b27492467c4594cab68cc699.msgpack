@@ -1,0 +1,2139 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚQ/*
+ * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+export class FoodDetail {
+}
+export class FoodList {
+}
+export const FoodCategoryListData1 = [
+    'ç²‰ä¸ç¦åˆ©', 'å¤šäººå¥—é¤', 'ç”°å›­æ—¶è”¬', 'å•äººå¥—é¤', 'æ‹›ç‰Œå¿…ç‚¹', 'å°ä»½å°é²œ', 'æ¹˜å‘³å°ç‚’', 'ä¸»é£Ÿå°åƒ'
+];
+export const FoodCategoryListData2 = [
+    'æ—¶ä»¤ä¸Šæ–°', 'çƒ­é¥®æ¨è', 'æ¸…çˆ½æœèŒ¶', 'é†‡é¦™å¥¶èŒ¶', 'ä¸»é£Ÿå°åƒ'
+];
+export const FoodListData1 = [
+    {
+        "category": "ç²‰ä¸ç¦åˆ©",
+        "list": [
+            {
+                "id": "1-1",
+                "title": "ç¦åˆ©|è›‹ç³•",
+                "desc": "æœˆå”®100+",
+                "price": 3.88,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "1-2",
+                "title": "ç¦åˆ©|ç‹¼ç‰™åœŸè±†",
+                "desc": "æœˆå”®200+",
+                "price": 4.99,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "1-3",
+                "title": "ç¦åˆ©|é¸¡å—",
+                "desc": "æœˆå”®100",
+                "price": 9.8,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "1-4",
+                "title": "ç¦åˆ©|å†°ç²‰4",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "1-5",
+                "title": "ç¦åˆ©|å†°ç²‰5",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "å¤šäººå¥—é¤",
+        "list": [
+            {
+                "id": "2-1",
+                "title": "æ¹–å—å°ç‚’è‚‰",
+                "desc": "æœˆå”®1000",
+                "price": 30,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "2-2",
+                "title": "å°ç‚’é»„ç‰›è‚‰",
+                "desc": "æœˆå”®500",
+                "price": 40,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "2-3",
+                "title": "é¦™å¹²ç‚’è‚‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "2-4",
+                "title": "å†œå®¶å°ç‚’é¸¡",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "2-5",
+                "title": "å¤–å©†èœç‚’è›‹",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "ç”°å›­æ—¶è”¬",
+        "list": [
+            {
+                "id": "3-1",
+                "title": "ç§‹å­£ä¸Šæ–°1",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "3-2",
+                "title": "ç§‹å­£ä¸Šæ–°2",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "3-3",
+                "title": "ç¦åˆ©|å¥¶èŒ¶",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "3-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "3-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "å•äººå¥—é¤",
+        "list": [
+            {
+                "id": "4-1",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "4-2",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "4-3",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "4-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "4-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "æ‹›ç‰Œå¿…ç‚¹",
+        "list": [
+            {
+                "id": "5-1",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "5-2",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "5-3",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "5-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "5-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "å°ä»½å°é²œ",
+        "list": [
+            {
+                "id": "6-1",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "6-2",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "6-3",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "6-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "6-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "æ¹˜å‘³å°ç‚’",
+        "list": [
+            {
+                "id": "7-1",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "7-2",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "7-3",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "7-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "7-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "ä¸»é£Ÿå°åƒ",
+        "list": [
+            {
+                "id": "8-1",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "8-2",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "8-3",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "8-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "8-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_main",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+];
+export const FoodListData2 = [
+    {
+        "category": "æ—¶ä»¤ä¸Šæ–°",
+        "list": [
+            {
+                "id": "1-1",
+                "title": "æ˜¥èŒ¶",
+                "desc": "æœˆå”®100+",
+                "price": 8,
+                "pic": "app.media.food_1",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "1-2",
+                "title": "å¤èŒ¶",
+                "desc": "æœˆå”®200+",
+                "price": 6,
+                "pic": "app.media.food_3",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "1-3",
+                "title": "ç§‹èŒ¶",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_4",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "1-4",
+                "title": "å†¬èŒ¶",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.food_5",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "çƒ­é¥®æ¨è",
+        "list": [
+            {
+                "id": "2-1",
+                "title": "çç å¥¶èŒ¶",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "2-2",
+                "title": "çº¢è±†å¥¶èŒ¶",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "2-3",
+                "title": "é»‘ç³–å¥¶èŒ¶",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "2-4",
+                "title": "æ¡‚èŠ±é…’é…¿",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "æ¸…çˆ½æœèŒ¶",
+        "list": [
+            {
+                "id": "3-1",
+                "title": "è‘¡è„å¤šå¤š",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "3-2",
+                "title": "è¥¿ç“œå¤šå¤š",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "3-3",
+                "title": "èŠ’æœå¤šå¤š",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "3-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "3-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "é†‡é¦™å¥¶èŒ¶",
+        "list": [
+            {
+                "id": "4-1",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "4-2",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "4-3",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "4-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "4-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    },
+    {
+        "category": "ä¸»é£Ÿå°åƒ",
+        "list": [
+            {
+                "id": "5-1",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "5-2",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "5-3",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "5-4",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            },
+            {
+                "id": "5-5",
+                "title": "ç¦åˆ©|å†°ç²‰",
+                "desc": "æœˆå”®100",
+                "price": 10,
+                "pic": "app.media.tee",
+                "label": "å‘³é“å¥½æäº†",
+                "buyNum": 0
+            }
+        ]
+    }
+];
+export function getCategoryListByShop(chooseShop) {
+    return chooseShop === "å—äº¬é›¨èŠ±å®¢å…åº—" ? FoodCategoryListData1 : FoodCategoryListData2;
+}
+export function getFoodListByShop(chooseShop) {
+    return chooseShop === "å—äº¬é›¨èŠ±å®¢å…åº—" ? FoodListData1 : FoodListData2;
+}
+//# sourceMappingURL=FoodModelData.js.mapÂÙPE:\Chrome\download\Food\feature\feature_food\src\main\ets\model\FoodModelData.tsÔrB›ªmoduleName±isLocalDependency¯isNodeEntryFile§pkgPath±belongProjectPath§pkgNameªpkgVersion±dependencyPkgInfo¯hostModulesInfo°belongModulePath¬shouldEmitJs¬feature_foodÃÂÙ,E:\Chrome\download\Food\feature\feature_food·E:\Chrome\download\Food¬feature_food¥1.0.0ÔrC’§pkgNameªpkgVersion¬feature_food¥1.0.0’ÔrD’²hostDependencyName®hostModuleNameÙ"./src/main/ets/model/FoodModelData¬feature_foodD¶../model/FoodModelData¬feature_foodÙ,E:\Chrome\download\Food\feature\feature_foodÃÃÚ@a/*
+ * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+export class FoodDetail {
+  id : string;
+  title: string;
+  desc: string;
+  price: number;
+  pic: string;
+  label?: string;
+  buyNum: number;
+}
+
+export class FoodList {
+  category: string;
+  list: FoodDetail[]
+}
+
+export const FoodCategoryListData1: string[] = [
+  'ç²‰ä¸ç¦åˆ©', 'å¤šäººå¥—é¤', 'ç”°å›­æ—¶è”¬', 'å•äººå¥—é¤', 'æ‹›ç‰Œå¿…ç‚¹', 'å°ä»½å°é²œ', 'æ¹˜å‘³å°ç‚’', 'ä¸»é£Ÿå°åƒ'
+];
+
+export const FoodCategoryListData2: string[] = [
+  'æ—¶ä»¤ä¸Šæ–°', 'çƒ­é¥®æ¨è', 'æ¸…çˆ½æœèŒ¶', 'é†‡é¦™å¥¶èŒ¶', 'ä¸»é£Ÿå°åƒ'
+];
+
+export const FoodListData1: FoodList[] = [
+  {
+    "category": "ç²‰ä¸ç¦åˆ©",
+    "list": [
+      {
+        "id": "1-1",
+        "title": "ç¦åˆ©|è›‹ç³•",
+        "desc": "æœˆå”®100+",
+        "price": 3.88,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-2",
+        "title": "ç¦åˆ©|ç‹¼ç‰™åœŸè±†",
+        "desc": "æœˆå”®200+",
+        "price": 4.99,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-3",
+        "title": "ç¦åˆ©|é¸¡å—",
+        "desc": "æœˆå”®100",
+        "price": 9.8,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-4",
+        "title": "ç¦åˆ©|å†°ç²‰4",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-5",
+        "title": "ç¦åˆ©|å†°ç²‰5",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "å¤šäººå¥—é¤",
+    "list": [
+      {
+        "id": "2-1",
+        "title": "æ¹–å—å°ç‚’è‚‰",
+        "desc": "æœˆå”®1000",
+        "price": 30,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-2",
+        "title": "å°ç‚’é»„ç‰›è‚‰",
+        "desc": "æœˆå”®500",
+        "price": 40,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-3",
+        "title": "é¦™å¹²ç‚’è‚‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-4",
+        "title": "å†œå®¶å°ç‚’é¸¡",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-5",
+        "title": "å¤–å©†èœç‚’è›‹",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "ç”°å›­æ—¶è”¬",
+    "list": [
+      {
+        "id": "3-1",
+        "title": "ç§‹å­£ä¸Šæ–°1",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-2",
+        "title": "ç§‹å­£ä¸Šæ–°2",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-3",
+        "title": "ç¦åˆ©|å¥¶èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "å•äººå¥—é¤",
+    "list": [
+      {
+        "id": "4-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "æ‹›ç‰Œå¿…ç‚¹",
+    "list": [
+      {
+        "id": "5-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "å°ä»½å°é²œ",
+    "list": [
+      {
+        "id": "6-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "6-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "6-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "6-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "6-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "æ¹˜å‘³å°ç‚’",
+    "list": [
+      {
+        "id": "7-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "7-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "7-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "7-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "7-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "ä¸»é£Ÿå°åƒ",
+    "list": [
+      {
+        "id": "8-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "8-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "8-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "8-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "8-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+]
+
+export const FoodListData2: FoodList[] = [
+  {
+    "category": "æ—¶ä»¤ä¸Šæ–°",
+    "list": [
+      {
+        "id": "1-1",
+        "title": "æ˜¥èŒ¶",
+        "desc": "æœˆå”®100+",
+        "price": 8,
+        "pic": "app.media.food_1",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-2",
+        "title": "å¤èŒ¶",
+        "desc": "æœˆå”®200+",
+        "price": 6,
+        "pic": "app.media.food_3",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-3",
+        "title": "ç§‹èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_4",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-4",
+        "title": "å†¬èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_5",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "çƒ­é¥®æ¨è",
+    "list": [
+      {
+        "id": "2-1",
+        "title": "çç å¥¶èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-2",
+        "title": "çº¢è±†å¥¶èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-3",
+        "title": "é»‘ç³–å¥¶èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-4",
+        "title": "æ¡‚èŠ±é…’é…¿",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "æ¸…çˆ½æœèŒ¶",
+    "list": [
+      {
+        "id": "3-1",
+        "title": "è‘¡è„å¤šå¤š",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-2",
+        "title": "è¥¿ç“œå¤šå¤š",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-3",
+        "title": "èŠ’æœå¤šå¤š",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "é†‡é¦™å¥¶èŒ¶",
+    "list": [
+      {
+        "id": "4-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "ä¸»é£Ÿå°åƒ",
+    "list": [
+      {
+        "id": "5-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  }
+]
+
+export function getCategoryListByShop(chooseShop: string) : string[] {
+  return chooseShop === "å—äº¬é›¨èŠ±å®¢å…åº—" ? FoodCategoryListData1 : FoodCategoryListData2
+}
+
+export function getFoodListByShop(chooseShop: string) : FoodList[] {
+  return chooseShop === "å—äº¬é›¨èŠ±å®¢å…åº—" ? FoodListData1 : FoodListData2
+}ÔrE•§version¨mappings¥names§sources®sourcesContentÜ›‘”    ‘”  ‘”   ‘”  ‘”   ‘”  ‘”   ‘”  ‘”  " ‘”  #‘”  & ‘”  '‘”  (‘”  )‘”  *‘”  +‘”  ,‘”  -‘”  .‘”  /‘”  0‘”  1‘”  2‘”  3‘”  4‘”  5‘”  6‘”  7‘”  8‘”  9‘”  :‘”  ;‘”  <‘”  =‘”  >‘”  ?‘”  Ì@‘”  ÌA‘”  ÌB‘”  ÌC‘”  ÌD‘”  ÌE‘”  ÌF‘”  ÌG‘”  ÌH‘”  ÌI‘”  ÌJ‘”  ÌK‘”  ÌL‘”  ÌM‘”  ÌN‘”  ÌO‘”  ÌP‘”  ÌQ‘”  ÌR‘”  ÌS‘”  ÌT‘”  ÌU‘”  ÌV‘”  ÌW‘”  ÌX‘”  ÌY‘”  ÌZ‘”  Ì[‘”  Ì\‘”  Ì]‘”  Ì^‘”  Ì_‘”  Ì`‘”  Ìa‘”  Ìb‘”  Ìc‘”  Ìd‘”  Ìe‘”  Ìf‘”  Ìg‘”  Ìh‘”  Ìi‘”  Ìj‘”  Ìk‘”  Ìl‘”  Ìm‘”  Ìn‘”  Ìo‘”  Ìp‘”  Ìq‘”  Ìr‘”  Ìs‘”  Ìt‘”  Ìu‘”  Ìv‘”  Ìw‘”  Ìx‘”  Ìy‘”  Ìz‘”  Ì{‘”  Ì|‘”  Ì}‘”  Ì~‘”  Ì‘”  Ì€‘”  Ì‘”  Ì‚‘”  Ìƒ‘”  Ì„‘”  Ì…‘”  Ì†‘”  Ì‡‘”  Ìˆ‘”  Ì‰‘”  ÌŠ‘”  Ì‹‘”  ÌŒ‘”  Ì‘”  Ì‘”  Ì‘”  Ì‘”  Ì‘‘”  Ì’‘”  Ì“‘”  Ì”‘”  Ì•‘”  Ì–‘”  Ì—‘”  Ì˜‘”  Ì™‘”  Ìš‘”  Ì›‘”  Ìœ‘”  Ì‘”  Ì‘”  ÌŸ‘”  Ì ‘”  Ì¡‘”  Ì¢‘”  Ì£‘”  Ì¤‘”  Ì¥‘”  Ì¦‘”  Ì§‘”  Ì¨‘”  Ì©‘”  Ìª‘”  Ì«‘”  Ì¬‘”  Ì­‘”  Ì®‘”  Ì¯‘”  Ì°‘”  Ì±‘”  Ì²‘”  Ì³‘”  Ì´‘”  Ìµ‘”  Ì¶‘”  Ì·‘”  Ì¸‘”  Ì¹‘”  Ìº‘”  Ì»‘”  Ì¼‘”  Ì½‘”  Ì¾‘”  Ì¿‘”  ÌÀ‘”  ÌÁ‘”  ÌÂ‘”  ÌÃ‘”  ÌÄ‘”  ÌÅ‘”  ÌÆ‘”  ÌÇ‘”  ÌÈ‘”  ÌÉ‘”  ÌÊ‘”  ÌË‘”  ÌÌ‘”  ÌÍ‘”  ÌÎ‘”  ÌÏ‘”  ÌĞ‘”  ÌÑ‘”  ÌÒ‘”  ÌÓ‘”  ÌÔ‘”  ÌÕ‘”  ÌÖ‘”  Ì×‘”  ÌØ‘”  ÌÙ‘”  ÌÚ‘”  ÌÛ‘”  ÌÜ‘”  Ìİ‘”  ÌŞ‘”  Ìß‘”  Ìà‘”  Ìá‘”  Ìâ‘”  Ìã‘”  Ìä‘”  Ìå‘”  Ìæ‘”  Ìç‘”  Ìè‘”  Ìé‘”  Ìê‘”  Ìë‘”  Ìì‘”  Ìí‘”  Ìî‘”  Ìï‘”  Ìğ‘”  Ìñ‘”  Ìò‘”  Ìó‘”  Ìô‘”  Ìõ‘”  Ìö‘”  Ì÷‘”  Ìø‘”  Ìù‘”  Ìú‘”  Ìû‘”  Ìü‘”  Ìı‘”  Ìş‘”  Ìÿ‘”  Í ‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í	‘”  Í
+‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í ‘”  Í!‘”  Í"‘”  Í#‘”  Í$‘”  Í%‘”  Í&‘”  Í'‘”  Í(‘”  Í)‘”  Í*‘”  Í+‘”  Í,‘”  Í-‘”  Í.‘”  Í/‘”  Í0‘”  Í1‘”  Í2‘”  Í3‘”  Í4‘”  Í5‘”  Í6‘”  Í7‘”  Í8‘”  Í9‘”  Í:‘”  Í;‘”  Í<‘”  Í=‘”  Í>‘”  Í?‘”  Í@‘”  ÍA‘”  ÍB‘”  ÍC‘”  ÍD‘”  ÍE‘”  ÍF‘”  ÍG‘”  ÍH‘”  ÍI‘”  ÍJ‘”  ÍK‘”  ÍL‘”  ÍM‘”  ÍN‘”  ÍO‘”  ÍP‘”  ÍQ‘”  ÍR‘”  ÍS‘”  ÍT‘”  ÍU‘”  ÍV‘”  ÍW‘”  ÍX‘”  ÍY‘”  ÍZ‘”  Í[‘”  Í\‘”  Í]‘”  Í^‘”  Í_‘”  Í`‘”  Ía‘”  Íb‘”  Íc‘”  Íd‘”  Íe‘”  Íf‘”  Íg‘”  Íh‘”  Íi‘”  Íj‘”  Ík‘”  Íl‘”  Ím‘”  Ín‘”  Ío‘”  Íp‘”  Íq‘”  Ír‘”  Ís‘”  Ít‘”  Íu‘”  Ív‘”  Íw‘”  Íx‘”  Íy‘”  Íz‘”  Í{‘”  Í|‘”  Í}‘”  Í~‘”  Í‘”  Í€‘”  Í‘”  Í‚‘”  Íƒ‘”  Í„‘”  Í…‘”  Í†‘”  Í‡‘”  Íˆ‘”  Í‰‘”  ÍŠ‘”  Í‹‘”  ÍŒ‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘‘”  Í’‘”  Í“‘”  Í”‘”  Í•‘”  Í–‘”  Í—‘”  Í˜‘”  Í™‘”  Íš‘”  Í›‘”  Íœ‘”  Í‘”  Í‘”  ÍŸ‘”  Í ‘”  Í¡‘”  Í¢‘”  Í£‘”  Í¤‘”  Í¥‘”  Í¦‘”  Í§‘”  Í¨‘”  Í©‘”  Íª‘”  Í«‘”  Í¬‘”  Í­‘”  Í®‘”  Í¯‘”  Í°‘”  Í±‘”  Í²‘”  Í³‘”  Í´‘”  Íµ‘”  Í¶‘”  Í¹ ‘”  Íº‘”  Í»‘”  Í¼‘”  Í½‘”  Í¾‘”  Í¿‘”  ÍÀ‘”  ÍÁ‘”  ÍÂ‘”  ÍÃ‘”  ÍÄ‘”  ÍÅ‘”  ÍÆ‘”  ÍÇ‘”  ÍÈ‘”  ÍÉ‘”  ÍÊ‘”  ÍË‘”  ÍÌ‘”  ÍÍ‘”  ÍÎ‘”  ÍÏ‘”  ÍĞ‘”  ÍÑ‘”  ÍÒ‘”  ÍÓ‘”  ÍÔ‘”  ÍÕ‘”  ÍÖ‘”  Í×‘”  ÍØ‘”  ÍÙ‘”  ÍÚ‘”  ÍÛ‘”  ÍÜ‘”  Íİ‘”  ÍŞ‘”  Íß‘”  Íà‘”  Íá‘”  Íâ‘”  Íã‘”  Íä‘”  Íå‘”  Íæ‘”  Íç‘”  Íè‘”  Íé‘”  Íê‘”  Íë‘”  Íì‘”  Íí‘”  Íî‘”  Íï‘”  Íğ‘”  Íñ‘”  Íò‘”  Íó‘”  Íô‘”  Íõ‘”  Íö‘”  Í÷‘”  Íø‘”  Íù‘”  Íú‘”  Íû‘”  Íü‘”  Íı‘”  Íş‘”  Íÿ‘”  Í ‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í	‘”  Í
+‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í ‘”  Í!‘”  Í"‘”  Í#‘”  Í$‘”  Í%‘”  Í&‘”  Í'‘”  Í(‘”  Í)‘”  Í*‘”  Í+‘”  Í,‘”  Í-‘”  Í.‘”  Í/‘”  Í0‘”  Í1‘”  Í2‘”  Í3‘”  Í4‘”  Í5‘”  Í6‘”  Í7‘”  Í8‘”  Í9‘”  Í:‘”  Í;‘”  Í<‘”  Í=‘”  Í>‘”  Í?‘”  Í@‘”  ÍA‘”  ÍB‘”  ÍC‘”  ÍD‘”  ÍE‘”  ÍF‘”  ÍG‘”  ÍH‘”  ÍI‘”  ÍJ‘”  ÍK‘”  ÍL‘”  ÍM‘”  ÍN‘”  ÍO‘”  ÍP‘”  ÍQ‘”  ÍR‘”  ÍS‘”  ÍT‘”  ÍU‘”  ÍV‘”  ÍW‘”  ÍX‘”  ÍY‘”  ÍZ‘”  Í[‘”  Í\‘”  Í]‘”  Í^‘”  Í_‘”  Í`‘”  Ía‘”  Íb‘”  Íc‘”  Íd‘”  Íe‘”  Íf‘”  Íg‘”  Íh‘”  Íi‘”  Íj‘”  Ík‘”  Íl‘”  Ím‘”  Ín‘”  Ío‘”  Íp‘”  Íq‘”  Ír‘”  Ís‘”  Ít‘”  Íu‘”  Ív‘”  Íw‘”  Íx‘”  Íy‘”  Íz‘”  Í{‘”  Í|‘”  Í}‘”  Í~‘”  Í‘”  Í€‘”  Í‘”  Í‚‘”  Íƒ‘”  Í„‘”  Í…‘”  Í†‘”  Í‡‘”  Íˆ‘”  Í‰‘”  ÍŠ‘”  Í‹‘”  ÍŒ‘”  Í‘”  Í‘”  Í‘”  Í‘”  Í‘‘”  Í’‘”  Í“‘”  Í”‘”  Í•‘”  Í–‘”  Í—‘”  Í˜‘”  Í™‘”  Íš‘”  Í›‘”  Íœ‘”  Í‘”  Í‘”  ÍŸ‘”  Í ‘”  Í¡‘”  Í¤ ‘”  Í¦ ‘”  Í¨ ‘”  Íª ‘ÙPE:\Chrome\download\Food\feature\feature_food\src\main\ets\model\FoodModelData.ts‘Ú@a/*
+ * Copyright (c) 2025 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+export class FoodDetail {
+  id : string;
+  title: string;
+  desc: string;
+  price: number;
+  pic: string;
+  label?: string;
+  buyNum: number;
+}
+
+export class FoodList {
+  category: string;
+  list: FoodDetail[]
+}
+
+export const FoodCategoryListData1: string[] = [
+  'ç²‰ä¸ç¦åˆ©', 'å¤šäººå¥—é¤', 'ç”°å›­æ—¶è”¬', 'å•äººå¥—é¤', 'æ‹›ç‰Œå¿…ç‚¹', 'å°ä»½å°é²œ', 'æ¹˜å‘³å°ç‚’', 'ä¸»é£Ÿå°åƒ'
+];
+
+export const FoodCategoryListData2: string[] = [
+  'æ—¶ä»¤ä¸Šæ–°', 'çƒ­é¥®æ¨è', 'æ¸…çˆ½æœèŒ¶', 'é†‡é¦™å¥¶èŒ¶', 'ä¸»é£Ÿå°åƒ'
+];
+
+export const FoodListData1: FoodList[] = [
+  {
+    "category": "ç²‰ä¸ç¦åˆ©",
+    "list": [
+      {
+        "id": "1-1",
+        "title": "ç¦åˆ©|è›‹ç³•",
+        "desc": "æœˆå”®100+",
+        "price": 3.88,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-2",
+        "title": "ç¦åˆ©|ç‹¼ç‰™åœŸè±†",
+        "desc": "æœˆå”®200+",
+        "price": 4.99,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-3",
+        "title": "ç¦åˆ©|é¸¡å—",
+        "desc": "æœˆå”®100",
+        "price": 9.8,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-4",
+        "title": "ç¦åˆ©|å†°ç²‰4",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-5",
+        "title": "ç¦åˆ©|å†°ç²‰5",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "å¤šäººå¥—é¤",
+    "list": [
+      {
+        "id": "2-1",
+        "title": "æ¹–å—å°ç‚’è‚‰",
+        "desc": "æœˆå”®1000",
+        "price": 30,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-2",
+        "title": "å°ç‚’é»„ç‰›è‚‰",
+        "desc": "æœˆå”®500",
+        "price": 40,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-3",
+        "title": "é¦™å¹²ç‚’è‚‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-4",
+        "title": "å†œå®¶å°ç‚’é¸¡",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-5",
+        "title": "å¤–å©†èœç‚’è›‹",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "ç”°å›­æ—¶è”¬",
+    "list": [
+      {
+        "id": "3-1",
+        "title": "ç§‹å­£ä¸Šæ–°1",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-2",
+        "title": "ç§‹å­£ä¸Šæ–°2",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-3",
+        "title": "ç¦åˆ©|å¥¶èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "å•äººå¥—é¤",
+    "list": [
+      {
+        "id": "4-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "æ‹›ç‰Œå¿…ç‚¹",
+    "list": [
+      {
+        "id": "5-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "å°ä»½å°é²œ",
+    "list": [
+      {
+        "id": "6-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "6-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "6-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "6-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "6-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "æ¹˜å‘³å°ç‚’",
+    "list": [
+      {
+        "id": "7-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "7-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "7-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "7-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "7-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "ä¸»é£Ÿå°åƒ",
+    "list": [
+      {
+        "id": "8-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "8-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "8-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "8-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "8-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_main",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+]
+
+export const FoodListData2: FoodList[] = [
+  {
+    "category": "æ—¶ä»¤ä¸Šæ–°",
+    "list": [
+      {
+        "id": "1-1",
+        "title": "æ˜¥èŒ¶",
+        "desc": "æœˆå”®100+",
+        "price": 8,
+        "pic": "app.media.food_1",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-2",
+        "title": "å¤èŒ¶",
+        "desc": "æœˆå”®200+",
+        "price": 6,
+        "pic": "app.media.food_3",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-3",
+        "title": "ç§‹èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_4",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "1-4",
+        "title": "å†¬èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.food_5",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "çƒ­é¥®æ¨è",
+    "list": [
+      {
+        "id": "2-1",
+        "title": "çç å¥¶èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-2",
+        "title": "çº¢è±†å¥¶èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-3",
+        "title": "é»‘ç³–å¥¶èŒ¶",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "2-4",
+        "title": "æ¡‚èŠ±é…’é…¿",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "æ¸…çˆ½æœèŒ¶",
+    "list": [
+      {
+        "id": "3-1",
+        "title": "è‘¡è„å¤šå¤š",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-2",
+        "title": "è¥¿ç“œå¤šå¤š",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-3",
+        "title": "èŠ’æœå¤šå¤š",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "3-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "é†‡é¦™å¥¶èŒ¶",
+    "list": [
+      {
+        "id": "4-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "4-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  },
+  {
+    "category": "ä¸»é£Ÿå°åƒ",
+    "list": [
+      {
+        "id": "5-1",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-2",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-3",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-4",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      },
+      {
+        "id": "5-5",
+        "title": "ç¦åˆ©|å†°ç²‰",
+        "desc": "æœˆå”®100",
+        "price": 10,
+        "pic": "app.media.tee",
+        "label": "å‘³é“å¥½æäº†",
+        "buyNum": 0
+      }
+    ]
+  }
+]
+
+export function getCategoryListByShop(chooseShop: string) : string[] {
+  return chooseShop === "å—äº¬é›¨èŠ±å®¢å…åº—" ? FoodCategoryListData1 : FoodCategoryListData2
+}
+
+export function getFoodListByShop(chooseShop: string) : FoodList[] {
+  return chooseShop === "å—äº¬é›¨èŠ±å®¢å…åº—" ? FoodListData1 : FoodListData2
+}A‘ÔrF’§missing¦pluginÃ¦genAbcÂÔ  ÔrG”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache˜ÔrH–¤type¥start£end«declarationªspecifiers¦source¶ExportNamedDeclarationÍnÍŠÔrI–¤type¥start£end¢idªsuperClass¤body°ClassDeclarationÍuÍŠÔrJ”¤type¥start£end¤nameªIdentifierÍ{Í…ªFoodDetailÀÔrK”¤type¥start£end¤body©ClassBodyÍ†ÍŠÀH¶ExportNamedDeclarationÍŒÍ¦I°ClassDeclarationÍ“Í¦JªIdentifierÍ™Í¡¨FoodListÀK©ClassBodyÍ¢Í¦ÀH¶ExportNamedDeclarationÍ¨ÍÔrL•¤type¥start£end¬declarations¤kind³VariableDeclarationÍ¯Í‘ÔrM•¤type¥start£end¢id¤init²VariableDeclaratorÍµÍJªIdentifierÍµÍÊµFoodCategoryListData1ÔrN”¤type¥start£end¨elements¯ArrayExpressionÍÍÍ˜ÔrO•¤type¥start£end¥value£raw§LiteralÍÔÍÚ¬ç²‰ä¸ç¦åˆ©®'ç²‰ä¸ç¦åˆ©'O§LiteralÍÜÍâ¬å¤šäººå¥—é¤®'å¤šäººå¥—é¤'O§LiteralÍäÍê¬ç”°å›­æ—¶è”¬®'ç”°å›­æ—¶è”¬'O§LiteralÍìÍò¬å•äººå¥—é¤®'å•äººå¥—é¤'O§LiteralÍôÍú¬æ‹›ç‰Œå¿…ç‚¹®'æ‹›ç‰Œå¿…ç‚¹'O§LiteralÍüÍ¬å°ä»½å°é²œ®'å°ä»½å°é²œ'O§LiteralÍÍ
+¬æ¹˜å‘³å°ç‚’®'æ¹˜å‘³å°ç‚’'O§LiteralÍÍ¬ä¸»é£Ÿå°åƒ®'ä¸»é£Ÿå°åƒ'¥constÀH¶ExportNamedDeclarationÍÍnL³VariableDeclarationÍÍn‘M²VariableDeclaratorÍ%ÍmJªIdentifierÍ%Í:µFoodCategoryListData2N¯ArrayExpressionÍ=Ím•O§LiteralÍDÍJ¬æ—¶ä»¤ä¸Šæ–°®'æ—¶ä»¤ä¸Šæ–°'O§LiteralÍLÍR¬çƒ­é¥®æ¨è®'çƒ­é¥®æ¨è'O§LiteralÍTÍZ¬æ¸…çˆ½æœèŒ¶®'æ¸…çˆ½æœèŒ¶'O§LiteralÍ\Íb¬é†‡é¦™å¥¶èŒ¶®'é†‡é¦™å¥¶èŒ¶'O§LiteralÍdÍj¬ä¸»é£Ÿå°åƒ®'ä¸»é£Ÿå°åƒ'¥constÀH¶ExportNamedDeclarationÍpÍ0=L³VariableDeclarationÍwÍ0=‘M²VariableDeclaratorÍ}Í0<JªIdentifierÍ}ÍŠ­FoodListData1N¯ArrayExpressionÍÍ0<˜ÔrP”¤type¥start£endªproperties°ObjectExpressionÍ”Í	,’ÔrQ™¤type¥start£end¦method©shorthand¨computed£key¥value¤kind¨PropertyÍŸÍ±ÂÂÂO§LiteralÍŸÍ©¨categoryª"category"O§LiteralÍ«Í±¬ç²‰ä¸ç¦åˆ©®"ç²‰ä¸ç¦åˆ©"¤initQ¨PropertyÍ¼Í	%ÂÂÂO§LiteralÍ¼ÍÂ¤list¦"list"N¯ArrayExpressionÍÄÍ	%•P°ObjectExpressionÍÓÍÖ—Q¨PropertyÍæÍñÂÂÂO§LiteralÍæÍê¢id¤"id"O§LiteralÍìÍñ£1-1¥"1-1"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¥title§"title"O§LiteralÍÍ­ç¦åˆ©|è›‹ç³•¯"ç¦åˆ©|è›‹ç³•"¤initQ¨PropertyÍ'Í7ÂÂÂO§LiteralÍ'Í-¤desc¦"desc"O§LiteralÍ/Í7ªæœˆå”®100+¬"æœˆå”®100+"¤initQ¨PropertyÍJÍWÂÂÂO§LiteralÍJÍQ¥price§"price"O§LiteralÍSÍWË@
+=p£×
+¤3.88¤initQ¨PropertyÍjÍ†ÂÂÂO§LiteralÍjÍo£pic¥"pic"O§LiteralÍqÍ†³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ™Í©ÂÂÂO§LiteralÍ™Í ¥label§"label"O§LiteralÍ¢Í©¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ¼ÍÇÂÂÂO§LiteralÍ¼ÍÄ¦buyNum¨"buyNum"O§LiteralÍÆÍÇ ¡0¤initP°ObjectExpressionÍåÍê—Q¨PropertyÍøÍÂÂÂO§LiteralÍøÍü¢id¤"id"O§LiteralÍşÍ£1-2¥"1-2"¤initQ¨PropertyÍÍ(ÂÂÂO§LiteralÍÍ¥title§"title"O§LiteralÍÍ(³ç¦åˆ©|ç‹¼ç‰™åœŸè±†µ"ç¦åˆ©|ç‹¼ç‰™åœŸè±†"¤initQ¨PropertyÍ;ÍKÂÂÂO§LiteralÍ;ÍA¤desc¦"desc"O§LiteralÍCÍKªæœˆå”®200+¬"æœˆå”®200+"¤initQ¨PropertyÍ^ÍkÂÂÂO§LiteralÍ^Íe¥price§"price"O§LiteralÍgÍkË@õÂ\(ö¤4.99¤initQ¨PropertyÍ~ÍšÂÂÂO§LiteralÍ~Íƒ£pic¥"pic"O§LiteralÍ…Íš³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ­Í½ÂÂÂO§LiteralÍ­Í´¥label§"label"O§LiteralÍ¶Í½¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍĞÍÛÂÂÂO§LiteralÍĞÍØ¦buyNum¨"buyNum"O§LiteralÍÚÍÛ ¡0¤initP°ObjectExpressionÍùÍú—Q¨PropertyÍÍÂÂÂO§LiteralÍÍ¢id¤"id"O§LiteralÍÍ£1-3¥"1-3"¤initQ¨PropertyÍ*Í:ÂÂÂO§LiteralÍ*Í1¥title§"title"O§LiteralÍ3Í:­ç¦åˆ©|é¸¡å—¯"ç¦åˆ©|é¸¡å—"¤initQ¨PropertyÍMÍ\ÂÂÂO§LiteralÍMÍS¤desc¦"desc"O§LiteralÍUÍ\©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍoÍ{ÂÂÂO§LiteralÍoÍv¥price§"price"O§LiteralÍxÍ{Ë@#™™™™™š£9.8¤initQ¨PropertyÍÍªÂÂÂO§LiteralÍÍ“£pic¥"pic"O§LiteralÍ•Íª³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ½ÍÍÂÂÂO§LiteralÍ½ÍÄ¥label§"label"O§LiteralÍÆÍÍ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍàÍëÂÂÂO§LiteralÍàÍè¦buyNum¨"buyNum"O§LiteralÍêÍë ¡0¤initP°ObjectExpressionÍ	Í
+—Q¨PropertyÍÍ'ÂÂÂO§LiteralÍÍ ¢id¤"id"O§LiteralÍ"Í'£1-4¥"1-4"¤initQ¨PropertyÍ:ÍKÂÂÂO§LiteralÍ:ÍA¥title§"title"O§LiteralÍCÍK®ç¦åˆ©|å†°ç²‰4°"ç¦åˆ©|å†°ç²‰4"¤initQ¨PropertyÍ^ÍmÂÂÂO§LiteralÍ^Íd¤desc¦"desc"O§LiteralÍfÍm©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ€Í‹ÂÂÂO§LiteralÍ€Í‡¥price§"price"O§LiteralÍ‰Í‹
+¢10¤initQ¨PropertyÍÍºÂÂÂO§LiteralÍÍ££pic¥"pic"O§LiteralÍ¥Íº³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍÍÍİÂÂÂO§LiteralÍÍÍÔ¥label§"label"O§LiteralÍÖÍİ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍğÍûÂÂÂO§LiteralÍğÍø¦buyNum¨"buyNum"O§LiteralÍúÍû ¡0¤initP°ObjectExpressionÍÍ	—Q¨PropertyÍ,Í7ÂÂÂO§LiteralÍ,Í0¢id¤"id"O§LiteralÍ2Í7£1-5¥"1-5"¤initQ¨PropertyÍJÍ[ÂÂÂO§LiteralÍJÍQ¥title§"title"O§LiteralÍSÍ[®ç¦åˆ©|å†°ç²‰5°"ç¦åˆ©|å†°ç²‰5"¤initQ¨PropertyÍnÍ}ÂÂÂO§LiteralÍnÍt¤desc¦"desc"O§LiteralÍvÍ}©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍÍ›ÂÂÂO§LiteralÍÍ—¥price§"price"O§LiteralÍ™Í›
+¢10¤initQ¨PropertyÍ®ÍÊÂÂÂO§LiteralÍ®Í³£pic¥"pic"O§LiteralÍµÍÊ³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍİÍíÂÂÂO§LiteralÍİÍä¥label§"label"O§LiteralÍæÍí¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ	 Í	ÂÂÂO§LiteralÍ	 Í	¦buyNum¨"buyNum"O§LiteralÍ	
+Í	 ¡0¤init¤initP°ObjectExpressionÍ	3ÍÀ’Q¨PropertyÍ	>Í	PÂÂÂO§LiteralÍ	>Í	H¨categoryª"category"O§LiteralÍ	JÍ	P¬å¤šäººå¥—é¤®"å¤šäººå¥—é¤"¤initQ¨PropertyÍ	[Í¹ÂÂÂO§LiteralÍ	[Í	a¤list¦"list"N¯ArrayExpressionÍ	cÍ¹•P°ObjectExpressionÍ	rÍ
+s—Q¨PropertyÍ	…Í	ÂÂÂO§LiteralÍ	…Í	‰¢id¤"id"O§LiteralÍ	‹Í	£2-1¥"2-1"¤initQ¨PropertyÍ	£Í	³ÂÂÂO§LiteralÍ	£Í	ª¥title§"title"O§LiteralÍ	¬Í	³¯æ¹–å—å°ç‚’è‚‰±"æ¹–å—å°ç‚’è‚‰"¤initQ¨PropertyÍ	ÆÍ	ÖÂÂÂO§LiteralÍ	ÆÍ	Ì¤desc¦"desc"O§LiteralÍ	ÎÍ	Öªæœˆå”®1000¬"æœˆå”®1000"¤initQ¨PropertyÍ	éÍ	ôÂÂÂO§LiteralÍ	éÍ	ğ¥price§"price"O§LiteralÍ	òÍ	ô¢30¤initQ¨PropertyÍ
+Í
+#ÂÂÂO§LiteralÍ
+Í
+£pic¥"pic"O§LiteralÍ
+Í
+#³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ
+6Í
+FÂÂÂO§LiteralÍ
+6Í
+=¥label§"label"O§LiteralÍ
+?Í
+F¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ
+YÍ
+dÂÂÂO§LiteralÍ
+YÍ
+a¦buyNum¨"buyNum"O§LiteralÍ
+cÍ
+d ¡0¤initP°ObjectExpressionÍ
+‚Í‚—Q¨PropertyÍ
+•Í
+ ÂÂÂO§LiteralÍ
+•Í
+™¢id¤"id"O§LiteralÍ
+›Í
+ £2-2¥"2-2"¤initQ¨PropertyÍ
+³Í
+ÃÂÂÂO§LiteralÍ
+³Í
+º¥title§"title"O§LiteralÍ
+¼Í
+Ã¯å°ç‚’é»„ç‰›è‚‰±"å°ç‚’é»„ç‰›è‚‰"¤initQ¨PropertyÍ
+ÖÍ
+åÂÂÂO§LiteralÍ
+ÖÍ
+Ü¤desc¦"desc"O§LiteralÍ
+ŞÍ
+å©æœˆå”®500«"æœˆå”®500"¤initQ¨PropertyÍ
+øÍÂÂÂO§LiteralÍ
+øÍ
+ÿ¥price§"price"O§LiteralÍÍ(¢40¤initQ¨PropertyÍÍ2ÂÂÂO§LiteralÍÍ£pic¥"pic"O§LiteralÍÍ2³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍEÍUÂÂÂO§LiteralÍEÍL¥label§"label"O§LiteralÍNÍU¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍhÍsÂÂÂO§LiteralÍhÍp¦buyNum¨"buyNum"O§LiteralÍrÍs ¡0¤initP°ObjectExpressionÍ‘Í—Q¨PropertyÍ¤Í¯ÂÂÂO§LiteralÍ¤Í¨¢id¤"id"O§LiteralÍªÍ¯£2-3¥"2-3"¤initQ¨PropertyÍÂÍÑÂÂÂO§LiteralÍÂÍÉ¥title§"title"O§LiteralÍËÍÑ¬é¦™å¹²ç‚’è‚‰®"é¦™å¹²ç‚’è‚‰"¤initQ¨PropertyÍäÍóÂÂÂO§LiteralÍäÍê¤desc¦"desc"O§LiteralÍìÍó©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¥price§"price"O§LiteralÍÍ
+¢10¤initQ¨PropertyÍ$Í@ÂÂÂO§LiteralÍ$Í)£pic¥"pic"O§LiteralÍ+Í@³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍSÍcÂÂÂO§LiteralÍSÍZ¥label§"label"O§LiteralÍ\Íc¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍvÍÂÂÂO§LiteralÍvÍ~¦buyNum¨"buyNum"O§LiteralÍ€Í ¡0¤initP°ObjectExpressionÍŸÍŸ—Q¨PropertyÍ²Í½ÂÂÂO§LiteralÍ²Í¶¢id¤"id"O§LiteralÍ¸Í½£2-4¥"2-4"¤initQ¨PropertyÍĞÍàÂÂÂO§LiteralÍĞÍ×¥title§"title"O§LiteralÍÙÍà¯å†œå®¶å°ç‚’é¸¡±"å†œå®¶å°ç‚’é¸¡"¤initQ¨PropertyÍóÍÂÂÂO§LiteralÍóÍù¤desc¦"desc"O§LiteralÍûÍ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍÍ ÂÂÂO§LiteralÍÍ¥price§"price"O§LiteralÍÍ 
+¢10¤initQ¨PropertyÍ3ÍOÂÂÂO§LiteralÍ3Í8£pic¥"pic"O§LiteralÍ:ÍO³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍbÍrÂÂÂO§LiteralÍbÍi¥label§"label"O§LiteralÍkÍr¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ…ÍÂÂÂO§LiteralÍ…Í¦buyNum¨"buyNum"O§LiteralÍÍ ¡0¤initP°ObjectExpressionÍ®Í®—Q¨PropertyÍÁÍÌÂÂÂO§LiteralÍÁÍÅ¢id¤"id"O§LiteralÍÇÍÌ£2-5¥"2-5"¤initQ¨PropertyÍßÍïÂÂÂO§LiteralÍßÍæ¥title§"title"O§LiteralÍèÍï¯å¤–å©†èœç‚’è›‹±"å¤–å©†èœç‚’è›‹"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¤desc¦"desc"O§LiteralÍ
+Í©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ$Í/ÂÂÂO§LiteralÍ$Í+¥price§"price"O§LiteralÍ-Í/
+¢10¤initQ¨PropertyÍBÍ^ÂÂÂO§LiteralÍBÍG£pic¥"pic"O§LiteralÍIÍ^³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍqÍÂÂÂO§LiteralÍqÍx¥label§"label"O§LiteralÍzÍ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ”ÍŸÂÂÂO§LiteralÍ”Íœ¦buyNum¨"buyNum"O§LiteralÍÍŸ ¡0¤init¤initP°ObjectExpressionÍÇÍT’Q¨PropertyÍÒÍäÂÂÂO§LiteralÍÒÍÜ¨categoryª"category"O§LiteralÍŞÍä¬ç”°å›­æ—¶è”¬®"ç”°å›­æ—¶è”¬"¤initQ¨PropertyÍïÍMÂÂÂO§LiteralÍïÍõ¤list¦"list"N¯ArrayExpressionÍ÷ÍM•P°ObjectExpressionÍÍ—Q¨PropertyÍÍ$ÂÂÂO§LiteralÍÍ¢id¤"id"O§LiteralÍÍ$£3-1¥"3-1"¤initQ¨PropertyÍ7ÍGÂÂÂO§LiteralÍ7Í>¥title§"title"O§LiteralÍ@ÍG­ç§‹å­£ä¸Šæ–°1¯"ç§‹å­£ä¸Šæ–°1"¤initQ¨PropertyÍZÍiÂÂÂO§LiteralÍZÍ`¤desc¦"desc"O§LiteralÍbÍi©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ|Í‡ÂÂÂO§LiteralÍ|Íƒ¥price§"price"O§LiteralÍ…Í‡
+¢10¤initQ¨PropertyÍšÍ¶ÂÂÂO§LiteralÍšÍŸ£pic¥"pic"O§LiteralÍ¡Í¶³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍÉÍÙÂÂÂO§LiteralÍÉÍĞ¥label§"label"O§LiteralÍÒÍÙ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍìÍ÷ÂÂÂO§LiteralÍìÍô¦buyNum¨"buyNum"O§LiteralÍöÍ÷ ¡0¤initP°ObjectExpressionÍÍ—Q¨PropertyÍ(Í3ÂÂÂO§LiteralÍ(Í,¢id¤"id"O§LiteralÍ.Í3£3-2¥"3-2"¤initQ¨PropertyÍFÍVÂÂÂO§LiteralÍFÍM¥title§"title"O§LiteralÍOÍV­ç§‹å­£ä¸Šæ–°2¯"ç§‹å­£ä¸Šæ–°2"¤initQ¨PropertyÍiÍxÂÂÂO§LiteralÍiÍo¤desc¦"desc"O§LiteralÍqÍx©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ‹Í–ÂÂÂO§LiteralÍ‹Í’¥price§"price"O§LiteralÍ”Í–
+¢10¤initQ¨PropertyÍ©ÍÅÂÂÂO§LiteralÍ©Í®£pic¥"pic"O§LiteralÍ°ÍÅ³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍØÍèÂÂÂO§LiteralÍØÍß¥label§"label"O§LiteralÍáÍè¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍûÍÂÂÂO§LiteralÍûÍ¦buyNum¨"buyNum"O§LiteralÍÍ ¡0¤initP°ObjectExpressionÍ$Í$—Q¨PropertyÍ7ÍBÂÂÂO§LiteralÍ7Í;¢id¤"id"O§LiteralÍ=ÍB£3-3¥"3-3"¤initQ¨PropertyÍUÍeÂÂÂO§LiteralÍUÍ\¥title§"title"O§LiteralÍ^Íe­ç¦åˆ©|å¥¶èŒ¶¯"ç¦åˆ©|å¥¶èŒ¶"¤initQ¨PropertyÍxÍ‡ÂÂÂO§LiteralÍxÍ~¤desc¦"desc"O§LiteralÍ€Í‡©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍšÍ¥ÂÂÂO§LiteralÍšÍ¡¥price§"price"O§LiteralÍ£Í¥
+¢10¤initQ¨PropertyÍ¸ÍÔÂÂÂO§LiteralÍ¸Í½£pic¥"pic"O§LiteralÍ¿ÍÔ³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍçÍ÷ÂÂÂO§LiteralÍçÍî¥label§"label"O§LiteralÍğÍ÷¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ
+ÍÂÂÂO§LiteralÍ
+Í¦buyNum¨"buyNum"O§LiteralÍÍ ¡0¤initP°ObjectExpressionÍ3Í3—Q¨PropertyÍFÍQÂÂÂO§LiteralÍFÍJ¢id¤"id"O§LiteralÍLÍQ£3-4¥"3-4"¤initQ¨PropertyÍdÍtÂÂÂO§LiteralÍdÍk¥title§"title"O§LiteralÍmÍt­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ‡Í–ÂÂÂO§LiteralÍ‡Í¤desc¦"desc"O§LiteralÍÍ–©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ©Í´ÂÂÂO§LiteralÍ©Í°¥price§"price"O§LiteralÍ²Í´
+¢10¤initQ¨PropertyÍÇÍãÂÂÂO§LiteralÍÇÍÌ£pic¥"pic"O§LiteralÍÎÍã³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍöÍÂÂÂO§LiteralÍöÍı¥label§"label"O§LiteralÍÿÍ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍÍ$ÂÂÂO§LiteralÍÍ!¦buyNum¨"buyNum"O§LiteralÍ#Í$ ¡0¤initP°ObjectExpressionÍBÍB—Q¨PropertyÍUÍ`ÂÂÂO§LiteralÍUÍY¢id¤"id"O§LiteralÍ[Í`£3-5¥"3-5"¤initQ¨PropertyÍsÍƒÂÂÂO§LiteralÍsÍz¥title§"title"O§LiteralÍ|Íƒ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ–Í¥ÂÂÂO§LiteralÍ–Íœ¤desc¦"desc"O§LiteralÍÍ¥©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ¸ÍÃÂÂÂO§LiteralÍ¸Í¿¥price§"price"O§LiteralÍÁÍÃ
+¢10¤initQ¨PropertyÍÖÍòÂÂÂO§LiteralÍÖÍÛ£pic¥"pic"O§LiteralÍİÍò³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¥label§"label"O§LiteralÍÍ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ(Í3ÂÂÂO§LiteralÍ(Í0¦buyNum¨"buyNum"O§LiteralÍ2Í3 ¡0¤init¤initP°ObjectExpressionÍ[Íè’Q¨PropertyÍfÍxÂÂÂO§LiteralÍfÍp¨categoryª"category"O§LiteralÍrÍx¬å•äººå¥—é¤®"å•äººå¥—é¤"¤initQ¨PropertyÍƒÍáÂÂÂO§LiteralÍƒÍ‰¤list¦"list"N¯ArrayExpressionÍ‹Íá•P°ObjectExpressionÍšÍš—Q¨PropertyÍ­Í¸ÂÂÂO§LiteralÍ­Í±¢id¤"id"O§LiteralÍ³Í¸£4-1¥"4-1"¤initQ¨PropertyÍËÍÛÂÂÂO§LiteralÍËÍÒ¥title§"title"O§LiteralÍÔÍÛ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍîÍıÂÂÂO§LiteralÍîÍô¤desc¦"desc"O§LiteralÍöÍı©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¥price§"price"O§LiteralÍÍ
+¢10¤initQ¨PropertyÍ.ÍJÂÂÂO§LiteralÍ.Í3£pic¥"pic"O§LiteralÍ5ÍJ³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ]ÍmÂÂÂO§LiteralÍ]Íd¥label§"label"O§LiteralÍfÍm¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ€Í‹ÂÂÂO§LiteralÍ€Íˆ¦buyNum¨"buyNum"O§LiteralÍŠÍ‹ ¡0¤initP°ObjectExpressionÍ©Í©—Q¨PropertyÍ¼ÍÇÂÂÂO§LiteralÍ¼ÍÀ¢id¤"id"O§LiteralÍÂÍÇ£4-2¥"4-2"¤initQ¨PropertyÍÚÍêÂÂÂO§LiteralÍÚÍá¥title§"title"O§LiteralÍãÍê­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍıÍÂÂÂO§LiteralÍıÍ¤desc¦"desc"O§LiteralÍÍ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍÍ*ÂÂÂO§LiteralÍÍ&¥price§"price"O§LiteralÍ(Í*
+¢10¤initQ¨PropertyÍ=ÍYÂÂÂO§LiteralÍ=ÍB£pic¥"pic"O§LiteralÍDÍY³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍlÍ|ÂÂÂO§LiteralÍlÍs¥label§"label"O§LiteralÍuÍ|¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍÍšÂÂÂO§LiteralÍÍ—¦buyNum¨"buyNum"O§LiteralÍ™Íš ¡0¤initP°ObjectExpressionÍ¸Í¸—Q¨PropertyÍËÍÖÂÂÂO§LiteralÍËÍÏ¢id¤"id"O§LiteralÍÑÍÖ£4-3¥"4-3"¤initQ¨PropertyÍéÍùÂÂÂO§LiteralÍéÍğ¥title§"title"O§LiteralÍòÍù­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¤desc¦"desc"O§LiteralÍÍ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ.Í9ÂÂÂO§LiteralÍ.Í5¥price§"price"O§LiteralÍ7Í9
+¢10¤initQ¨PropertyÍLÍhÂÂÂO§LiteralÍLÍQ£pic¥"pic"O§LiteralÍSÍh³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ{Í‹ÂÂÂO§LiteralÍ{Í‚¥label§"label"O§LiteralÍ„Í‹¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍÍ©ÂÂÂO§LiteralÍÍ¦¦buyNum¨"buyNum"O§LiteralÍ¨Í© ¡0¤initP°ObjectExpressionÍÇÍÇ—Q¨PropertyÍÚÍåÂÂÂO§LiteralÍÚÍŞ¢id¤"id"O§LiteralÍàÍå£4-4¥"4-4"¤initQ¨PropertyÍøÍÂÂÂO§LiteralÍøÍÿ¥title§"title"O§LiteralÍÍ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍÍ*ÂÂÂO§LiteralÍÍ!¤desc¦"desc"O§LiteralÍ#Í*©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ=ÍHÂÂÂO§LiteralÍ=ÍD¥price§"price"O§LiteralÍFÍH
+¢10¤initQ¨PropertyÍ[ÍwÂÂÂO§LiteralÍ[Í`£pic¥"pic"O§LiteralÍbÍw³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍŠÍšÂÂÂO§LiteralÍŠÍ‘¥label§"label"O§LiteralÍ“Íš¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ­Í¸ÂÂÂO§LiteralÍ­Íµ¦buyNum¨"buyNum"O§LiteralÍ·Í¸ ¡0¤initP°ObjectExpressionÍÖÍÖ—Q¨PropertyÍéÍôÂÂÂO§LiteralÍéÍí¢id¤"id"O§LiteralÍïÍô£4-5¥"4-5"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¥title§"title"O§LiteralÍÍ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ*Í9ÂÂÂO§LiteralÍ*Í0¤desc¦"desc"O§LiteralÍ2Í9©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍLÍWÂÂÂO§LiteralÍLÍS¥price§"price"O§LiteralÍUÍW
+¢10¤initQ¨PropertyÍjÍ†ÂÂÂO§LiteralÍjÍo£pic¥"pic"O§LiteralÍqÍ†³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ™Í©ÂÂÂO§LiteralÍ™Í ¥label§"label"O§LiteralÍ¢Í©¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ¼ÍÇÂÂÂO§LiteralÍ¼ÍÄ¦buyNum¨"buyNum"O§LiteralÍÆÍÇ ¡0¤init¤initP°ObjectExpressionÍïÍ|’Q¨PropertyÍúÍÂÂÂO§LiteralÍúÍ¨categoryª"category"O§LiteralÍÍ¬æ‹›ç‰Œå¿…ç‚¹®"æ‹›ç‰Œå¿…ç‚¹"¤initQ¨PropertyÍÍuÂÂÂO§LiteralÍÍ¤list¦"list"N¯ArrayExpressionÍÍu•P°ObjectExpressionÍ.Í.—Q¨PropertyÍAÍLÂÂÂO§LiteralÍAÍE¢id¤"id"O§LiteralÍGÍL£5-1¥"5-1"¤initQ¨PropertyÍ_ÍoÂÂÂO§LiteralÍ_Íf¥title§"title"O§LiteralÍhÍo­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ‚Í‘ÂÂÂO§LiteralÍ‚Íˆ¤desc¦"desc"O§LiteralÍŠÍ‘©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ¤Í¯ÂÂÂO§LiteralÍ¤Í«¥price§"price"O§LiteralÍ­Í¯
+¢10¤initQ¨PropertyÍÂÍŞÂÂÂO§LiteralÍÂÍÇ£pic¥"pic"O§LiteralÍÉÍŞ³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍñÍÂÂÂO§LiteralÍñÍø¥label§"label"O§LiteralÍúÍ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¦buyNum¨"buyNum"O§LiteralÍÍ ¡0¤initP°ObjectExpressionÍ=Í=—Q¨PropertyÍPÍ[ÂÂÂO§LiteralÍPÍT¢id¤"id"O§LiteralÍVÍ[£5-2¥"5-2"¤initQ¨PropertyÍnÍ~ÂÂÂO§LiteralÍnÍu¥title§"title"O§LiteralÍwÍ~­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ‘Í ÂÂÂO§LiteralÍ‘Í—¤desc¦"desc"O§LiteralÍ™Í ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ³Í¾ÂÂÂO§LiteralÍ³Íº¥price§"price"O§LiteralÍ¼Í¾
+¢10¤initQ¨PropertyÍÑÍíÂÂÂO§LiteralÍÑÍÖ£pic¥"pic"O§LiteralÍØÍí³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ ÍÂÂÂO§LiteralÍ Í¥label§"label"O§LiteralÍ	Í¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ#Í.ÂÂÂO§LiteralÍ#Í+¦buyNum¨"buyNum"O§LiteralÍ-Í. ¡0¤initP°ObjectExpressionÍLÍL—Q¨PropertyÍ_ÍjÂÂÂO§LiteralÍ_Íc¢id¤"id"O§LiteralÍeÍj£5-3¥"5-3"¤initQ¨PropertyÍ}ÍÂÂÂO§LiteralÍ}Í„¥title§"title"O§LiteralÍ†Í­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ Í¯ÂÂÂO§LiteralÍ Í¦¤desc¦"desc"O§LiteralÍ¨Í¯©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍÂÍÍÂÂÂO§LiteralÍÂÍÉ¥price§"price"O§LiteralÍËÍÍ
+¢10¤initQ¨PropertyÍàÍüÂÂÂO§LiteralÍàÍå£pic¥"pic"O§LiteralÍçÍü³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍÍÂÂÂO§LiteralÍÍ¥label§"label"O§LiteralÍÍ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ2Í=ÂÂÂO§LiteralÍ2Í:¦buyNum¨"buyNum"O§LiteralÍ<Í= ¡0¤initP°ObjectExpressionÍ[Í[—Q¨PropertyÍnÍyÂÂÂO§LiteralÍnÍr¢id¤"id"O§LiteralÍtÍy£5-4¥"5-4"¤initQ¨PropertyÍŒÍœÂÂÂO§LiteralÍŒÍ“¥title§"title"O§LiteralÍ•Íœ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ¯Í¾ÂÂÂO§LiteralÍ¯Íµ¤desc¦"desc"O§LiteralÍ·Í¾©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍÑÍÜÂÂÂO§LiteralÍÑÍØ¥price§"price"O§LiteralÍÚÍÜ
+¢10¤initQ¨PropertyÍïÍÂÂÂO§LiteralÍïÍô£pic¥"pic"O§LiteralÍöÍ³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍÍ.ÂÂÂO§LiteralÍÍ%¥label§"label"O§LiteralÍ'Í.¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍAÍLÂÂÂO§LiteralÍAÍI¦buyNum¨"buyNum"O§LiteralÍKÍL ¡0¤initP°ObjectExpressionÍjÍj—Q¨PropertyÍ}ÍˆÂÂÂO§LiteralÍ}Í¢id¤"id"O§LiteralÍƒÍˆ£5-5¥"5-5"¤initQ¨PropertyÍ›Í«ÂÂÂO§LiteralÍ›Í¢¥title§"title"O§LiteralÍ¤Í«­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ¾ÍÍÂÂÂO§LiteralÍ¾ÍÄ¤desc¦"desc"O§LiteralÍÆÍÍ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍàÍëÂÂÂO§LiteralÍàÍç¥price§"price"O§LiteralÍéÍë
+¢10¤initQ¨PropertyÍşÍÂÂÂO§LiteralÍşÍ£pic¥"pic"O§LiteralÍÍ³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ-Í=ÂÂÂO§LiteralÍ-Í4¥label§"label"O§LiteralÍ6Í=¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍPÍ[ÂÂÂO§LiteralÍPÍX¦buyNum¨"buyNum"O§LiteralÍZÍ[ ¡0¤init¤initP°ObjectExpressionÍƒÍ%’Q¨PropertyÍÍ ÂÂÂO§LiteralÍÍ˜¨categoryª"category"O§LiteralÍšÍ ¬å°ä»½å°é²œ®"å°ä»½å°é²œ"¤initQ¨PropertyÍ«Í%	ÂÂÂO§LiteralÍ«Í±¤list¦"list"N¯ArrayExpressionÍ³Í%	•P°ObjectExpressionÍÂÍ Â—Q¨PropertyÍÕÍàÂÂÂO§LiteralÍÕÍÙ¢id¤"id"O§LiteralÍÛÍà£6-1¥"6-1"¤initQ¨PropertyÍóÍ ÂÂÂO§LiteralÍóÍú¥title§"title"O§LiteralÍüÍ ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ Í %ÂÂÂO§LiteralÍ Í ¤desc¦"desc"O§LiteralÍ Í %©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ 8Í CÂÂÂO§LiteralÍ 8Í ?¥price§"price"O§LiteralÍ AÍ C
+¢10¤initQ¨PropertyÍ VÍ rÂÂÂO§LiteralÍ VÍ [£pic¥"pic"O§LiteralÍ ]Í r³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ …Í •ÂÂÂO§LiteralÍ …Í Œ¥label§"label"O§LiteralÍ Í •¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ ¨Í ³ÂÂÂO§LiteralÍ ¨Í °¦buyNum¨"buyNum"O§LiteralÍ ²Í ³ ¡0¤initP°ObjectExpressionÍ ÑÍ!Ñ—Q¨PropertyÍ äÍ ïÂÂÂO§LiteralÍ äÍ è¢id¤"id"O§LiteralÍ êÍ ï£6-2¥"6-2"¤initQ¨PropertyÍ!Í!ÂÂÂO§LiteralÍ!Í!	¥title§"title"O§LiteralÍ!Í!­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ!%Í!4ÂÂÂO§LiteralÍ!%Í!+¤desc¦"desc"O§LiteralÍ!-Í!4©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ!GÍ!RÂÂÂO§LiteralÍ!GÍ!N¥price§"price"O§LiteralÍ!PÍ!R
+¢10¤initQ¨PropertyÍ!eÍ!ÂÂÂO§LiteralÍ!eÍ!j£pic¥"pic"O§LiteralÍ!lÍ!³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ!”Í!¤ÂÂÂO§LiteralÍ!”Í!›¥label§"label"O§LiteralÍ!Í!¤¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ!·Í!ÂÂÂÂO§LiteralÍ!·Í!¿¦buyNum¨"buyNum"O§LiteralÍ!ÁÍ!Â ¡0¤initP°ObjectExpressionÍ!àÍ"à—Q¨PropertyÍ!óÍ!şÂÂÂO§LiteralÍ!óÍ!÷¢id¤"id"O§LiteralÍ!ùÍ!ş£6-3¥"6-3"¤initQ¨PropertyÍ"Í"!ÂÂÂO§LiteralÍ"Í"¥title§"title"O§LiteralÍ"Í"!­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ"4Í"CÂÂÂO§LiteralÍ"4Í":¤desc¦"desc"O§LiteralÍ"<Í"C©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ"VÍ"aÂÂÂO§LiteralÍ"VÍ"]¥price§"price"O§LiteralÍ"_Í"a
+¢10¤initQ¨PropertyÍ"tÍ"ÂÂÂO§LiteralÍ"tÍ"y£pic¥"pic"O§LiteralÍ"{Í"³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ"£Í"³ÂÂÂO§LiteralÍ"£Í"ª¥label§"label"O§LiteralÍ"¬Í"³¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ"ÆÍ"ÑÂÂÂO§LiteralÍ"ÆÍ"Î¦buyNum¨"buyNum"O§LiteralÍ"ĞÍ"Ñ ¡0¤initP°ObjectExpressionÍ"ïÍ#ï—Q¨PropertyÍ#Í#ÂÂÂO§LiteralÍ#Í#¢id¤"id"O§LiteralÍ#Í#£6-4¥"6-4"¤initQ¨PropertyÍ# Í#0ÂÂÂO§LiteralÍ# Í#'¥title§"title"O§LiteralÍ#)Í#0­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ#CÍ#RÂÂÂO§LiteralÍ#CÍ#I¤desc¦"desc"O§LiteralÍ#KÍ#R©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ#eÍ#pÂÂÂO§LiteralÍ#eÍ#l¥price§"price"O§LiteralÍ#nÍ#p
+¢10¤initQ¨PropertyÍ#ƒÍ#ŸÂÂÂO§LiteralÍ#ƒÍ#ˆ£pic¥"pic"O§LiteralÍ#ŠÍ#Ÿ³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ#²Í#ÂÂÂÂO§LiteralÍ#²Í#¹¥label§"label"O§LiteralÍ#»Í#Â¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ#ÕÍ#àÂÂÂO§LiteralÍ#ÕÍ#İ¦buyNum¨"buyNum"O§LiteralÍ#ßÍ#à ¡0¤initP°ObjectExpressionÍ#şÍ$ş—Q¨PropertyÍ$Í$ÂÂÂO§LiteralÍ$Í$¢id¤"id"O§LiteralÍ$Í$£6-5¥"6-5"¤initQ¨PropertyÍ$/Í$?ÂÂÂO§LiteralÍ$/Í$6¥title§"title"O§LiteralÍ$8Í$?­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ$RÍ$aÂÂÂO§LiteralÍ$RÍ$X¤desc¦"desc"O§LiteralÍ$ZÍ$a©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ$tÍ$ÂÂÂO§LiteralÍ$tÍ${¥price§"price"O§LiteralÍ$}Í$
+¢10¤initQ¨PropertyÍ$’Í$®ÂÂÂO§LiteralÍ$’Í$—£pic¥"pic"O§LiteralÍ$™Í$®³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ$ÁÍ$ÑÂÂÂO§LiteralÍ$ÁÍ$È¥label§"label"O§LiteralÍ$ÊÍ$Ñ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ$äÍ$ïÂÂÂO§LiteralÍ$äÍ$ì¦buyNum¨"buyNum"O§LiteralÍ$îÍ$ï ¡0¤init¤initP°ObjectExpressionÍ%Í*¤’Q¨PropertyÍ%"Í%4ÂÂÂO§LiteralÍ%"Í%,¨categoryª"category"O§LiteralÍ%.Í%4¬æ¹˜å‘³å°ç‚’®"æ¹˜å‘³å°ç‚’"¤initQ¨PropertyÍ%?Í*ÂÂÂO§LiteralÍ%?Í%E¤list¦"list"N¯ArrayExpressionÍ%GÍ*•P°ObjectExpressionÍ%VÍ&V—Q¨PropertyÍ%iÍ%tÂÂÂO§LiteralÍ%iÍ%m¢id¤"id"O§LiteralÍ%oÍ%t£7-1¥"7-1"¤initQ¨PropertyÍ%‡Í%—ÂÂÂO§LiteralÍ%‡Í%¥title§"title"O§LiteralÍ%Í%—­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ%ªÍ%¹ÂÂÂO§LiteralÍ%ªÍ%°¤desc¦"desc"O§LiteralÍ%²Í%¹©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ%ÌÍ%×ÂÂÂO§LiteralÍ%ÌÍ%Ó¥price§"price"O§LiteralÍ%ÕÍ%×
+¢10¤initQ¨PropertyÍ%êÍ&ÂÂÂO§LiteralÍ%êÍ%ï£pic¥"pic"O§LiteralÍ%ñÍ&³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ&Í&)ÂÂÂO§LiteralÍ&Í& ¥label§"label"O§LiteralÍ&"Í&)¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ&<Í&GÂÂÂO§LiteralÍ&<Í&D¦buyNum¨"buyNum"O§LiteralÍ&FÍ&G ¡0¤initP°ObjectExpressionÍ&eÍ'e—Q¨PropertyÍ&xÍ&ƒÂÂÂO§LiteralÍ&xÍ&|¢id¤"id"O§LiteralÍ&~Í&ƒ£7-2¥"7-2"¤initQ¨PropertyÍ&–Í&¦ÂÂÂO§LiteralÍ&–Í&¥title§"title"O§LiteralÍ&ŸÍ&¦­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ&¹Í&ÈÂÂÂO§LiteralÍ&¹Í&¿¤desc¦"desc"O§LiteralÍ&ÁÍ&È©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ&ÛÍ&æÂÂÂO§LiteralÍ&ÛÍ&â¥price§"price"O§LiteralÍ&äÍ&æ
+¢10¤initQ¨PropertyÍ&ùÍ'ÂÂÂO§LiteralÍ&ùÍ&ş£pic¥"pic"O§LiteralÍ' Í'³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ'(Í'8ÂÂÂO§LiteralÍ'(Í'/¥label§"label"O§LiteralÍ'1Í'8¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ'KÍ'VÂÂÂO§LiteralÍ'KÍ'S¦buyNum¨"buyNum"O§LiteralÍ'UÍ'V ¡0¤initP°ObjectExpressionÍ'tÍ(t—Q¨PropertyÍ'‡Í'’ÂÂÂO§LiteralÍ'‡Í'‹¢id¤"id"O§LiteralÍ'Í'’£7-3¥"7-3"¤initQ¨PropertyÍ'¥Í'µÂÂÂO§LiteralÍ'¥Í'¬¥title§"title"O§LiteralÍ'®Í'µ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ'ÈÍ'×ÂÂÂO§LiteralÍ'ÈÍ'Î¤desc¦"desc"O§LiteralÍ'ĞÍ'×©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ'êÍ'õÂÂÂO§LiteralÍ'êÍ'ñ¥price§"price"O§LiteralÍ'óÍ'õ
+¢10¤initQ¨PropertyÍ(Í($ÂÂÂO§LiteralÍ(Í(£pic¥"pic"O§LiteralÍ(Í($³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ(7Í(GÂÂÂO§LiteralÍ(7Í(>¥label§"label"O§LiteralÍ(@Í(G¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ(ZÍ(eÂÂÂO§LiteralÍ(ZÍ(b¦buyNum¨"buyNum"O§LiteralÍ(dÍ(e ¡0¤initP°ObjectExpressionÍ(ƒÍ)ƒ—Q¨PropertyÍ(–Í(¡ÂÂÂO§LiteralÍ(–Í(š¢id¤"id"O§LiteralÍ(œÍ(¡£7-4¥"7-4"¤initQ¨PropertyÍ(´Í(ÄÂÂÂO§LiteralÍ(´Í(»¥title§"title"O§LiteralÍ(½Í(Ä­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ(×Í(æÂÂÂO§LiteralÍ(×Í(İ¤desc¦"desc"O§LiteralÍ(ßÍ(æ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ(ùÍ)ÂÂÂO§LiteralÍ(ùÍ) ¥price§"price"O§LiteralÍ)Í)
+¢10¤initQ¨PropertyÍ)Í)3ÂÂÂO§LiteralÍ)Í)£pic¥"pic"O§LiteralÍ)Í)3³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ)FÍ)VÂÂÂO§LiteralÍ)FÍ)M¥label§"label"O§LiteralÍ)OÍ)V¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ)iÍ)tÂÂÂO§LiteralÍ)iÍ)q¦buyNum¨"buyNum"O§LiteralÍ)sÍ)t ¡0¤initP°ObjectExpressionÍ)’Í*’—Q¨PropertyÍ)¥Í)°ÂÂÂO§LiteralÍ)¥Í)©¢id¤"id"O§LiteralÍ)«Í)°£7-5¥"7-5"¤initQ¨PropertyÍ)ÃÍ)ÓÂÂÂO§LiteralÍ)ÃÍ)Ê¥title§"title"O§LiteralÍ)ÌÍ)Ó­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ)æÍ)õÂÂÂO§LiteralÍ)æÍ)ì¤desc¦"desc"O§LiteralÍ)îÍ)õ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ*Í*ÂÂÂO§LiteralÍ*Í*¥price§"price"O§LiteralÍ*Í*
+¢10¤initQ¨PropertyÍ*&Í*BÂÂÂO§LiteralÍ*&Í*+£pic¥"pic"O§LiteralÍ*-Í*B³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ*UÍ*eÂÂÂO§LiteralÍ*UÍ*\¥label§"label"O§LiteralÍ*^Í*e¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ*xÍ*ƒÂÂÂO§LiteralÍ*xÍ*€¦buyNum¨"buyNum"O§LiteralÍ*‚Í*ƒ ¡0¤init¤initP°ObjectExpressionÍ*«Í08’Q¨PropertyÍ*¶Í*ÈÂÂÂO§LiteralÍ*¶Í*À¨categoryª"category"O§LiteralÍ*ÂÍ*È¬ä¸»é£Ÿå°åƒ®"ä¸»é£Ÿå°åƒ"¤initQ¨PropertyÍ*ÓÍ01ÂÂÂO§LiteralÍ*ÓÍ*Ù¤list¦"list"N¯ArrayExpressionÍ*ÛÍ01•P°ObjectExpressionÍ*êÍ+ê—Q¨PropertyÍ*ıÍ+ÂÂÂO§LiteralÍ*ıÍ+¢id¤"id"O§LiteralÍ+Í+£8-1¥"8-1"¤initQ¨PropertyÍ+Í++ÂÂÂO§LiteralÍ+Í+"¥title§"title"O§LiteralÍ+$Í++­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ+>Í+MÂÂÂO§LiteralÍ+>Í+D¤desc¦"desc"O§LiteralÍ+FÍ+M©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ+`Í+kÂÂÂO§LiteralÍ+`Í+g¥price§"price"O§LiteralÍ+iÍ+k
+¢10¤initQ¨PropertyÍ+~Í+šÂÂÂO§LiteralÍ+~Í+ƒ£pic¥"pic"O§LiteralÍ+…Í+š³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ+­Í+½ÂÂÂO§LiteralÍ+­Í+´¥label§"label"O§LiteralÍ+¶Í+½¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ+ĞÍ+ÛÂÂÂO§LiteralÍ+ĞÍ+Ø¦buyNum¨"buyNum"O§LiteralÍ+ÚÍ+Û ¡0¤initP°ObjectExpressionÍ+ùÍ,ù—Q¨PropertyÍ,Í,ÂÂÂO§LiteralÍ,Í,¢id¤"id"O§LiteralÍ,Í,£8-2¥"8-2"¤initQ¨PropertyÍ,*Í,:ÂÂÂO§LiteralÍ,*Í,1¥title§"title"O§LiteralÍ,3Í,:­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ,MÍ,\ÂÂÂO§LiteralÍ,MÍ,S¤desc¦"desc"O§LiteralÍ,UÍ,\©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ,oÍ,zÂÂÂO§LiteralÍ,oÍ,v¥price§"price"O§LiteralÍ,xÍ,z
+¢10¤initQ¨PropertyÍ,Í,©ÂÂÂO§LiteralÍ,Í,’£pic¥"pic"O§LiteralÍ,”Í,©³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ,¼Í,ÌÂÂÂO§LiteralÍ,¼Í,Ã¥label§"label"O§LiteralÍ,ÅÍ,Ì¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ,ßÍ,êÂÂÂO§LiteralÍ,ßÍ,ç¦buyNum¨"buyNum"O§LiteralÍ,éÍ,ê ¡0¤initP°ObjectExpressionÍ-Í.—Q¨PropertyÍ-Í-&ÂÂÂO§LiteralÍ-Í-¢id¤"id"O§LiteralÍ-!Í-&£8-3¥"8-3"¤initQ¨PropertyÍ-9Í-IÂÂÂO§LiteralÍ-9Í-@¥title§"title"O§LiteralÍ-BÍ-I­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ-\Í-kÂÂÂO§LiteralÍ-\Í-b¤desc¦"desc"O§LiteralÍ-dÍ-k©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ-~Í-‰ÂÂÂO§LiteralÍ-~Í-…¥price§"price"O§LiteralÍ-‡Í-‰
+¢10¤initQ¨PropertyÍ-œÍ-¸ÂÂÂO§LiteralÍ-œÍ-¡£pic¥"pic"O§LiteralÍ-£Í-¸³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ-ËÍ-ÛÂÂÂO§LiteralÍ-ËÍ-Ò¥label§"label"O§LiteralÍ-ÔÍ-Û¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ-îÍ-ùÂÂÂO§LiteralÍ-îÍ-ö¦buyNum¨"buyNum"O§LiteralÍ-øÍ-ù ¡0¤initP°ObjectExpressionÍ.Í/—Q¨PropertyÍ.*Í.5ÂÂÂO§LiteralÍ.*Í..¢id¤"id"O§LiteralÍ.0Í.5£8-4¥"8-4"¤initQ¨PropertyÍ.HÍ.XÂÂÂO§LiteralÍ.HÍ.O¥title§"title"O§LiteralÍ.QÍ.X­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ.kÍ.zÂÂÂO§LiteralÍ.kÍ.q¤desc¦"desc"O§LiteralÍ.sÍ.z©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ.Í.˜ÂÂÂO§LiteralÍ.Í.”¥price§"price"O§LiteralÍ.–Í.˜
+¢10¤initQ¨PropertyÍ.«Í.ÇÂÂÂO§LiteralÍ.«Í.°£pic¥"pic"O§LiteralÍ.²Í.Ç³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ.ÚÍ.êÂÂÂO§LiteralÍ.ÚÍ.á¥label§"label"O§LiteralÍ.ãÍ.ê¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ.ıÍ/ÂÂÂO§LiteralÍ.ıÍ/¦buyNum¨"buyNum"O§LiteralÍ/Í/ ¡0¤initP°ObjectExpressionÍ/&Í0&—Q¨PropertyÍ/9Í/DÂÂÂO§LiteralÍ/9Í/=¢id¤"id"O§LiteralÍ/?Í/D£8-5¥"8-5"¤initQ¨PropertyÍ/WÍ/gÂÂÂO§LiteralÍ/WÍ/^¥title§"title"O§LiteralÍ/`Í/g­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ/zÍ/‰ÂÂÂO§LiteralÍ/zÍ/€¤desc¦"desc"O§LiteralÍ/‚Í/‰©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ/œÍ/§ÂÂÂO§LiteralÍ/œÍ/£¥price§"price"O§LiteralÍ/¥Í/§
+¢10¤initQ¨PropertyÍ/ºÍ/ÖÂÂÂO§LiteralÍ/ºÍ/¿£pic¥"pic"O§LiteralÍ/ÁÍ/Ö³app.media.food_mainµ"app.media.food_main"¤initQ¨PropertyÍ/éÍ/ùÂÂÂO§LiteralÍ/éÍ/ğ¥label§"label"O§LiteralÍ/òÍ/ù¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ0Í0ÂÂÂO§LiteralÍ0Í0¦buyNum¨"buyNum"O§LiteralÍ0Í0 ¡0¤init¤init¥constÀH¶ExportNamedDeclarationÍ0?ÍI•L³VariableDeclarationÍ0FÍI•‘M²VariableDeclaratorÍ0LÍI”JªIdentifierÍ0LÍ0Y­FoodListData2N¯ArrayExpressionÍ0\ÍI”•P°ObjectExpressionÍ0cÍ4É’Q¨PropertyÍ0nÍ0€ÂÂÂO§LiteralÍ0nÍ0x¨categoryª"category"O§LiteralÍ0zÍ0€¬æ—¶ä»¤ä¸Šæ–°®"æ—¶ä»¤ä¸Šæ–°"¤initQ¨PropertyÍ0‹Í4ÂÂÂÂO§LiteralÍ0‹Í0‘¤list¦"list"N¯ArrayExpressionÍ0“Í4Â”P°ObjectExpressionÍ0¢Í1œ—Q¨PropertyÍ0µÍ0ÀÂÂÂO§LiteralÍ0µÍ0¹¢id¤"id"O§LiteralÍ0»Í0À£1-1¥"1-1"¤initQ¨PropertyÍ0ÓÍ0àÂÂÂO§LiteralÍ0ÓÍ0Ú¥title§"title"O§LiteralÍ0ÜÍ0à¦æ˜¥èŒ¶¨"æ˜¥èŒ¶"¤initQ¨PropertyÍ0óÍ1ÂÂÂO§LiteralÍ0óÍ0ù¤desc¦"desc"O§LiteralÍ0ûÍ1ªæœˆå”®100+¬"æœˆå”®100+"¤initQ¨PropertyÍ1Í1 ÂÂÂO§LiteralÍ1Í1¥price§"price"O§LiteralÍ1Í1 ¡8¤initQ¨PropertyÍ13Í1LÂÂÂO§LiteralÍ13Í18£pic¥"pic"O§LiteralÍ1:Í1L°app.media.food_1²"app.media.food_1"¤initQ¨PropertyÍ1_Í1oÂÂÂO§LiteralÍ1_Í1f¥label§"label"O§LiteralÍ1hÍ1o¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ1‚Í1ÂÂÂO§LiteralÍ1‚Í1Š¦buyNum¨"buyNum"O§LiteralÍ1ŒÍ1 ¡0¤initP°ObjectExpressionÍ1«Í2¥—Q¨PropertyÍ1¾Í1ÉÂÂÂO§LiteralÍ1¾Í1Â¢id¤"id"O§LiteralÍ1ÄÍ1É£1-2¥"1-2"¤initQ¨PropertyÍ1ÜÍ1éÂÂÂO§LiteralÍ1ÜÍ1ã¥title§"title"O§LiteralÍ1åÍ1é¦å¤èŒ¶¨"å¤èŒ¶"¤initQ¨PropertyÍ1üÍ2ÂÂÂO§LiteralÍ1üÍ2¤desc¦"desc"O§LiteralÍ2Í2ªæœˆå”®200+¬"æœˆå”®200+"¤initQ¨PropertyÍ2Í2)ÂÂÂO§LiteralÍ2Í2&¥price§"price"O§LiteralÍ2(Í2)¡6¤initQ¨PropertyÍ2<Í2UÂÂÂO§LiteralÍ2<Í2A£pic¥"pic"O§LiteralÍ2CÍ2U°app.media.food_3²"app.media.food_3"¤initQ¨PropertyÍ2hÍ2xÂÂÂO§LiteralÍ2hÍ2o¥label§"label"O§LiteralÍ2qÍ2x¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ2‹Í2–ÂÂÂO§LiteralÍ2‹Í2“¦buyNum¨"buyNum"O§LiteralÍ2•Í2– ¡0¤initP°ObjectExpressionÍ2´Í3®—Q¨PropertyÍ2ÇÍ2ÒÂÂÂO§LiteralÍ2ÇÍ2Ë¢id¤"id"O§LiteralÍ2ÍÍ2Ò£1-3¥"1-3"¤initQ¨PropertyÍ2åÍ2òÂÂÂO§LiteralÍ2åÍ2ì¥title§"title"O§LiteralÍ2îÍ2ò¦ç§‹èŒ¶¨"ç§‹èŒ¶"¤initQ¨PropertyÍ3Í3ÂÂÂO§LiteralÍ3Í3¤desc¦"desc"O§LiteralÍ3Í3©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ3'Í32ÂÂÂO§LiteralÍ3'Í3.¥price§"price"O§LiteralÍ30Í32
+¢10¤initQ¨PropertyÍ3EÍ3^ÂÂÂO§LiteralÍ3EÍ3J£pic¥"pic"O§LiteralÍ3LÍ3^°app.media.food_4²"app.media.food_4"¤initQ¨PropertyÍ3qÍ3ÂÂÂO§LiteralÍ3qÍ3x¥label§"label"O§LiteralÍ3zÍ3¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ3”Í3ŸÂÂÂO§LiteralÍ3”Í3œ¦buyNum¨"buyNum"O§LiteralÍ3Í3Ÿ ¡0¤initP°ObjectExpressionÍ3½Í4·—Q¨PropertyÍ3ĞÍ3ÛÂÂÂO§LiteralÍ3ĞÍ3Ô¢id¤"id"O§LiteralÍ3ÖÍ3Û£1-4¥"1-4"¤initQ¨PropertyÍ3îÍ3ûÂÂÂO§LiteralÍ3îÍ3õ¥title§"title"O§LiteralÍ3÷Í3û¦å†¬èŒ¶¨"å†¬èŒ¶"¤initQ¨PropertyÍ4Í4ÂÂÂO§LiteralÍ4Í4¤desc¦"desc"O§LiteralÍ4Í4©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ40Í4;ÂÂÂO§LiteralÍ40Í47¥price§"price"O§LiteralÍ49Í4;
+¢10¤initQ¨PropertyÍ4NÍ4gÂÂÂO§LiteralÍ4NÍ4S£pic¥"pic"O§LiteralÍ4UÍ4g°app.media.food_5²"app.media.food_5"¤initQ¨PropertyÍ4zÍ4ŠÂÂÂO§LiteralÍ4zÍ4¥label§"label"O§LiteralÍ4ƒÍ4Š¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ4Í4¨ÂÂÂO§LiteralÍ4Í4¥¦buyNum¨"buyNum"O§LiteralÍ4§Í4¨ ¡0¤init¤initP°ObjectExpressionÍ4ĞÍ92’Q¨PropertyÍ4ÛÍ4íÂÂÂO§LiteralÍ4ÛÍ4å¨categoryª"category"O§LiteralÍ4çÍ4í¬çƒ­é¥®æ¨è®"çƒ­é¥®æ¨è"¤initQ¨PropertyÍ4øÍ9+ÂÂÂO§LiteralÍ4øÍ4ş¤list¦"list"N¯ArrayExpressionÍ5 Í9+”P°ObjectExpressionÍ5Í6—Q¨PropertyÍ5"Í5-ÂÂÂO§LiteralÍ5"Í5&¢id¤"id"O§LiteralÍ5(Í5-£2-1¥"2-1"¤initQ¨PropertyÍ5@Í5OÂÂÂO§LiteralÍ5@Í5G¥title§"title"O§LiteralÍ5IÍ5O¬çç å¥¶èŒ¶®"çç å¥¶èŒ¶"¤initQ¨PropertyÍ5bÍ5qÂÂÂO§LiteralÍ5bÍ5h¤desc¦"desc"O§LiteralÍ5jÍ5q©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ5„Í5ÂÂÂO§LiteralÍ5„Í5‹¥price§"price"O§LiteralÍ5Í5
+¢10¤initQ¨PropertyÍ5¢Í5¸ÂÂÂO§LiteralÍ5¢Í5§£pic¥"pic"O§LiteralÍ5©Í5¸­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ5ËÍ5ÛÂÂÂO§LiteralÍ5ËÍ5Ò¥label§"label"O§LiteralÍ5ÔÍ5Û¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ5îÍ5ùÂÂÂO§LiteralÍ5îÍ5ö¦buyNum¨"buyNum"O§LiteralÍ5øÍ5ù ¡0¤initP°ObjectExpressionÍ6Í7—Q¨PropertyÍ6*Í65ÂÂÂO§LiteralÍ6*Í6.¢id¤"id"O§LiteralÍ60Í65£2-2¥"2-2"¤initQ¨PropertyÍ6HÍ6WÂÂÂO§LiteralÍ6HÍ6O¥title§"title"O§LiteralÍ6QÍ6W¬çº¢è±†å¥¶èŒ¶®"çº¢è±†å¥¶èŒ¶"¤initQ¨PropertyÍ6jÍ6yÂÂÂO§LiteralÍ6jÍ6p¤desc¦"desc"O§LiteralÍ6rÍ6y©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ6ŒÍ6—ÂÂÂO§LiteralÍ6ŒÍ6“¥price§"price"O§LiteralÍ6•Í6—
+¢10¤initQ¨PropertyÍ6ªÍ6ÀÂÂÂO§LiteralÍ6ªÍ6¯£pic¥"pic"O§LiteralÍ6±Í6À­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ6ÓÍ6ãÂÂÂO§LiteralÍ6ÓÍ6Ú¥label§"label"O§LiteralÍ6ÜÍ6ã¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ6öÍ7ÂÂÂO§LiteralÍ6öÍ6ş¦buyNum¨"buyNum"O§LiteralÍ7 Í7 ¡0¤initP°ObjectExpressionÍ7Í8—Q¨PropertyÍ72Í7=ÂÂÂO§LiteralÍ72Í76¢id¤"id"O§LiteralÍ78Í7=£2-3¥"2-3"¤initQ¨PropertyÍ7PÍ7_ÂÂÂO§LiteralÍ7PÍ7W¥title§"title"O§LiteralÍ7YÍ7_¬é»‘ç³–å¥¶èŒ¶®"é»‘ç³–å¥¶èŒ¶"¤initQ¨PropertyÍ7rÍ7ÂÂÂO§LiteralÍ7rÍ7x¤desc¦"desc"O§LiteralÍ7zÍ7©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ7”Í7ŸÂÂÂO§LiteralÍ7”Í7›¥price§"price"O§LiteralÍ7Í7Ÿ
+¢10¤initQ¨PropertyÍ7²Í7ÈÂÂÂO§LiteralÍ7²Í7·£pic¥"pic"O§LiteralÍ7¹Í7È­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ7ÛÍ7ëÂÂÂO§LiteralÍ7ÛÍ7â¥label§"label"O§LiteralÍ7äÍ7ë¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ7şÍ8	ÂÂÂO§LiteralÍ7şÍ8¦buyNum¨"buyNum"O§LiteralÍ8Í8	 ¡0¤initP°ObjectExpressionÍ8'Í9 —Q¨PropertyÍ8:Í8EÂÂÂO§LiteralÍ8:Í8>¢id¤"id"O§LiteralÍ8@Í8E£2-4¥"2-4"¤initQ¨PropertyÍ8XÍ8gÂÂÂO§LiteralÍ8XÍ8_¥title§"title"O§LiteralÍ8aÍ8g¬æ¡‚èŠ±é…’é…¿®"æ¡‚èŠ±é…’é…¿"¤initQ¨PropertyÍ8zÍ8‰ÂÂÂO§LiteralÍ8zÍ8€¤desc¦"desc"O§LiteralÍ8‚Í8‰©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ8œÍ8§ÂÂÂO§LiteralÍ8œÍ8£¥price§"price"O§LiteralÍ8¥Í8§
+¢10¤initQ¨PropertyÍ8ºÍ8ĞÂÂÂO§LiteralÍ8ºÍ8¿£pic¥"pic"O§LiteralÍ8ÁÍ8Ğ­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ8ãÍ8óÂÂÂO§LiteralÍ8ãÍ8ê¥label§"label"O§LiteralÍ8ìÍ8ó¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ9Í9ÂÂÂO§LiteralÍ9Í9¦buyNum¨"buyNum"O§LiteralÍ9Í9 ¡0¤init¤initP°ObjectExpressionÍ99Í>¥’Q¨PropertyÍ9DÍ9VÂÂÂO§LiteralÍ9DÍ9N¨categoryª"category"O§LiteralÍ9PÍ9V¬æ¸…çˆ½æœèŒ¶®"æ¸…çˆ½æœèŒ¶"¤initQ¨PropertyÍ9aÍ>ÂÂÂO§LiteralÍ9aÍ9g¤list¦"list"N¯ArrayExpressionÍ9iÍ>•P°ObjectExpressionÍ9xÍ:q—Q¨PropertyÍ9‹Í9–ÂÂÂO§LiteralÍ9‹Í9¢id¤"id"O§LiteralÍ9‘Í9–£3-1¥"3-1"¤initQ¨PropertyÍ9©Í9¸ÂÂÂO§LiteralÍ9©Í9°¥title§"title"O§LiteralÍ9²Í9¸¬è‘¡è„å¤šå¤š®"è‘¡è„å¤šå¤š"¤initQ¨PropertyÍ9ËÍ9ÚÂÂÂO§LiteralÍ9ËÍ9Ñ¤desc¦"desc"O§LiteralÍ9ÓÍ9Ú©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ9íÍ9øÂÂÂO§LiteralÍ9íÍ9ô¥price§"price"O§LiteralÍ9öÍ9ø
+¢10¤initQ¨PropertyÍ:Í:!ÂÂÂO§LiteralÍ:Í:£pic¥"pic"O§LiteralÍ:Í:!­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ:4Í:DÂÂÂO§LiteralÍ:4Í:;¥label§"label"O§LiteralÍ:=Í:D¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ:WÍ:bÂÂÂO§LiteralÍ:WÍ:_¦buyNum¨"buyNum"O§LiteralÍ:aÍ:b ¡0¤initP°ObjectExpressionÍ:€Í;y—Q¨PropertyÍ:“Í:ÂÂÂO§LiteralÍ:“Í:—¢id¤"id"O§LiteralÍ:™Í:£3-2¥"3-2"¤initQ¨PropertyÍ:±Í:ÀÂÂÂO§LiteralÍ:±Í:¸¥title§"title"O§LiteralÍ:ºÍ:À¬è¥¿ç“œå¤šå¤š®"è¥¿ç“œå¤šå¤š"¤initQ¨PropertyÍ:ÓÍ:âÂÂÂO§LiteralÍ:ÓÍ:Ù¤desc¦"desc"O§LiteralÍ:ÛÍ:â©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ:õÍ; ÂÂÂO§LiteralÍ:õÍ:ü¥price§"price"O§LiteralÍ:şÍ; 
+¢10¤initQ¨PropertyÍ;Í;)ÂÂÂO§LiteralÍ;Í;£pic¥"pic"O§LiteralÍ;Í;)­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ;<Í;LÂÂÂO§LiteralÍ;<Í;C¥label§"label"O§LiteralÍ;EÍ;L¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ;_Í;jÂÂÂO§LiteralÍ;_Í;g¦buyNum¨"buyNum"O§LiteralÍ;iÍ;j ¡0¤initP°ObjectExpressionÍ;ˆÍ<—Q¨PropertyÍ;›Í;¦ÂÂÂO§LiteralÍ;›Í;Ÿ¢id¤"id"O§LiteralÍ;¡Í;¦£3-3¥"3-3"¤initQ¨PropertyÍ;¹Í;ÈÂÂÂO§LiteralÍ;¹Í;À¥title§"title"O§LiteralÍ;ÂÍ;È¬èŠ’æœå¤šå¤š®"èŠ’æœå¤šå¤š"¤initQ¨PropertyÍ;ÛÍ;êÂÂÂO§LiteralÍ;ÛÍ;á¤desc¦"desc"O§LiteralÍ;ãÍ;ê©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ;ıÍ<ÂÂÂO§LiteralÍ;ıÍ<¥price§"price"O§LiteralÍ<Í<
+¢10¤initQ¨PropertyÍ<Í<1ÂÂÂO§LiteralÍ<Í< £pic¥"pic"O§LiteralÍ<"Í<1­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ<DÍ<TÂÂÂO§LiteralÍ<DÍ<K¥label§"label"O§LiteralÍ<MÍ<T¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ<gÍ<rÂÂÂO§LiteralÍ<gÍ<o¦buyNum¨"buyNum"O§LiteralÍ<qÍ<r ¡0¤initP°ObjectExpressionÍ<Í=Š—Q¨PropertyÍ<£Í<®ÂÂÂO§LiteralÍ<£Í<§¢id¤"id"O§LiteralÍ<©Í<®£3-4¥"3-4"¤initQ¨PropertyÍ<ÁÍ<ÑÂÂÂO§LiteralÍ<ÁÍ<È¥title§"title"O§LiteralÍ<ÊÍ<Ñ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ<äÍ<óÂÂÂO§LiteralÍ<äÍ<ê¤desc¦"desc"O§LiteralÍ<ìÍ<ó©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ=Í=ÂÂÂO§LiteralÍ=Í=¥price§"price"O§LiteralÍ=Í=
+¢10¤initQ¨PropertyÍ=$Í=:ÂÂÂO§LiteralÍ=$Í=)£pic¥"pic"O§LiteralÍ=+Í=:­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ=MÍ=]ÂÂÂO§LiteralÍ=MÍ=T¥label§"label"O§LiteralÍ=VÍ=]¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ=pÍ={ÂÂÂO§LiteralÍ=pÍ=x¦buyNum¨"buyNum"O§LiteralÍ=zÍ={ ¡0¤initP°ObjectExpressionÍ=™Í>“—Q¨PropertyÍ=¬Í=·ÂÂÂO§LiteralÍ=¬Í=°¢id¤"id"O§LiteralÍ=²Í=·£3-5¥"3-5"¤initQ¨PropertyÍ=ÊÍ=ÚÂÂÂO§LiteralÍ=ÊÍ=Ñ¥title§"title"O§LiteralÍ=ÓÍ=Ú­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ=íÍ=üÂÂÂO§LiteralÍ=íÍ=ó¤desc¦"desc"O§LiteralÍ=õÍ=ü©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ>Í>ÂÂÂO§LiteralÍ>Í>¥price§"price"O§LiteralÍ>Í>
+¢10¤initQ¨PropertyÍ>-Í>CÂÂÂO§LiteralÍ>-Í>2£pic¥"pic"O§LiteralÍ>4Í>C­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ>VÍ>fÂÂÂO§LiteralÍ>VÍ>]¥label§"label"O§LiteralÍ>_Í>f¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ>yÍ>„ÂÂÂO§LiteralÍ>yÍ>¦buyNum¨"buyNum"O§LiteralÍ>ƒÍ>„ ¡0¤init¤initP°ObjectExpressionÍ>¬ÍD’Q¨PropertyÍ>·Í>ÉÂÂÂO§LiteralÍ>·Í>Á¨categoryª"category"O§LiteralÍ>ÃÍ>É¬é†‡é¦™å¥¶èŒ¶®"é†‡é¦™å¥¶èŒ¶"¤initQ¨PropertyÍ>ÔÍDÂÂÂO§LiteralÍ>ÔÍ>Ú¤list¦"list"N¯ArrayExpressionÍ>ÜÍD•P°ObjectExpressionÍ>ëÍ?å—Q¨PropertyÍ>şÍ?	ÂÂÂO§LiteralÍ>şÍ?¢id¤"id"O§LiteralÍ?Í?	£4-1¥"4-1"¤initQ¨PropertyÍ?Í?,ÂÂÂO§LiteralÍ?Í?#¥title§"title"O§LiteralÍ?%Í?,­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ??Í?NÂÂÂO§LiteralÍ??Í?E¤desc¦"desc"O§LiteralÍ?GÍ?N©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ?aÍ?lÂÂÂO§LiteralÍ?aÍ?h¥price§"price"O§LiteralÍ?jÍ?l
+¢10¤initQ¨PropertyÍ?Í?•ÂÂÂO§LiteralÍ?Í?„£pic¥"pic"O§LiteralÍ?†Í?•­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ?¨Í?¸ÂÂÂO§LiteralÍ?¨Í?¯¥label§"label"O§LiteralÍ?±Í?¸¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ?ËÍ?ÖÂÂÂO§LiteralÍ?ËÍ?Ó¦buyNum¨"buyNum"O§LiteralÍ?ÕÍ?Ö ¡0¤initP°ObjectExpressionÍ?ôÍ@î—Q¨PropertyÍ@Í@ÂÂÂO§LiteralÍ@Í@¢id¤"id"O§LiteralÍ@Í@£4-2¥"4-2"¤initQ¨PropertyÍ@%Í@5ÂÂÂO§LiteralÍ@%Í@,¥title§"title"O§LiteralÍ@.Í@5­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍ@HÍ@WÂÂÂO§LiteralÍ@HÍ@N¤desc¦"desc"O§LiteralÍ@PÍ@W©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍ@jÍ@uÂÂÂO§LiteralÍ@jÍ@q¥price§"price"O§LiteralÍ@sÍ@u
+¢10¤initQ¨PropertyÍ@ˆÍ@ÂÂÂO§LiteralÍ@ˆÍ@£pic¥"pic"O§LiteralÍ@Í@­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍ@±Í@ÁÂÂÂO§LiteralÍ@±Í@¸¥label§"label"O§LiteralÍ@ºÍ@Á¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍ@ÔÍ@ßÂÂÂO§LiteralÍ@ÔÍ@Ü¦buyNum¨"buyNum"O§LiteralÍ@ŞÍ@ß ¡0¤initP°ObjectExpressionÍ@ıÍA÷—Q¨PropertyÍAÍAÂÂÂO§LiteralÍAÍA¢id¤"id"O§LiteralÍAÍA£4-3¥"4-3"¤initQ¨PropertyÍA.ÍA>ÂÂÂO§LiteralÍA.ÍA5¥title§"title"O§LiteralÍA7ÍA>­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍAQÍA`ÂÂÂO§LiteralÍAQÍAW¤desc¦"desc"O§LiteralÍAYÍA`©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍAsÍA~ÂÂÂO§LiteralÍAsÍAz¥price§"price"O§LiteralÍA|ÍA~
+¢10¤initQ¨PropertyÍA‘ÍA§ÂÂÂO§LiteralÍA‘ÍA–£pic¥"pic"O§LiteralÍA˜ÍA§­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍAºÍAÊÂÂÂO§LiteralÍAºÍAÁ¥label§"label"O§LiteralÍAÃÍAÊ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍAİÍAèÂÂÂO§LiteralÍAİÍAå¦buyNum¨"buyNum"O§LiteralÍAçÍAè ¡0¤initP°ObjectExpressionÍBÍC —Q¨PropertyÍBÍB$ÂÂÂO§LiteralÍBÍB¢id¤"id"O§LiteralÍBÍB$£4-4¥"4-4"¤initQ¨PropertyÍB7ÍBGÂÂÂO§LiteralÍB7ÍB>¥title§"title"O§LiteralÍB@ÍBG­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍBZÍBiÂÂÂO§LiteralÍBZÍB`¤desc¦"desc"O§LiteralÍBbÍBi©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍB|ÍB‡ÂÂÂO§LiteralÍB|ÍBƒ¥price§"price"O§LiteralÍB…ÍB‡
+¢10¤initQ¨PropertyÍBšÍB°ÂÂÂO§LiteralÍBšÍBŸ£pic¥"pic"O§LiteralÍB¡ÍB°­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍBÃÍBÓÂÂÂO§LiteralÍBÃÍBÊ¥label§"label"O§LiteralÍBÌÍBÓ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍBæÍBñÂÂÂO§LiteralÍBæÍBî¦buyNum¨"buyNum"O§LiteralÍBğÍBñ ¡0¤initP°ObjectExpressionÍCÍD	—Q¨PropertyÍC"ÍC-ÂÂÂO§LiteralÍC"ÍC&¢id¤"id"O§LiteralÍC(ÍC-£4-5¥"4-5"¤initQ¨PropertyÍC@ÍCPÂÂÂO§LiteralÍC@ÍCG¥title§"title"O§LiteralÍCIÍCP­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍCcÍCrÂÂÂO§LiteralÍCcÍCi¤desc¦"desc"O§LiteralÍCkÍCr©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍC…ÍCÂÂÂO§LiteralÍC…ÍCŒ¥price§"price"O§LiteralÍCÍC
+¢10¤initQ¨PropertyÍC£ÍC¹ÂÂÂO§LiteralÍC£ÍC¨£pic¥"pic"O§LiteralÍCªÍC¹­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍCÌÍCÜÂÂÂO§LiteralÍCÌÍCÓ¥label§"label"O§LiteralÍCÕÍCÜ¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍCïÍCúÂÂÂO§LiteralÍCïÍC÷¦buyNum¨"buyNum"O§LiteralÍCùÍCú ¡0¤init¤initP°ObjectExpressionÍD"ÍI‘’Q¨PropertyÍD-ÍD?ÂÂÂO§LiteralÍD-ÍD7¨categoryª"category"O§LiteralÍD9ÍD?¬ä¸»é£Ÿå°åƒ®"ä¸»é£Ÿå°åƒ"¤initQ¨PropertyÍDJÍIŠÂÂÂO§LiteralÍDJÍDP¤list¦"list"N¯ArrayExpressionÍDRÍIŠ•P°ObjectExpressionÍDaÍE[—Q¨PropertyÍDtÍDÂÂÂO§LiteralÍDtÍDx¢id¤"id"O§LiteralÍDzÍD£5-1¥"5-1"¤initQ¨PropertyÍD’ÍD¢ÂÂÂO§LiteralÍD’ÍD™¥title§"title"O§LiteralÍD›ÍD¢­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍDµÍDÄÂÂÂO§LiteralÍDµÍD»¤desc¦"desc"O§LiteralÍD½ÍDÄ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍD×ÍDâÂÂÂO§LiteralÍD×ÍDŞ¥price§"price"O§LiteralÍDàÍDâ
+¢10¤initQ¨PropertyÍDõÍEÂÂÂO§LiteralÍDõÍDú£pic¥"pic"O§LiteralÍDüÍE­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍEÍE.ÂÂÂO§LiteralÍEÍE%¥label§"label"O§LiteralÍE'ÍE.¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍEAÍELÂÂÂO§LiteralÍEAÍEI¦buyNum¨"buyNum"O§LiteralÍEKÍEL ¡0¤initP°ObjectExpressionÍEjÍFd—Q¨PropertyÍE}ÍEˆÂÂÂO§LiteralÍE}ÍE¢id¤"id"O§LiteralÍEƒÍEˆ£5-2¥"5-2"¤initQ¨PropertyÍE›ÍE«ÂÂÂO§LiteralÍE›ÍE¢¥title§"title"O§LiteralÍE¤ÍE«­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍE¾ÍEÍÂÂÂO§LiteralÍE¾ÍEÄ¤desc¦"desc"O§LiteralÍEÆÍEÍ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍEàÍEëÂÂÂO§LiteralÍEàÍEç¥price§"price"O§LiteralÍEéÍEë
+¢10¤initQ¨PropertyÍEşÍFÂÂÂO§LiteralÍEşÍF£pic¥"pic"O§LiteralÍFÍF­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍF'ÍF7ÂÂÂO§LiteralÍF'ÍF.¥label§"label"O§LiteralÍF0ÍF7¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍFJÍFUÂÂÂO§LiteralÍFJÍFR¦buyNum¨"buyNum"O§LiteralÍFTÍFU ¡0¤initP°ObjectExpressionÍFsÍGm—Q¨PropertyÍF†ÍF‘ÂÂÂO§LiteralÍF†ÍFŠ¢id¤"id"O§LiteralÍFŒÍF‘£5-3¥"5-3"¤initQ¨PropertyÍF¤ÍF´ÂÂÂO§LiteralÍF¤ÍF«¥title§"title"O§LiteralÍF­ÍF´­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍFÇÍFÖÂÂÂO§LiteralÍFÇÍFÍ¤desc¦"desc"O§LiteralÍFÏÍFÖ©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍFéÍFôÂÂÂO§LiteralÍFéÍFğ¥price§"price"O§LiteralÍFòÍFô
+¢10¤initQ¨PropertyÍGÍGÂÂÂO§LiteralÍGÍG£pic¥"pic"O§LiteralÍGÍG­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍG0ÍG@ÂÂÂO§LiteralÍG0ÍG7¥label§"label"O§LiteralÍG9ÍG@¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍGSÍG^ÂÂÂO§LiteralÍGSÍG[¦buyNum¨"buyNum"O§LiteralÍG]ÍG^ ¡0¤initP°ObjectExpressionÍG|ÍHv—Q¨PropertyÍGÍGšÂÂÂO§LiteralÍGÍG“¢id¤"id"O§LiteralÍG•ÍGš£5-4¥"5-4"¤initQ¨PropertyÍG­ÍG½ÂÂÂO§LiteralÍG­ÍG´¥title§"title"O§LiteralÍG¶ÍG½­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍGĞÍGßÂÂÂO§LiteralÍGĞÍGÖ¤desc¦"desc"O§LiteralÍGØÍGß©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍGòÍGıÂÂÂO§LiteralÍGòÍGù¥price§"price"O§LiteralÍGûÍGı
+¢10¤initQ¨PropertyÍHÍH&ÂÂÂO§LiteralÍHÍH£pic¥"pic"O§LiteralÍHÍH&­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍH9ÍHIÂÂÂO§LiteralÍH9ÍH@¥label§"label"O§LiteralÍHBÍHI¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍH\ÍHgÂÂÂO§LiteralÍH\ÍHd¦buyNum¨"buyNum"O§LiteralÍHfÍHg ¡0¤initP°ObjectExpressionÍH…ÍI—Q¨PropertyÍH˜ÍH£ÂÂÂO§LiteralÍH˜ÍHœ¢id¤"id"O§LiteralÍHÍH££5-5¥"5-5"¤initQ¨PropertyÍH¶ÍHÆÂÂÂO§LiteralÍH¶ÍH½¥title§"title"O§LiteralÍH¿ÍHÆ­ç¦åˆ©|å†°ç²‰¯"ç¦åˆ©|å†°ç²‰"¤initQ¨PropertyÍHÙÍHèÂÂÂO§LiteralÍHÙÍHß¤desc¦"desc"O§LiteralÍHáÍHè©æœˆå”®100«"æœˆå”®100"¤initQ¨PropertyÍHûÍIÂÂÂO§LiteralÍHûÍI¥price§"price"O§LiteralÍIÍI
+¢10¤initQ¨PropertyÍIÍI/ÂÂÂO§LiteralÍIÍI£pic¥"pic"O§LiteralÍI ÍI/­app.media.tee¯"app.media.tee"¤initQ¨PropertyÍIBÍIRÂÂÂO§LiteralÍIBÍII¥label§"label"O§LiteralÍIKÍIR¯å‘³é“å¥½æäº†±"å‘³é“å¥½æäº†"¤initQ¨PropertyÍIeÍIpÂÂÂO§LiteralÍIeÍIm¦buyNum¨"buyNum"O§LiteralÍIoÍIp ¡0¤init¤init¥constÀH¶ExportNamedDeclarationÍI—ÍJ#ÔrR™¤type¥start£end¢idªexpression©generator¥async¦params¤body³FunctionDeclarationÍIÍJ#JªIdentifierÍI§ÍI¼µgetCategoryListByShopÂÂÂ‘JªIdentifierÍI½ÍIÇªchooseShopK®BlockStatementÍIÉÍJ#‘ÔrS”¤type¥start£end¨argument¯ReturnStatementÍIĞÍJ ÔrT–¤type¥start£end¤testªconsequent©alternateµConditionalExpressionÍI×ÍJÔrU–¤type¥start£end¤left¨operator¥right°BinaryExpressionÍI×ÍIïJªIdentifierÍI×ÍIáªchooseShop£===O§LiteralÍIæÍIïµå—äº¬é›¨èŠ±å®¢å…åº—·"å—äº¬é›¨èŠ±å®¢å…åº—"JªIdentifierÍIòÍJµFoodCategoryListData1JªIdentifierÍJ
+ÍJµFoodCategoryListData2ÀH¶ExportNamedDeclarationÍJ%ÍJR³FunctionDeclarationÍJ,ÍJJªIdentifierÍJ5ÍJF±getFoodListByShopÂÂÂ‘JªIdentifierÍJGÍJQªchooseShopK®BlockStatementÍJSÍJ‘S¯ReturnStatementÍJZÍJšTµConditionalExpressionÍJaÍJ™U°BinaryExpressionÍJaÍJyJªIdentifierÍJaÍJkªchooseShop£===O§LiteralÍJpÍJyµå—äº¬é›¨èŠ±å®¢å…åº—·"å—äº¬é›¨èŠ±å®¢å…åº—"JªIdentifierÍJ|ÍJ‰­FoodListData1JªIdentifierÍJŒÍJ™­FoodListData2À

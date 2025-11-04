@@ -1,0 +1,27 @@
+{
+	"app": {
+		"bundleName": "wanxy.food.com",
+		"debug": true,
+		"versionCode": 1000000,
+		"versionName": "1.0.0",
+		"minAPIVersion": 50001013,
+		"targetAPIVersion": 50005017,
+		"apiReleaseType": "Release",
+		"compileSdkVersion": "5.0.5.165",
+		"compileSdkType": "HarmonyOS",
+		"appEnvironments": [],
+		"bundleType": "app",
+		"buildMode": "debug"
+	},
+	"module": {
+		"name": "feature_map",
+		"type": "har",
+		"routerMap": "$profile:route_map",
+		"deviceTypes": [
+			"default",
+			"tablet"
+		],
+		"packageName": "feature_map",
+		"installationFree": false
+	}
+}

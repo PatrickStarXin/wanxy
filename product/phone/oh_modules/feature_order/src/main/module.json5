@@ -1,0 +1,12 @@
+{
+  "module": {
+    "name": "feature_order",
+    "type": "har",
+    "routerMap": "$profile:route_map",
+    "deviceTypes": [
+      "default",
+      "tablet",
+      "2in1"
+    ]
+  }
+}

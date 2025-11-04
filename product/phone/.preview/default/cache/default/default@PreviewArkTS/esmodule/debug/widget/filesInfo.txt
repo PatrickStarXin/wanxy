@@ -1,0 +1,1 @@
+E:/Chrome/download/Food/product/phone/.preview/default/cache/default/default@PreviewArkTS/esmodule/debug/widget/phone/src/main/ets/food/pages/FoodCard.ts;com.atomicservice.5765880207855620561/phone/ets/food/pages/FoodCard;esm;phone|phone|1.0.0|src/main/ets/food/pages/FoodCard.ts;phone;false

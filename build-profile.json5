@@ -1,0 +1,91 @@
+{
+  "app": {
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.1(13)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true // 添加这行配置
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\wanxy\\.ohos\\config\\default_Food_dzUDgecZv2djog8qkIut4zbC5WHDrPWJQRyS1HyGGV0=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B6D290B78385591B625B6D24A2992FD0036D3AD12AFF2CCF13165A8E05A79A3057327F6A416D989",
+          "profile": "C:\\Users\\wanxy\\.ohos\\config\\default_Food_dzUDgecZv2djog8qkIut4zbC5WHDrPWJQRyS1HyGGV0=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\wanxy\\.ohos\\config\\default_Food_dzUDgecZv2djog8qkIut4zbC5WHDrPWJQRyS1HyGGV0=.p12",
+          "storePassword": "0000001B44A9C37A3B5588A77C93137996CECD8538FD6C4CB8C523C848FA1EF2033C4E1B6F2CD80935FBEE"
+        }
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "router_manage",
+      "srcPath": "./common/router_manage",
+    },
+    {
+      "name": "phone",
+      "srcPath": "./product/phone",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "feature_home",
+      "srcPath": "./feature/feature_home",
+    },
+    {
+      "name": "feature_food",
+      "srcPath": "./feature/feature_food",
+    },
+    {
+      "name": "feature_order",
+      "srcPath": "./feature/feature_order",
+    },
+    {
+      "name": "feature_mine",
+      "srcPath": "./feature/feature_mine",
+    },
+    {
+      "name": "feature_map",
+      "srcPath": "./feature/feature_map",
+    },
+    {
+      "name": "common_utils",
+      "srcPath": "./common/common_utils",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "modulePathMap": {
+    "router_manage": "E:\\Chrome\\download\\Food\\common\\router_manage",
+    "phone": "E:\\Chrome\\download\\Food\\product\\phone",
+    "feature_home": "E:\\Chrome\\download\\Food\\feature\\feature_home",
+    "feature_food": "E:\\Chrome\\download\\Food\\feature\\feature_food",
+    "feature_order": "E:\\Chrome\\download\\Food\\feature\\feature_order",
+    "feature_mine": "E:\\Chrome\\download\\Food\\feature\\feature_mine",
+    "feature_map": "E:\\Chrome\\download\\Food\\feature\\feature_map",
+    "common_utils": "E:\\Chrome\\download\\Food\\common\\common_utils"
+  },
+  "compileMode": "esmodule",
+  "projectRootPath": "E:\\Chrome\\download\\Food",
+  "nodeModulesPath": "E:\\Chrome\\download\\Food\\feature\\feature_food\\.preview\\default\\intermediates\\loader_out\\default\\node_modules",
+  "byteCodeHarInfo": {},
+  "declarationEntry": [],
+  "moduleName": "feature_food",
+  "hspNameOhmMap": {},
+  "harNameOhmMap": {},
+  "packageManagerType": "ohpm",
+  "compileEntry": [
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\components\\FoodCategory.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\components\\SqlConstants.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\manager\\EventManager.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\model\\FoodModelData.ts",
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\pages\\PageFoodDetail.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\service\\DatabaseService.ets",
+    "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\viewmodel\\GoalItem.ets"
+  ],
+  "otherCompileFiles": [],
+  "dynamicImportLibInfo": {},
+  "routerMap": [
+    {
+      "name": "PageFoodDetail",
+      "pageSourceFile": "E:\\Chrome\\download\\Food\\feature\\feature_food\\src\\main\\ets\\pages\\PageFoodDetail.ets",
+      "buildFunction": "PageFoodDetailBuilder"
+    }
+  ],
+  "hspResourcesMap": {},
+  "updateVersionInfo": {},
+  "buildConfigPath": ".preview\\config\\buildConfig.json"
+}
